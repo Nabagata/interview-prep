@@ -1661,8 +1661,7 @@ No friend functions\
 No friend classes\
 No templates in java
 
-Comparison of Inheritance in C++ and Java
-=========================================
+# Comparison of Inheritance in C++ and Java
 
 The purpose of inheritance is same in C++ and Java. Inheritance is used
 in both languages for reusing code and/or creating is-a relationship.
@@ -1683,7 +1682,7 @@ inherit from anything, we create a new tree in forest.
 Following Java example shows that Test class automatically inherits from
 Object class.
 
-  ``````---------------------
+  ```cpp
   class Test { 
   
       // members of test
@@ -1701,7 +1700,7 @@ Object class.
     }
   
   }
-  ``````---------------------
+  ```
 
 Output:
 
@@ -1718,7 +1717,7 @@ accessible in other class “B” of same package, even if B doesn’t inherit
 from A (they both have to be in the same package). For example, in the
 following program, protected members of A are accessible in B.
 
-  ```--------------------
+  ```java
   // filename B.java
   
   class A {
@@ -1740,7 +1739,7 @@ following program, protected members of A are accessible in B.
       }
   
   }
-  ```--------------------
+  ```
 
 **4) **Java uses *extends *keyword for inheritence. Unlike C++, Java
 doesn’t provide an inheritance specifier like public, protected or
@@ -1761,7 +1760,7 @@ and *abstract *keyword for abstract classes and abstract functions.
 
 Following is a Java abstract class example.
 
-  ```--------------------------
+  ```java
   // An abstract class example
   
   []{#_gjdgxs .anchor}abstract class myAbstractClass {
@@ -1795,11 +1794,11 @@ Following is a Java abstract class example.
      }
   
   }
-  ```--------------------------
+  ```
 
 Following is a Java interface example
 
-  ``````---------------------------
+  ```java
   // An interface example
   
   public interface myInterface {
@@ -1823,13 +1822,13 @@ Following is a Java interface example
      }
   
   }
-  ``````---------------------------
+  ```
 
 **7)** Unlike C++, Java doesn’t support multiple inheritance. A class
 cannot inherit from more than one class. A class can implement multiple
 interfaces though.
 
-**8 ) **In C++, default constructor of parent class is automatically
+**8 )** In C++, default constructor of parent class is automatically
 called, but if we want to call parametrized constructor of a parent
 class, we must use [*Initializer
 list*](https://www.geeksforgeeks.org/when-do-we-use-initializer-list-in-c/).
@@ -1838,7 +1837,7 @@ called in Java, but if we want to call parametrized constructor then we
 must use super to call the parent constructor. See following Java
 example.
 
-  ``````-------------------------
+  ```java
   package main;
   
      
@@ -1890,7 +1889,7 @@ example.
       }
   
   }
-  ``````-------------------------
+  ```
 
 Output:
 
@@ -1898,8 +1897,7 @@ Base constructor called
 
 Derived constructor called
 
-Commonly Asked Data Structure Interview Questions | Set 1
-=========================================================
+# Commonly Asked Data Structure Interview Questions | Set 1
 
 **What is a Data Structure?**\
 A data structure is a way of organizing the data so that the data can be
@@ -2046,7 +2044,7 @@ node.Types of Linked List :
     node and one to the previous node. Eg.
     NULL<-1<->2<->3->NULL
 
-3.  **Circular Linked List : **Circular linked list is a linked list
+3.  **Circular Linked List :** Circular linked list is a linked list
     where all nodes are connected to form a circle. There is no NULL
     at the end. A circular linked list can be a singly circular linked
     list or doubly circular linked list. Eg. 1->2->3->1 \[The
@@ -2234,14 +2232,13 @@ list*](https://www.geeksforgeeks.org/write-a-c-function-to-detect-loop-in-a-link
 [*Data Structure for Dictionary and Spell
 Checker?*](https://www.geeksforgeeks.org/data-structure-dictionary-spell-checker/)
 
-OOP
-===
+# OOP
 
-Commonly Asked OOP Interview Questions | Set 1
-==============================================
+
+## Commonly Asked OOP Interview Questions | Set 1
 
 **What is Object Oriented Programming?**\
-**O**bject **O**riented **P**rogramming (OOP) is a programming paradigm
+Object Oriented Programming (OOP) is a programming paradigm
 where the complete software operates as a bunch of objects talking to
 each other. An object is a collection of data and methods that operate
 on its data.
@@ -2305,11 +2302,10 @@ do is to try to understand the problem to separate necessary from
 unnecessary details: We try to obtain our own abstract view, or model,
 of the problem. This process of modeling is called abstraction.
 
-DBMS
-====
+# DBMS
 
-Commonly asked DBMS interview questions | Set 1
-===============================================
+
+## Commonly asked DBMS interview questions | Set 1
 
 **What are advantages of DBMS over traditional file based systems?**\
 **Ans:** Database management systems were developed to handle the
@@ -2325,7 +2321,7 @@ conventional operating systems.\
 Source: [*http://cs.nyu.edu/courses/spring01/G22.2433-001/mod1.2.pdf*](http://cs.nyu.edu/courses/spring01/G22.2433-001/mod1.2.pdf)
 
 **What are super, primary, candidate and foreign keys?**\
-**Ans: **A [*superkey *](http://en.wikipedia.org/wiki/Superkey)is a set
+**Ans:** A [*superkey*](http://en.wikipedia.org/wiki/Superkey) is a set
 of attributes of a relation schema upon which all attributes of the
 schema are functionally dependent. No two rows can have the same value
 of super key attributes.\
@@ -2829,12 +2825,12 @@ are used:
 
  
 
-  **Cardinality**                                                **Minimum No. of tables**
-  ``````------ ---------------------------
-  1:1 cardinality with partial participation of both entities    2
-  1:1 cardinality with total participation of atleast 1 entity   1
-  1:n cardinality                                                2
-  m:n cardinality                                                3
+  Cardinality | Minimum No. of tables
+  --- | ---
+  1:1 cardinality with partial participation of both entities | 2
+  1:1 cardinality with total participation of atleast 1 entity | 1
+  1:n cardinality | 2
+  m:n cardinality | 3
 
  
 
@@ -2850,12 +2846,12 @@ moved to any entity side.
 relation***](https://www.geeksforgeeks.org/dbms-keys-candidate-super-primary-alternate-and-foreign/):
 There are various types of keys in a relation which are:
 
--   **Candidate Key: **The minimal set of attributes which can determine
+-   **Candidate Key:** The minimal set of attributes which can determine
     a tuple uniquely. There can be more than 1 candidate key of a
     relation and its proper subset can’t determine tuple uniquely and
     it can’t be NULL.
 
--   **Super Key: **The set of attributes which can determine a tuple
+-   **Super Key:** The set of attributes which can determine a tuple
     uniquely. A candidate key is always a super key but vice versa is
     not true.
 
@@ -2900,48 +2896,47 @@ Procedural language with basic and extended operators.
 
  
 
-  [***Basic Operator***](https://www.geeksforgeeks.org/basic-operators-in-relational-algebra-2/)   **Semantic**
-  `````````------------ ````````````-------------------
-  **σ(Selection)**                                                                                 Select rows based on given condition
-  **∏(Projection)**                                                                                Project some columns
-  **X (Cross Product)**                                                                            Cross product of relations, returns **m\*n**rows where m and n are number of rows in R1 and R2 respectively.
-  **U (Union)**                                                                                    Return those tuples which are either in R1 or in R2. Max no. of rows returned**= m+n **andMin no. of rows returned =**max(m,n)**
-  **−(Minus)**                                                                                     R1-R2 returns those tuples which are in R1 but not in R2. Max no. of rows returned = **m **and Min no. of rows returned = **m-n**
-  **ρ(Rename)**                                                                                    Renaming a relation to other relation.
+  [***Basic Operator***](https://www.geeksforgeeks.org/basic-operators-in-relational-algebra-2/) | **Semantic**
+  --- | ---
+  **σ(Selection)**       |                                                                          Select rows based on given condition
+  **∏(Projection)** |                                                                               Project some columns
+  **X (Cross Product)** |                                                                           Cross product of relations, returns **m\*n**rows where m and n are number of rows in R1 and R2 respectively.
+  **U (Union)** |                                                                                   Return those tuples which are either in R1 or in R2. Max no. of rows returned **= m+n** andMin no. of rows returned =**max(m,n)**
+  **−(Minus)** |                                                                                    R1-R2 returns those tuples which are in R1 but not in R2. Max no. of rows returned = **m** and Min no. of rows returned = **m-n**
+  **ρ(Rename)** |                                                                                    Renaming a relation to other relation.
 
   
 
-  [***Extended Operator***](https://www.geeksforgeeks.org/extended-operators-in-relational-algebra/)   **Semantic**
-  `````````---------------- ````````````````````````````````````-
-  **∩ (Intersection)**                                                                                 Returns those tuples which are in both R1 and R2. Max no. of rows returned = min(m,n) and Min no. of rows returned = 0
-  **⋈~c~(Conditional Join)**                                                                           Selection from two or more tables based on some condition (Cross product followed by selection)
-  **⋈(Equi Join)**                                                                                     It is a special case of conditional join when only equality condition is applied between attributes.
-  **⋈(Natural Join)**                                                                                  In natural join, equality condition on common attributes hold and duplicate attributes are removed by default.**Note:** Natural Join is equivalent to cross product if two relations have no attribute in common and natural join of a relation R with itself will return R only.
-  **⟕(Left Outer Join)**                                                                               When applying join on two relations R and S, some tuples of R or S does not appear in result set which does not satisfy the join conditions. But Left Outer Joins gives all tuples of R in the result set. The tuples of R which do not satisfy join condition will have values as NULL for attributes of S.
-  **⟖(Right Outer Join)**                                                                              When applying join on two relations R and S, some tuples of R or S does not appear in result set which does not satisfy the join conditions. But Right Outer Joins gives all tuples of S in the result set. The tuples of S which do not satisfy join condition will have values as NULL for attributes of R.
-  **⟗(Full Outer Join)**                                                                               When applying join on two relations R and S, some tuples of R or S does not appear in result set which does not satisfy the join conditions. But Full Outer Joins gives all tuples of S and all tuples of R in the result set. The tuples of S which do not satisfy join condition will have values as NULL for attributes of R and vice versa.
-  **/(Division Operator)**                                                                             Division operator A/B will return those tuples in A which is associated with every tuple of B.**Note:**Attributes of B should be proper subset of attributes of A. The attributes in A/B will be Attributes of A- Attribute of B.
+  [***Extended Operator***](https://www.geeksforgeeks.org/extended-operators-in-relational-algebra/) |   **Semantic**
+  --- | ---
+  **∩ (Intersection)** |                                                                                Returns those tuples which are in both R1 and R2. Max no. of rows returned = min(m,n) and Min no. of rows returned = 0
+  **⋈~c~(Conditional Join)** |                                                                          Selection from two or more tables based on some condition (Cross product followed by selection)
+  **⋈(Equi Join)** |                                                                                    It is a special case of conditional join when only equality condition is applied between attributes.
+  **⋈(Natural Join)** |                                                                                 In natural join, equality condition on common attributes hold and duplicate attributes are removed by default.**Note:** Natural Join is equivalent to cross product if two relations have no attribute in common and natural join of a relation R with itself will return R only.
+  **⟕(Left Outer Join)** |                                                                              When applying join on two relations R and S, some tuples of R or S does not appear in result set which does not satisfy the join conditions. But Left Outer Joins gives all tuples of R in the result set. The tuples of R which do not satisfy join condition will have values as NULL for attributes of S.
+  **⟖(Right Outer Join)** |                                                                             When applying join on two relations R and S, some tuples of R or S does not appear in result set which does not satisfy the join conditions. But Right Outer Joins gives all tuples of S in the result set. The tuples of S which do not satisfy join condition will have values as NULL for attributes of R.
+  **⟗(Full Outer Join)** |                                                                              When applying join on two relations R and S, some tuples of R or S does not appear in result set which does not satisfy the join conditions. But Full Outer Joins gives all tuples of S and all tuples of R in the result set. The tuples of S which do not satisfy join condition will have values as NULL for attributes of R and vice versa.
+  **/(Division Operator)** |                                                                            Division operator A/B will return those tuples in A which is associated with every tuple of B.**Note:**Attributes of B should be proper subset of attributes of A. The attributes in A/B will be Attributes of A- Attribute of B.
 
- \
-\
  
 
- \
+ 
+\
 [***SQL***](https://www.geeksforgeeks.org/sql-tutorial/): As opposed to
 Relational Algebra, SQL is a non-procedural language.
 
  
 
-  **Operator**                                                                                                 **Meaning**
-  `````````------------------------ `````````````````````-------------------
-  [***Select***](https://www.geeksforgeeks.org/sql-select-query/)                                              Selects columns from a relation or set of relations. **Note: **As opposed to Relational Algebra, it may give duplicate tuples for repeated value of an attribute.
-  [***From***](https://www.geeksforgeeks.org/sql-sub-queries-clause/)                                          **From** is used to give input as relation or set of relations from which data needs to be selected.
-  [***where***](https://www.geeksforgeeks.org/sql-where-clause/)                                               **Where **is used to give condition to be used to filter tuples
-  [***EXISTS***](https://www.geeksforgeeks.org/sql-exists/)                                                    **EXISTS **is used to check whether the result of a correlated nested query is empty (contains no tuples) or not.
-  [***Group By***](https://www.geeksforgeeks.org/sql-group-by/)                                                **Group By **is used to group the tuples based on some attribute or set of attributes like counting the no. of students group by department.
-  [***Order By***](https://www.geeksforgeeks.org/sql-order-by/)                                                **Order By **is used to sort the fetched data in either ascending or descending according to one or more columns.
-  [***Aggregate functions***](https://www.geeksforgeeks.org/database-management-system-aggregate-functions/)   Find the aggregated value of an attribute. Used mostly with group by. e.g.; count, sum, min max. **select count(\*) from student group by dept\_idNote:**we can select only those columns which are part of group by.
-  [***Nested Queries***](https://www.geeksforgeeks.org/nested-queries-sql/)                                    When one query is a part of other query. Solving nested queries questions can be learnt in**http://quiz.geeksforgeeks.org/nested-queries-sql/**
+  **Operator** |                                                                                                **Meaning**
+  --- | ---
+  [***Select***](https://www.geeksforgeeks.org/sql-select-query/) |                                             Selects columns from a relation or set of relations. **Note: **As opposed to Relational Algebra, it may give duplicate tuples for repeated value of an attribute.
+  [***From***](https://www.geeksforgeeks.org/sql-sub-queries-clause/) |                                          **From** is used to give input as relation or set of relations from which data needs to be selected.
+  [***where***](https://www.geeksforgeeks.org/sql-where-clause/) |                                              **Where** is used to give condition to be used to filter tuples
+  [***EXISTS***](https://www.geeksforgeeks.org/sql-exists/) |                                                  **EXISTS** is used to check whether the result of a correlated nested query is empty (contains no tuples) or not.
+  [***Group By***](https://www.geeksforgeeks.org/sql-group-by/) |                                               **Group By** is used to group the tuples based on some attribute or set of attributes like counting the no. of students group by department.
+  [***Order By***](https://www.geeksforgeeks.org/sql-order-by/) |                                               **Order By** is used to sort the fetched data in either ascending or descending according to one or more columns.
+  [***Aggregate functions***](https://www.geeksforgeeks.org/database-management-system-aggregate-functions/) |  Find the aggregated value of an attribute. Used mostly with group by. e.g.; count, sum, min max. **select count(\*) from student group by dept\_idNote:** we can select only those columns which are part of group by.
+  [***Nested Queries***](https://www.geeksforgeeks.org/nested-queries-sql/) |                                   When one query is a part of other query. Solving nested queries questions can be learnt in **http://quiz.geeksforgeeks.org/nested-queries-sql/**
 
  
 
@@ -3845,7 +3840,7 @@ system call while the parent sleeps for 50 seconds, hence doesn’t call
 [wait()](https://en.wikipedia.org/wiki/Wait_%28system_call%29) and the
 child process’s entry still exists in the process table.
 
-  ```-------------------
+  ```c
   // A C program to demonstrate Zombie Process.
   
   // Child becomes Zombie as parent is sleeping
@@ -3883,7 +3878,7 @@ child process’s entry still exists in the process table.
   return 0;
   
   }
-  ```-------------------
+  ```
 
 **Orphan Process:**
 
@@ -3897,7 +3892,7 @@ child process is still executing and is called an orphan process now.
 However, the orphan process is soon adopted by init process, once its
 parent process dies.
 
-  ```--------------------
+  ```c
   // A C program to demonstrate Orphan Process.
   
   // Parent process finishes execution while the
@@ -3941,7 +3936,7 @@ parent process dies.
   return 0;
   
   }
-  ```--------------------
+  ```
 
 **NOTES**
 
@@ -5069,7 +5064,7 @@ This method may cause a problem for users that follow a lot of users.
 Push method is for users that follow few users and pull method is for
 users that follow a lot of users.
 
-  `````````---
+  ```java
   // Java Program to explain the design
   
     
@@ -5327,4 +5322,4 @@ users that follow a lot of users.
       }
   
   }
-  `````````---
+  ```
