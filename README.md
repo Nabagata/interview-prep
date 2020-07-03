@@ -1,3 +1,18 @@
+# Table of contents
+
+* [C](#c)
+* [C++](#c\+\+)
+* [JAVA](#java)
+* [Comparison of Inheritance in C++ and JAVA](#comparison-of-inheritance-in-c-and-java)
+* [Data Structures](#commonly-asked-data-structure-interview-questions--set-1)
+* [OOPs](#oop)
+* [DBMS](#dbms)
+* [Computer Networking](#computer-networking)
+* [Operating Systems](#operating-systems)
+* [Compiler Design](#compiler-design)
+* [System Design](#design-scalable-system-like-instagram)
+
+
 # C
 
 ## Commonly Asked C Programming Interview Questions | Set 1
@@ -282,7 +297,7 @@ And store following program in another file *file2.c*
 
 Now, if we compile the above code with command “*gcc file2.c file1.c*”,
 we get the error *“undefined reference to \`fun1’”* . This is
-because *fun1()* is declared *static *in *file1.c* and cannot be used
+because *fun1()* is declared *static* in *file1.c* and cannot be used
 in *file2.c*.
 
 **What are main characteristics of C language?**\
@@ -291,7 +306,7 @@ low-level access to memory, simple set of keywords, and clean style.
 These features make it suitable for system programming like operating
 system or compiler development.
 
-**What is difference between i++ and ++i?** \
+**What is difference between i++ and ++i?** 
 1) The expression ‘i++’ returns the old value and then increments i. The
 expression ++i increments the value and returns new value.
 2) Precedence of postfix ++ is higher than that of prefix ++.
@@ -707,8 +722,7 @@ variables) can be accessed outside the class.
 
 -   **Protected:** Only the class and its child classes can access
       protected
-      members.![table5.6](images//media/image14.png){width="5.75in"
-      height="1.625in"}
+      members.![table5.6](images//media/image14.png)
 
 Do you know [*What happens when more restrictive access is given to a
 derived class method in
@@ -788,11 +802,11 @@ Following are the differences between malloc() and operator new.
 -   new calls constructors( class instances are initalized and deinitialized automatically), while malloc() does not (classes won’t get initalized or deinitialized automatically)
 
 -   Syntax:
-
+```c
     1.  int *n = new int(10); // initialization with new()
 
     2.  str = (char *) malloc(15); //malloc()
-
+```
 **free( )** is used on resources allocated by malloc( ), or calloc( ) in
 C
 
@@ -810,7 +824,7 @@ call. This substitution is performed by the C++ compiler at compile
 time. Inline function may increase efficiency if it is small.
 
 The syntax for defining the function inline is:
-
+```cpp
 inline return-type function-name(parameters)
 
 {
@@ -818,11 +832,10 @@ inline return-type function-name(parameters)
 // function code
 
 }
-
+```
 *Remember, inlining is only a request to the compiler, not a command.
 Compiler can ignore the request for inlining.*
 
-### * *
 
 ###  Q.[*Friend class and function in C++*](http://quiz.geeksforgeeks.org/friend-class-function-cpp/)
 
@@ -872,28 +885,28 @@ Other example classes where arithmetic operators may be overloaded are
 Complex Number, Fractional Number, Big Integer, etc.
 
   ```cpp
-  class Complex {\
-  private:\
-  int real, imag;\
-  public:\
-  Complex(int r = 0, int i =0) {real = r; imag = i;}\
-  \
-  // This is automatically called when '+' is used with\
-  // between two Complex objects\
-  Complex operator + (Complex const &obj) {\
-  Complex res;\
-  res.real = real + obj.real;\
-  res.imag = imag + obj.imag;\
-  return res;\
-  }\
-  void print() { cout << real << " + i" << imag << endl; }\
-  };\
-  \
-  int main()\
-  {\
-  Complex c1(10, 5), c2(2, 4);\
-  Complex c3 = c1 + c2; // An example call to "operator+"\
-  c3.print();\
+  class Complex {
+  private:
+  int real, imag;
+  public:
+  Complex(int r = 0, int i =0) {real = r; imag = i;}
+  
+  // This is automatically called when '+' is used with
+  // between two Complex objects
+  Complex operator + (Complex const &obj) {
+  Complex res;
+  res.real = real + obj.real;
+  res.imag = imag + obj.imag;
+  return res;
+  }
+  void print() { cout << real << " + i" << imag << endl; }
+  };
+  
+  int main()
+  {
+  Complex c1(10, 5), c2(2, 4);
+  Complex c3 = c1 + c2; // An example call to "operator+"
+  c3.print();
   }
   ```
 
@@ -966,7 +979,7 @@ can create two variables or member functions having the same name.
 
 A namespace definition begins with the keyword **namespace** followed by
 the namespace name as follows:
-```
+```cpp
 namespace namespace\_name
 
 {
@@ -994,8 +1007,7 @@ sections.
 
 5\. Heap
 
-![Memory-Layout](images//media/image3.jpg){width="5.208333333333333in"
-height="3.486111111111111in"}
+![Memory-Layout](images//media/image3.jpg)
 
 A typical memory layout of a running process
 
@@ -1112,7 +1124,7 @@ can be converted to machine code on any operating system, this is the
 reason why java is platform independent.
 
  \
-**Explain Final keyword in java?**\
+**Explain Final keyword in java?**
  
 
 Final keyword in java is used to restrict usage of variable, class and
@@ -1251,11 +1263,11 @@ java](https://www.geeksforgeeks.org/can-we-overload-or-override-static-methods-i
       name, but different signatures, especially number of input
       parameters and type of input paramaters.
 
--   **Can we overload static methods?   **The answer is **‘Yes’**. We
+-   **Can we overload static methods?** The answer is **‘Yes’**. We
       can have two ore more static methods with same name, but
       differences in input parameters
 
--   **Can we Override static methods in java?  **We can declare static
+-   **Can we Override static methods in java?** We can declare static
       methods with same signature in subclass, but it is not considered
       overriding as there won’t be any run-time polymorphism. Hence the
       answer is **‘No’**. Static methods cannot be overridden because
@@ -1270,7 +1282,7 @@ Read [more](https://www.geeksforgeeks.org/can-we-overload-or-override-static-me
 **Why the main method is static in java?**\
 The method is static because otherwise there would be ambiguity: which
 constructor should be called? Especially if your class looks like this:
-
+```java
 public class JavaClass
 
 {
@@ -1286,7 +1298,7 @@ public void main(String\[\] args)
 }
 
 }
-
+```
 Should the JVM call new JavaClass(int)? What should it pass for x? If
 not, should the JVM instantiate JavaClass without running any
 constructor method? because that will special-case your entire class –
@@ -1306,17 +1318,17 @@ Program compiles successfully . But at runtime throws an error
 
 **What is the [scope of
 variables](https://www.geeksforgeeks.org/variable-scope-in-java/) in
-Java in following cases? **
+Java in following cases?**
 
 -   **Member Variables** (Class Level Scope) : The member variables must
       be declared inside class (outside any function). They can be
       directly accessed anywhere in class
 
--   **Local Variables **(Method Level Scope) : Variables declared inside
+-   **Local Variables**(Method Level Scope) : Variables declared inside
       a method have method level scope and can’t be accessed outside the
       method.
 
--   **Loop Variables **(Block Scope) : A variable declared inside pair
+-   **Loop Variables**(Block Scope) : A variable declared inside pair
       of brackets “{” and “}” in a method has scope withing the brackets
       only.
 
@@ -1403,8 +1415,7 @@ Read [more](https://www.geeksforgeeks.org/abstract-classes-in-java/)
     like private, protected, etc.
 
 ![Abstract Class vs
-Interface](images//media/image1.png){width="6.270833333333333in"
-height="2.5in"}
+Interface](images//media/image1.png)
 
 **Which class is the superclass for every class ?**\
 Object class
@@ -1436,9 +1447,9 @@ Object cloning means to create an exact copy of the original object. If
 a class needs to support cloning, it must implement java.lang.Cloneable
 interface and override clone() method from Object class. Syntax of the
 clone() method is :
-
+```java
 protected Object clone() throws CloneNotSupportedException
-
+```
 If the object’s class doesn’t implement Cloneable interface then it
 throws an exception ‘CloneNotSupportedException’ .
 
@@ -1522,22 +1533,22 @@ Read [more](https://www.geeksforgeeks.org/can-override-private-methods-java/)
 variable](https://www.geeksforgeeks.org/blank-final-in-java/)?**\
 A final variable in Java can be assigned a value only once, we can
 assign a value either in declaration or later.
-
+```cpp
 final int i = 10;
 
 i = 30; // Error because i is final.
-
+```
 A **blank final** variable in Java is
 a [final](https://www.geeksforgeeks.org/g-fact-48/) variable that is not
 initialized during declaration. Below is a simple example of blank
 final.
-
+```cpp
 // A simple blank final example
 
 final int i;
 
 i = 30;
-
+```
 Read [more](https://www.geeksforgeeks.org/blank-final-in-java/)
 
  
@@ -1643,13 +1654,13 @@ There are following differences in the way both languages provide
 support for inheritance.
 
 **1)** In Java, all classes inherit from the [*Object
-class *](http://download.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html)directly
+class*](http://download.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html) directly
 or indirectly. Therefore, there is always a single inheritance tree of
 classes in Java, and [*Object
-class *](http://download.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html)is
+class*](http://download.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html) is
 root of the tree. In Java, if we create a class that doesn’t inherit
 from any class then it automatically inherits from [*Object
-class *](http://download.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html).
+class*](http://download.oracle.com/javase/1.5.0/docs/api/java/lang/Object.html).
 In C++, there is forest of classes; when we create a class that doesn’t
 inherit from anything, we create a new tree in forest.
 
@@ -1715,7 +1726,7 @@ following program, protected members of A are accessible in B.
   }
   ```
 
-**4) **Java uses *extends *keyword for inheritence. Unlike C++, Java
+**4)** Java uses *extends* keyword for inheritence. Unlike C++, Java
 doesn’t provide an inheritance specifier like public, protected or
 private. Therefore, we cannot change the protection level of members of
 base class in Java, if some data member is public or protected in base
@@ -1890,7 +1901,7 @@ Page*](http://en.wikipedia.org/wiki/Data_structure))
     form a sequence or a linear list. Examples: Array. Linked List,
     Stacks and Queues
 
--   **Non-Linear: **A data structure is said to be non-linear if
+-   **Non-Linear:** A data structure is said to be non-linear if
     traversal of nodes is nonlinear in nature. Example: Graph and
     Trees.
 
@@ -1899,19 +1910,19 @@ Page*](http://en.wikipedia.org/wiki/Data_structure))
 **What are the various operations that can be performed on different
 Data Structures?**
 
--   **Insertion** ? Add a new data item in the given collection of data
+-   **Insertion** : Add a new data item in the given collection of data
     items.
 
--   **Deletion** ? Delete an existing data item from the given
+-   **Deletion** : Delete an existing data item from the given
     collection of data items.
 
--   **Traversal** ? Access each data item exactly once so that it can be
+-   **Traversal** : Access each data item exactly once so that it can be
     processed.
 
--   **Searching** ? Find out the location of the data item if it exists
+-   **Searching** : Find out the location of the data item if it exists
     in the given collection of data items.
 
--   **Sorting** ? Arranging the data items in some order i.e. in
+-   **Sorting** : Arranging the data items in some order i.e. in
     ascending or descending order in case of numerical data and in
     dictionary order in case of alphanumeric data.
 
@@ -1964,11 +1975,11 @@ Applications of Stack:
 **What is a Queue, how it is different from stack and how is it
 implemented?**
 
-[*Queue *](http://en.wikipedia.org/wiki/Queue_%28data_structure%29)is a
+[*Queue*](http://en.wikipedia.org/wiki/Queue_%28data_structure%29) is a
 linear structure which follows the order
 is **F**irst **I**n **F**irst **O**ut (FIFO) to access elements. Mainly
 the following are basic operations on
-queue: **Enqueue, Dequeue**, **Front, Rear **\
+queue: **Enqueue, Dequeue**, **Front, Rear**\
 The difference between stacks and queues is in removing. In a stack we
 remove the item the most recently added; in a queue, we remove the item
 the least recently added. Both Queues and Stacks can be implemented
@@ -1978,20 +1989,20 @@ using Arrays and Linked Lists.
 
 **What are Infix, prefix, Postfix notations?**
 
--   **Infix notation: **X **+** Y – Operators are written in-between
+-   **Infix notation:** X + Y – Operators are written in-between
     their operands. This is the usual way we write expressions. An
     expression such as
 
 A * ( B + C ) / D
 
--   **Postfix notation (also known as “Reverse Polish notation”): **X
-    Y **+ **Operators are written after their operands. The infix
+-   **Postfix notation** (also known as “Reverse Polish notation”): X
+    Y + Operators are written after their operands. The infix
     expression given above is equivalent to
 
 A B C + * D/
 
--   **Prefix notation (also known as “Polish notation”): **+ X
-    Y** **Operators are written before their operands. The expressions
+-   **Prefix notation** (also known as “Polish notation”): + X
+    Y Operators are written before their operands. The expressions
     given above are equivalent to
 
 / * A + B C D
@@ -2008,12 +2019,12 @@ element is a separate object. Each element (that is node) of a list is
 comprising of two items – the data and a reference to the next
 node.Types of Linked List :
 
-1.  **Singly Linked List : **In this type of linked list, every node
+1.  **Singly Linked List :** In this type of linked list, every node
     stores address or reference of next node in list and the last node
     has next address or reference as NULL. For example
     1->2->3->4->NULL
 
-2.  **Doubly Linked List : **Here,** **here are two references
+2.  **Doubly Linked List :** Here, there are two references
     associated with each node, One of the reference points to the next
     node and one to the previous node. Eg.
     NULL<-1<->2<->3->NULL
@@ -2206,7 +2217,7 @@ list*](https://www.geeksforgeeks.org/write-a-c-function-to-detect-loop-in-a-link
 [*Data Structure for Dictionary and Spell
 Checker?*](https://www.geeksforgeeks.org/data-structure-dictionary-spell-checker/)
 
-# OOP
+# OOPs
 
 
 ## Commonly Asked OOP Interview Questions | Set 1
@@ -2237,9 +2248,9 @@ Polymorphism\
 Inheritance
 
 **What is encapsulation?**\
-Encapsulation is referred to one of the following two notions.\
+Encapsulation is referred to one of the following two notions.
 1) Data hiding: A language feature to restrict access to members of an
-object. For example, private and protected members in C++.\
+object. For example, private and protected members in C++.
 2) Bundling of data and methods together: Data and methods that operate
 on that data are bundled together.
 
@@ -2284,14 +2295,14 @@ of the problem. This process of modeling is called abstraction.
 **What are advantages of DBMS over traditional file based systems?**\
 **Ans:** Database management systems were developed to handle the
 following difficulties of typical Fille-processing systems supported by
-conventional operating systems.\
-1. Data redundancy and inconsistency\
-2. Difficulty in accessing data\
-3. Data isolation – multiple files and formats\
-4. Integrity problems\
-5. Atomicity of updates\
-6. Concurrent access by multiple users\
-7. Security problems\
+conventional operating systems
+1. Data redundancy and inconsistency
+2. Difficulty in accessing data
+3. Data isolation – multiple files and formats
+4. Integrity problems
+5. Atomicity of updates
+6. Concurrent access by multiple users
+7. Security problems
 Source: [*http://cs.nyu.edu/courses/spring01/G22.2433-001/mod1.2.pdf*](http://cs.nyu.edu/courses/spring01/G22.2433-001/mod1.2.pdf)
 
 **What are super, primary, candidate and foreign keys?**\
@@ -2319,7 +2330,7 @@ have NULL values. There is only one primary key in a table, but there
 can be multiple unique constrains.
 
 **What is database normalization?**\
-**Ans: **It is a process of analyzing the given relation schemas based
+**Ans:** It is a process of analyzing the given relation schemas based
 on their functional dependencies and primary keys to achieve the
 following desirable properties:\
 1) Minimizing Redundancy\
@@ -2333,13 +2344,13 @@ SQL is Structured Query Language designed for inserting and modifying in
 a [*relational database
 system*](http://en.wikipedia.org/wiki/Relational_database_management_system).
 
-**What are the differences between DDL, DML and DCL in SQL?\
-Ans:** Following are some details of three.\
-***DDL** *stands for Data Definition Language. SQL queries like CREATE,
+**What are the differences between DDL, DML and DCL in SQL?**\
+**Ans:** Following are some details of three.\
+**DDL** stands for Data Definition Language. SQL queries like CREATE,
 ALTER, DROP and RENAME come under this.\
-***DML** *stands for Data Manipulation Language. SQL queries like
+**DML** stands for Data Manipulation Language. SQL queries like
 SELECT, INSERT and UPDATE come under this.\
-***DCL*** stands for Data Control Language. SQL queries like GRANT and
+**DCL** stands for Data Control Language. SQL queries like GRANT and
 REVOKE come under this.
 
 **What is the difference between having and where clause?**\
@@ -2354,34 +2365,34 @@ Clause?*](http://quiz.geeksforgeeks.org/having-vs-where-clause/) for
 more details
 
 **How to print duplicate rows in a table?**\
-**Ans:  **See [*http://quiz.geeksforgeeks.org/how-to-print-duplicate-rows-in-a-table/*](http://quiz.geeksforgeeks.org/how-to-print-duplicate-rows-in-a-table/)
+**Ans:** See [*http://quiz.geeksforgeeks.org/how-to-print-duplicate-rows-in-a-table/*](http://quiz.geeksforgeeks.org/how-to-print-duplicate-rows-in-a-table/)
 
-**What is Join? **\
+**What is Join?**\
 **Ans:** An SQL Join is used to combine data from two or more tables,
 based on a common field between them. For example, consider the
 following two tables.
 
 **Table –** Student Table
 
-  ***<span style="font-variant:small-caps;">ENROLLNO</span>***   ***<span style="font-variant:small-caps;">STUDENTNAME</span>***   ***<span style="font-variant:small-caps;">ADDRESS</span>***
-  ``````------ ``````--------- ``````-----
-  1000                                                           geek1                                                             geeksquiz1
-  1001                                                           geek2                                                             geeksquiz2
-  1002                                                           geek3                                                             geeksquiz3
+  ***<span style="font-variant:small-caps;">ENROLLNO</span>*** | ***<span style="font-variant:small-caps;">STUDENTNAME</span>*** | ***<span style="font-variant:small-caps;">ADDRESS</span>***
+  --- | --- | ---
+  1000                                                       |    geek1                                                       |      geeksquiz1
+  1001  |                                                         geek2  |                                                           geeksquiz2
+  1002 |                                                          geek3 |                                                            geeksquiz3
 
 **Table –** StudentCourse Table
 
-  ***<span style="font-variant:small-caps;">COURSEID</span>***   ***<span style="font-variant:small-caps;">ENROLLNO</span>***
-  ``````------ ``````------
-  1                                                              1000
-  2                                                              1000
-  3                                                              1000
-  1                                                              1002
-  2                                                              1003
+  ***<span style="font-variant:small-caps;">COURSEID</span>*** | ***<span style="font-variant:small-caps;">ENROLLNO</span>***
+  --- | ---
+  1                                                            |  1000
+  2                                                            |  1000
+  3                                                            |  1000
+  1                                                            |  1002
+  2                                                            |  1003
 
 Following is join query that shows names of students enrolled in
 different courseIDs.
-
+```sql
 SELECT StudentCourse.CourseID, Student.StudentName
 
 FROM StudentCourse
@@ -2391,15 +2402,15 @@ INNER JOIN Student
 ON StudentCourse.EnrollNo = Student.EnrollNo
 
 ORDER BY StudentCourse.CourseID;
-
+```
 The above query would produce following result.
 
-  ***<span style="font-variant:small-caps;">COURSEID</span>***   ***<span style="font-variant:small-caps;">STUDENTNAME</span>***
-  ``````------ ``````---------
-  1                                                              geek1
-  1                                                              geek3
-  2                                                              geek1
-  3                                                              geek1
+  ***<span style="font-variant:small-caps;">COURSEID</span>*** | ***<span style="font-variant:small-caps;">STUDENTNAME</span>***
+  --- | ---
+  1 | geek1
+  1 | geek3
+  2 | geek1
+  3 | geek1
 
 **What is Identity?**\
 **Ans:** Identity (or AutoNumber) is a column that automatically
@@ -2416,12 +2427,8 @@ IDENTITY \[( seed, increment)\]
 
 Default value is 1.
 
-**Increment:** Incremental value that is
-
-added to the identity value of the previous
-
-row that was loaded. The default value 1.
-
+**Increment:** Incremental value that is added to the identity value of the previous row that was loaded. The default value 1.
+```sql
 CREATE TABLE Persons (
 
 Personid int IDENTITY(1,1) PRIMARY KEY,
@@ -2433,20 +2440,20 @@ FirstName varchar(255),
 Age int
 
 );
-
+```
 **What is a view in SQL? How to create one**\
 **Ans:** A [*view *](http://en.wikipedia.org/wiki/View_(SQL))is a
 virtual table based on the result-set of an SQL statement. We can create
 using create view syntax.
+```sql
+CREATE VIEW view_name AS
 
-CREATE VIEW view\_name AS
+SELECT column_name(s)
 
-SELECT column\_name(s)
-
-FROM table\_name
+FROM table_name
 
 WHERE condition
-
+```
 **What are the uses of view?**\
 **1.** Views can represent a subset of the data contained in a table;
 consequently, a view can limit the degree of exposure of the underlying
@@ -2494,10 +2501,9 @@ them.\
 [*ACID *](http://en.wikipedia.org/wiki/ACID)(Atomicity, Consistency,
 Isolation, Durability) is a set of properties that guarantee that
 database transactions are processed
-reliably.![](images//media/image11.png){width="6.270833333333333in"
-height="3.861111111111111in"}
+reliably.![](images//media/image11.png)
 
-**What are indexes? **\
+**What are indexes?** \
 **Ans:** A [*database
 index*](http://en.wikipedia.org/wiki/Database_index) is a data structure
 that improves the speed of data retrieval operations on a database table
@@ -2551,65 +2557,62 @@ SQL Interview Questions
     Ans: Some common differences between SQL and PL/SQL are as shown
     below:
 
-  **<span style="font-variant:small-caps;">SQL</span>**   **<span style="font-variant:small-caps;">PL/SQL</span>**
-  ```--------------------------- ``````--
-  SQL is a query execution or commanding language         PL/SQL is a complete programming language
-  SQL is data oriented language                           PL/SQL is a procedural language
-  SQL is very declarative in nature                       PL/SQL has a procedural nature
-  It is used for manipulating data                        It is used for creating applications
-  We can execute one statement at a time in SQL           We can execute block of statements in PL/SQL
-  SQL tells database, what to do?                         PL/SQL tells database how to do
-  We can embed SQL in PL/SQL                              We can not embed PL/SQL in SQL
+  **<span style="font-variant:small-caps;">SQL</span>** |  **<span style="font-variant:small-caps;">PL/SQL</span>**
+  --- | ---
+  SQL is a query execution or commanding language |        PL/SQL is a complete programming language
+  SQL is data oriented language |                          PL/SQL is a procedural language
+  SQL is very declarative in nature |                      PL/SQL has a procedural nature
+  It is used for manipulating data |                       It is used for creating applications
+  We can execute one statement at a time in SQL |          We can execute block of statements in PL/SQL
+  SQL tells database, what to do |                        PL/SQL tells database how to do
+  We can embed SQL in PL/SQL |                             We can not embed PL/SQL in SQL
 
-1.  **What is the difference between BETWEEN and IN operators in SQL?**\
+5.  **What is the difference between BETWEEN and IN operators in SQL?**\
     **BETWEEN**\
     The **BETWEEN** operator is used to fetch rows based on a range of
     values.\
     For example,
+```sql
+SELECT * FROM Students
 
-2.  SELECT * FROM Students
-
-3.  WHERE ROLL\_NO BETWEEN 20 AND 30;
-
+WHERE ROLL_NO BETWEEN 20 AND 30;
+```
 This query will select all those rows from the table Students where
 the value of the field ROLL\_NO lies between 20 and 30.\
+
 **IN**\
-The **IN **operator is used to check for values contained in specific
+The **IN** operator is used to check for values contained in specific
 sets.\
 For example,
->
+```sql
 SELECT * FROM Students
->
-WHERE ROLL\_NO IN (20,21,23);
->
+
+WHERE ROLL_NO IN (20,21,23);
+```
 This query will select all those rows from the table Students where
 the value of the field ROLL\_NO is either 20 or 21 or 23.
 
-1.  **Write an SQL query to find names of employee start with ‘A’?**\
+6.  **Write an SQL query to find names of employee start with ‘A’?**\
     The LIKE operator of SQL is used for this purpose. It is used to
     fetch filtered data by searching for a particular pattern in where
     clause.\
-    The Syntax for using LIKE is,
+    The Syntax for using LIKE is:
+```sql
+SELECT column1,column2 FROM table_name WHERE column_name LIKE pattern;
+```
+**LIKE**: operator name
 
-2.  **SELECT column1,column2 FROM table\_name WHERE column\_name LIKE
-    pattern;**
-
-3.  4.  **LIKE**: operator name
-
-5.  **pattern**: exact value extracted from the pattern to get related
-    data in
-
-6.  result set.
+**pattern**: exact value extracted from the pattern to get related data in result set.
 
 The required query is:
->
+```sql
 SELECT * FROM Employees WHERE EmpName like 'A%' ;
->
+```
 You may refer to this article on [*WHERE
 clause*](https://www.geeksforgeeks.org/sql-where-clause/) for more
 details on LIKE operator.
 
-1.  **What is the difference between CHAR and VARCHAR2 datatype in
+7.  **What is the difference between CHAR and VARCHAR2 datatype in
     SQL?**\
     Both of these datatypes are used for characters but varchar2 is
     used for character strings of variable length whereas char is used
@@ -2620,7 +2623,7 @@ details on LIKE operator.
     strings of variable length, we can store a string of length 3 or 4
     or 2 in this variable.
 
-2.  **Name different types of case manipulation functions available in
+8.  **Name different types of case manipulation functions available in
     SQL.**\
     There are three types of case manipulation functions available in
     SQL. They are,
@@ -2679,21 +2682,21 @@ details on LIKE operator.
     specific rows based on certain condition.\
     The CREATE VIEW statement of SQL is used for creating Views.\
     Basic Syntax:
+```sql
+CREATE VIEW view_name AS
 
-7.  CREATE VIEW view\_name AS
+SELECT column1, column2.....
 
-8.  SELECT column1, column2.....
+FROM table_name
 
-9.  FROM table\_name
+WHERE condition;
 
-10. WHERE condition;
+view_name: Name for the View
 
-11. 12. **view\_name**: Name for the View
+table_name: Name of the table
 
-13. **table\_name**: Name of the table
-
-14. **condition**: Condition to select rows
-
+condition: Condition to select rows
+```
 For more details on how to create and use view, please refer
 to [*this*](https://www.geeksforgeeks.org/sql-views/) article.
 
@@ -2707,43 +2710,36 @@ to [*this*](https://www.geeksforgeeks.org/sql-views/) article.
 
 **Orders**
 
-  **<span style="font-variant:small-caps;">O\_ID</span>**   **<span style="font-variant:small-caps;">ORDER\_NO</span>**   **<span style="font-variant:small-caps;">C\_ID</span>**
-  ``````- ``````----- ``````-
-  1                                                         2253                                                          3
-  2                                                         3325                                                          3
-  3                                                         4521                                                          2
-  4                                                         8532                                                          1
+  **<span style="font-variant:small-caps;">O\_ID</span>** | **<span style="font-variant:small-caps;">ORDER\_NO</span>** | **<span style="font-variant:small-caps;">C\_ID</span>**
+  --- | --- | ---
+  1 | 2253 | 3
+  2 | 3325 | 3
+  3 | 4521 | 2
+  4 | 8532 | 1
 
 **Customers**
 
-  **<span style="font-variant:small-caps;">C\_ID</span>**   **<span style="font-variant:small-caps;">NAME</span>**   **<span style="font-variant:small-caps;">ADDRESS</span>**
-  ``````- `````` ``````---
-  1                                                         RAMESH                                                   DELHI
-  2                                                         SURESH                                                   NOIDA
-  3                                                         DHARMESH                                                 GURGAON
+  **<span style="font-variant:small-caps;">C\_ID</span>** | **<span style="font-variant:small-caps;">NAME</span>** | **<span style="font-variant:small-caps;">ADDRESS</span>**
+  --- | --- | ---
+  1 | RAMESH | DELHI
+  2 |  SURESH | NOIDA
+  3 |  DHARMESH | GURGAON
 
 As we can see clearly that the field C\_ID in Orders table is the
 primary key in Customers table, i.e. it uniquely identifies each row
 in the Customers table. Therefore, it is a Foreign Key in Orders
 table.\
 Syntax:
->
+```sql
 CREATE TABLE Orders
->
 (
->
-O\_ID int NOT NULL,
->
-ORDER\_NO int NOT NULL,
->
-C\_ID int,
->
-PRIMARY KEY (O\_ID),
->
-FOREIGN KEY (C\_ID) REFERENCES Customers(C\_ID)
->
-)
-
+O_ID int NOT NULL,
+ORDER_NO int NOT NULL,
+C_ID int,
+PRIMARY KEY (O_ID),
+FOREIGN KEY (C_ID) REFERENCES Customers(C_ID)
+);
+```
 1.  **What is a join in SQL? What are the types of joins?**\
     An SQL Join statement is used to combine data or rows from two or
     more tables based on a common field between them. Different types
@@ -2841,22 +2837,22 @@ There are various types of keys in a relation which are:
 [***Normal
 Forms***](https://www.geeksforgeeks.org/database-normalization-normal-forms/)
 
--   **First Normal Form: **A relation is in first normal form if it does
+-   **First Normal Form:** A relation is in first normal form if it does
     not contain any multi-valued or composite attribute.
 
--   **Second Normal Form: **A relation is in second normal form if it
+-   **Second Normal Form:** A relation is in second normal form if it
     does not contain any partial dependency. A dependency is called
     partial dependency if any proper subset of candidate key
     determines non-prime (which are not part of candidate key)
     attribute.
 
--   **Third Normal Form: **A relation is in third normal form if it does
+-   **Third Normal Form:** A relation is in third normal form if it does
     not contain any transitive dependency. For a relation to be in
     Third Normal Form, either LHS of FD should be super key or RHS
     should be prime attribute.
 
--   **Boyce-Codd Normal Form: **A relation is
-    in** **Boyce-Codd** **Normal Form if LHS of every FD is super key.
+-   **Boyce-Codd Normal Form:** A relation is
+    in **Boyce-Codd** Normal Form if LHS of every FD is super key.
     The relationship between Normal Forms can be represented
     as: **1NF⊃2NF ⊃3NF ⊃BCNF**
 
@@ -2957,19 +2953,19 @@ schedule.
 
  
 
-**Irrecoverable Schedules: **For a transaction pair < Ti, Tj >,
+**Irrecoverable Schedules:** For a transaction pair < Ti, Tj >,
 if Tj is reading the value updated by Ti and Tj is committed before
 commit of Ti, the schedule will be irrecoverable.
 
  
 
-**Recoverable Schedules: **For a transaction pair < Ti, Tj >,
+**Recoverable Schedules:** For a transaction pair < Ti, Tj >,
 ifTj is reading the value updated by Ti and Tj is committed after commit
 of Ti, the schedule will be recoverable.
 
  
 
-**Cascadeless Recoverable Schedules: **For a transaction pair
+**Cascadeless Recoverable Schedules:** For a transaction pair
 < Ti, Tj >, if value updated by Ti is read by Tj only after commit
 of Ti, the schedule will be cascadeless recoverable.
 
@@ -3030,11 +3026,10 @@ is. Order of non-leaf will be higher as compared to leaf nodes.
 Searching time will be less in B+ tress, since it doesn’t have record
 pointers in non-leaf because of which depth will decrease.
 
-CN
-==
+# Computer Networking
 
-Commonly asked Computer Networks Interview Questions | Set 1
-============================================================
+## Commonly asked Computer Networks Interview Questions | Set 1
+
 
 **What are Unicasting, Anycasting, Multicasting and Broadcasting?**\
 If the message is sent from a source to a single destination node, it is
@@ -3181,11 +3176,11 @@ instead of sending a separate frame.
 
 **Differences between Hub, Switch and Router?**
 
-  Hub                                                                                                                                                                         Switch                                                                                                                                        Router
-  ``````````````````--- ```````````````- ```----------------------
-  Physical Layer Device                                                                                                                                                       Data Link Layer Device                                                                                                                        Network Layer Device
-  Simply repeats signal to all ports                                                                                                                                          Doesn’t simply repeat, but filters content by MAC or LAN address                                                                              Routes data based on IP address
-  Connects devices within a single LAN                                                                                                                                        Can connect multiple sub-LANs within a single LAN                                                                                             Connect multiple  LANSand WANS together.
+  Hub | Switch | Router
+  --- | --- | ---
+  Physical Layer Device | Data Link Layer Device | Network Layer Device
+  Simply repeats signal to all ports | Doesn’t simply repeat, but filters content by MAC or LAN address | Routes data based on IP address
+  Connects devices within a single LAN | Can connect multiple sub-LANs within a single LAN | Connect multiple LANS and WANS together.
   [*Collision domain*](https://en.wikipedia.org/wiki/Collision_domain) of all hosts connected through Hub remains one. i.e., if signal sent by any two devices can collide.   Switch divides collision domain, but [*broadcast domain*](https://en.wikipedia.org/wiki/Broadcast_domain)of connected devices remains same.   It divides both collision and broadcast domains,
                                                                                                                                                                                                                                                                                                                             
 
@@ -3284,8 +3279,7 @@ domain server will return the associative ip address.
 
 **Domain Name Server**
 
-![DNS\_3](images//media/image16.png){width="6.270833333333333in"
-height="4.013888888888889in"}
+![DNS_3](images//media/image16.png)
 
 The client machine sends a request to the local name server, which , if
 root does not find the address in its database, sends a request to the
@@ -3296,8 +3290,8 @@ knows who the authoritative name server is. So finally the IP address is
 returned to the local name server which in turn returns the IP address
 to the host.
 
-**Recursive Resolution –\
-**Here, client requires the Local Server to give either the requested
+**Recursive Resolution** –\
+Here, client requires the Local Server to give either the requested
 mapping or an error message. A DNS Query is generated by the application
 program to the resolver to fetch the destination IP Address. The Query
 is then forward to the local DNS Server. If it knows the IP Address, it
@@ -3312,26 +3306,24 @@ Server. The local DNS server knows the destination host’s IP Address.
 The information is then sent back to the top-level domain server, then
 to the root server and then to the host’s Local DNS Server and finally
 to the host.\
-![](images//media/image10.jpg){width="6.270833333333333in"
-height="4.152777777777778in"}
+![](images//media/image10.jpg)
 
 **NOTES**
 
 **OSI Layers, Data units and Functions:**
 
-  **LAYERS**           **DATA UNITS**      **FUNCTIONS**
-  -------------------- ------------------- ``````--------
-  Application Layer    Data                Mail Services, Directory Services, FTAM
-  Presentation Layer   Data                Translation, Compression, Encryption/Decryption
-  Session Layer        Data                Session Establishment, Synchronization,Dialog Controller
-  Transport Layer      Segments,Datagram   Segmentation, Flow Control, Error Control, TCP/UDP
-  Network Layer        Packets             Logical Addressing, Routing, Traffic control, Fragmentation
-  Data Link Layer      Frames              Physical Addressing, Flow control,Error control,Access control
-  Physical Layer       Bits                Bit Synchronization,Bit rate control,Physical Topologies
+  **LAYERS**    |      **DATA UNITS**  |   **FUNCTIONS**
+  --- | --- | ---
+  Application Layer |  Data            |   Mail Services, Directory Services, FTAM
+  Presentation Layer | Data |              Translation, Compression, Encryption/Decryption
+  Session Layer |      Data |              Session Establishment, Synchronization,Dialog Controller
+  Transport Layer |    Segments,Datagram | Segmentation, Flow Control, Error Control, TCP/UDP
+  Network Layer |      Packets |           Logical Addressing, Routing, Traffic control, Fragmentation
+  Data Link Layer |    Frames |            Physical Addressing, Flow control,Error control,Access control
+  Physical Layer |     Bits |              Bit Synchronization,Bit rate control,Physical Topologies
 
 **Layers and their uses –**\
-![https://media.geeksforgeeks.org/wp-content/uploads/3-30.jpg](images//media/image15.jpg){width="6.263888888888889in"
-height="1.78125in"}
+![https://media.geeksforgeeks.org/wp-content/uploads/3-30.jpg](images//media/image15.jpg)
 
 **Physical Layer**
 
@@ -3393,8 +3385,7 @@ lack of transmissions.
     are same)\
     a = T~p~ /T~t~
 
-![https://media.geeksforgeeks.org/wp-content/uploads/2-40.jpg](images//media/image5.jpg){width="6.263888888888889in"
-height="1.9895833333333333in"}
+![https://media.geeksforgeeks.org/wp-content/uploads/2-40.jpg](images//media/image5.jpg)
 
 1.  Sequence No. >= (Sender’s Window Size) + (Reciever’s Window Size
     )
@@ -3411,7 +3402,7 @@ height="1.9895833333333333in"}
     Waiting time = back–off time\
     Let n = collision number or re-transmission serial number.\
     Then, Waiting time = K * T~slot~\
-    where K = \[0, 2^n^ – 1 \]
+    where K = \[0, 2<sup>n</sup> – 1 \]
 
 6.  N = No. of stations\
     Early Token Reinsertion : Efficiency = 1/(1 + a/N)\
@@ -3433,7 +3424,7 @@ height="1.9895833333333333in"}
 
  
 
-1.  **Error Control**
+9.  **Error Control**
 
     -   [***Hamming
         Code***](https://www.geeksforgeeks.org/computer-network-hamming-code/):
@@ -3458,18 +3449,15 @@ height="1.9895833333333333in"}
 
 [***Class Full Addressing
 Table***](https://www.geeksforgeeks.org/ip-addressing-introduction-and-classful-addressing/):\
-![https://media.geeksforgeeks.org/wp-content/uploads/1-45.jpg](images//media/image13.jpg){width="6.263888888888889in"
-height="1.5847222222222221in"}
+![https://media.geeksforgeeks.org/wp-content/uploads/1-45.jpg](images//media/image13.jpg)
 
 [***IPv4 header
 datagram***](https://www.geeksforgeeks.org/network-layer-introduction-ipv4/):\
-![https://media.geeksforgeeks.org/wp-content/uploads/contentArticle-1.png](images//media/image21.png){width="6.263888888888889in"
-height="5.478472222222222in"}
+![https://media.geeksforgeeks.org/wp-content/uploads/contentArticle-1.png](images//media/image21.png)
 
 [***IP version 6 Header
 Format***](https://www.geeksforgeeks.org/computer-network-internet-protocol-version-6-ipv6-header/)\
-![https://media.geeksforgeeks.org/wp-content/uploads/ipv6-header.png](images//media/image4.png){width="6.263888888888889in"
-height="5.868055555555555in"}
+![https://media.geeksforgeeks.org/wp-content/uploads/ipv6-header.png](images//media/image4.png)
 
 [***Internet Control Message
 Protocol***](https://www.geeksforgeeks.org/internet-control-message-protocol-icmp/):
@@ -3488,8 +3476,7 @@ provide an error control.
  \
 [***Difference between DVR and
 LSR***](https://www.geeksforgeeks.org/computer-network-distance-vector-routing-vs-link-state-routing/)\
-![https://media.geeksforgeeks.org/wp-content/uploads/4-18.jpg](images//media/image8.jpg){width="6.263888888888889in"
-height="1.6909722222222223in"}
+![https://media.geeksforgeeks.org/wp-content/uploads/4-18.jpg](images//media/image8.jpg)
 
 [***Open shortest path first
 (OSPF)***](https://www.geeksforgeeks.org/open-shortest-path-first-ospf-router-roles-configuration/):
@@ -3514,7 +3501,7 @@ to find the best path between the source and the destination network. It
 is a distance vector routing protocol which has AD value 120 and works
 on the application layer of OSI model. RIP uses port number 520.
 
-**Hop Count **:
+**Hop Count**:
 
 1.  Hop count is the number of routers occurring in between the source
     and destination network. The path with the lowest hop count is
@@ -3528,8 +3515,7 @@ on the application layer of OSI model. RIP uses port number 520.
 
 [***TCP
 header***](https://www.geeksforgeeks.org/tcp-services-and-segment-structure/)\
-![https://media.geeksforgeeks.org/wp-content/uploads/TCPSegmentHeader-1.png](images//media/image12.png){width="6.263888888888889in"
-height="5.427777777777778in"}
+![https://media.geeksforgeeks.org/wp-content/uploads/TCPSegmentHeader-1.png](images//media/image12.png)
 
 [***In TCP congestion control
 Algorithm***](https://www.geeksforgeeks.org/computer-network-tcp-congestion-control/)\
@@ -3552,8 +3538,7 @@ will start eh actual data transfer.\
  
 
 [***UDP header***](https://www.geeksforgeeks.org/gate-cs-notes-gq/)\
-![https://media.geeksforgeeks.org/wp-content/uploads/UDP-header.png](images//media/image7.png){width="4.170138888888889in"
-height="2.0854166666666667in"}
+![https://media.geeksforgeeks.org/wp-content/uploads/UDP-header.png](images//media/image7.png)
 
 Refer the [*Differences between TCP and
 UDP*](https://www.geeksforgeeks.org/differences-between-tcp-and-udp/)
@@ -3577,7 +3562,7 @@ Vendor Class Identifier (Option 43 – e.g., ‘unifi’ = 192.168.1.9
 ##where unifi = controller)
 
 [***Simple Network Management Protocol
-(SNMP) ***](https://www.geeksforgeeks.org/computer-network-simple-network-management-protocol-snmp/):
+(SNMP)***](https://www.geeksforgeeks.org/computer-network-simple-network-management-protocol-snmp/):
 SNMP is an application layer protocol which uses UDP port number
 161/162.SNMP is used to monitor network, detect network faults and
 sometimes even used to configure remote devices.
@@ -3614,18 +3599,17 @@ public key).
 [***RSA Algorithm in
 Cryptography***](https://www.geeksforgeeks.org/rsa-algorithm-using-multiple-precision-arithmetic-library/)\
 \
-![Rsa Example](images//media/image9.png){width="5.553472222222222in"
-height="2.776388888888889in"}
+![Rsa Example](images//media/image9.png)
 
 [***Deffie Hellman Key
 Exchange***](https://www.geeksforgeeks.org/implementation-diffie-hellman-algorithm/)\
-R1 = g^x^ mod p\
-R2 = g^y^ mod q\
-Both will have same key = g^xy^ mod p
+R1 = g<sup>x</sup> mod p\
+R2 = g<sup>y</sup> mod q\
+Both will have same key = g<sup>xy</sup> mod p
 
-**OS**
+# Operating Systems
 
-Commonly Asked Operating Systems Interview Questions | Set 1
+## Commonly Asked Operating Systems Interview Questions | Set 1
 
 **What is a process and process table? What are different states of
 process**\
@@ -3664,7 +3648,7 @@ A thread has its own program counter (PC), a register set, and a stack
 space. Threads are not independent of one other like processes as a
 result threads shares with other threads their code section, data
 section and OS resources like open files and signals.
-See [*http://www.personal.kent.edu/\~rmuhamma/OpSystems/Myos/threads.htm*](http://www.personal.kent.edu/~rmuhamma/OpSystems/Myos/threads.htm) for
+See [*http://www.personal.kent.edu/\~rmuhamma/OpSystems/Myos/threads.html*](http://www.personal.kent.edu/~rmuhamma/OpSystems/Myos/threads.htm) for
 more details.
 
 **Process vs Thread?**
@@ -3716,7 +3700,7 @@ User Level Thread
 
 Kernel Level Thread
 
-**What is deadlock? **\
+**What is deadlock?**\
 Deadlock is a situation when two or more processes wait for each other
 to finish and none of them ever finish.  Consider an example when two
 trains are coming toward each other on same track and there is only one
@@ -3752,15 +3736,15 @@ necessary to in order to appreciate the benefits of virtual memory,
 thrashing has a negative affect on the system. As the page fault rate
 increases, more transactions need processing from the paging device. The
 queue at the paging device increases, resulting in increased service
-time for a page fault (Source:
-h[*ttp://cs.gmu.edu/cne/modules/vm/blue/thrash.html*](http://cs.gmu.edu/cne/modules/vm/blue/thrash.html))
+time for a page fault 
+(Source:[*http://cs.gmu.edu/cne/modules/vm/blue/thrash.html*](http://cs.gmu.edu/cne/modules/vm/blue/thrash.html))
 
 **What is Belady’s Anomaly?**\
 Bélády’s anomaly is an anomaly with some page replacement policies where
 increasing the number of page frames results in an increase in the
 number of page faults. It occurs with First in First Out page
 replacement is used. See [*the wiki
-page *](http://en.wikipedia.org/wiki/B%C3%A9l%C3%A1dy's_anomaly)for an
+page*](http://en.wikipedia.org/wiki/B%C3%A9l%C3%A1dy's_anomaly) for an
 example and more details.
 
 **Differences between mutex and semaphore?**
@@ -3914,7 +3898,7 @@ parent process dies.
 
 **NOTES**
 
-**Operating Systems: **It is the interface between the user and the
+**Operating Systems:** It is the interface between the user and the
 computer hardware.
 
 [**Types of Operating System
@@ -3957,7 +3941,7 @@ by including multiple threads.
 
 A new thread, or a child process of a given process, can be introduced
 by using the fork() system call. A process with n fork() system calls
-generates 2^n^ – 1 child processes.\
+generates 2<sup>n</sup> – 1 child processes.\
 There are two types of threads:
 
 -   User threads
@@ -3968,14 +3952,14 @@ There are two types of threads:
 
  
 
-  **<span style="font-variant:small-caps;">USER LEVEL THREAD</span>**                         **<span style="font-variant:small-caps;">KERNEL LEVEL THREAD</span>**
-  `````````------- `````````----------
-  User threads are implemented by users.                                                      kernel threads are implemented by OS.
-  OS doesn’t recognize user level threads.                                                    Kernel threads are recognized by OS.
-  Implementation of User threads is easy.                                                     Implementation of Kernel thread is complicated.
-  Context switch time is less.                                                                Context switch time is more.
-  Context switch requires no hardware support.                                                Hardware support is needed.
-  If one user level thread performs blocking operation then entire process will be blocked.   If one kernel thread performs blocking operation then another thread can continue execution.
+  **USER LEVEL THREAD** | **KERNEL LEVEL THREAD**
+  --- | ---
+  User threads are implemented by users |                                                      kernel threads are implemented by OS 
+  OS doesn’t recognize user level threads |                                                   Kernel threads are recognized by OS.
+  Implementation of User threads is easy. |                                                     Implementation of Kernel thread is complicated.
+  Context switch time is less. |                                                               Context switch time is more.
+  Context switch requires no hardware support. |                                                Hardware support is needed.
+  If one user level thread performs blocking operation then entire process will be blocked. |  If one kernel thread performs blocking operation then another thread can continue execution.
 
  \
 [**Process:**](https://www.geeksforgeeks.org/gate-notes-operating-system-process-management-introduction/)\
@@ -4029,7 +4013,7 @@ only with process scheduling.
 **Different Scheduling Algorithms:**
 
 1.  [**First Come First Serve
-    (FCFS) **](https://www.geeksforgeeks.org/program-fcfs-scheduling-set-1/):
+    (FCFS)**](https://www.geeksforgeeks.org/program-fcfs-scheduling-set-1/):
     Simplest scheduling algorithm that schedules according to arrival
     times of processes.
 
@@ -4164,7 +4148,7 @@ deadlock
 We can prevent Deadlock by eliminating any of the above four
 conditions.
 >
-**Eliminate Mutual Exclusion **\
+**Eliminate Mutual Exclusion**\
 It is not possible to dis-satisfy the mutual exclusion because some
 resources, such as the tap drive and printer, are inherently
 non-shareable.
@@ -4184,8 +4168,7 @@ non-shareable.
     the current set of resources. This solution may lead to
     starvation.
 
-![holdnwait](images//media/image2.png){width="4.163194444444445in"
-height="2.54375in"}
+![holdnwait](images//media/image2.png)
 >
 **Eliminate No Preemption**\
 Preempt resources from the process when resources required by other
@@ -4278,7 +4261,7 @@ P2 0 2 0 1
 >
 P3 0 1 4 0
 >
-**Note:**Deadlock prevention is more strict that Deadlock Avoidance.
+**Note:** Deadlock prevention is more strict that Deadlock Avoidance.
 
 1.  [***Deadlock detection and
     recovery***](https://www.geeksforgeeks.org/deadlock-detection-recovery/) :
@@ -4290,8 +4273,7 @@ P3 0 1 4 0
     In this case for Deadlock detection we can run an algorithm to
     check for cycle in the Resource Allocation Graph. Presence of
     cycle in the graph is the sufficient condition for deadlock.\
-    ![deadlock](images//media/image17.png){width="4.163194444444445in"
-    height="2.890972222222222in"}
+    ![deadlock](images//media/image17.png)
 
 In the above diagram, resource 1 and resource 2 have single instances.
 There is a cycle R1 → P1 → R2 → P2. So, Deadlock is Confirmed.
@@ -4445,12 +4427,10 @@ so when 7 0 1 2 are allocated to the empty slots —> 4 Page faults.
 0 is already their so —> 0 Page fault. When 3 came it will take the
 place of 7 because it is least recently used —> 1 Page fault. 0 is
 already in memory so —> 0 Page fault. 4 will takes place of 1 —>
-1 Page Fault. Now for the further page reference string —>** 0 Page
-fault** because they are already available in the memory.
->
- \
- 
->
+1 Page Fault. Now for the further page reference string —>**0 Page
+fault** because they are already available in the memory. 
+
+
 [**File
 System**](https://www.geeksforgeeks.org/file-system-operating-systems/):
 A file is a collection of related information that is recorded on
@@ -4470,7 +4450,7 @@ storage, is managed by the operating system.
 2.  **TWO-LEVEL DIRECTORY**: Due to two levels there is a path name for
     every file to locate that file.
 
-3.  **TREE-STRUCTURED DIRECTORY **: Directory is maintained in the form
+3.  **TREE-STRUCTURED DIRECTORY**: Directory is maintained in the form
     of a tree. Searching is efficient and also there is grouping
     capability.
 
@@ -4486,7 +4466,7 @@ Methods**](https://www.geeksforgeeks.org/file-system-operating-systems/):
     an individual block basis. Each block contains a pointer to the
     next block in the chain.
 
-3.  **Indexed Allocation **: It addresses many of the problems of
+3.  **Indexed Allocation**: It addresses many of the problems of
     contiguous and chained allocation. In this case, the file
     allocation table contains a separate one-level index for each file
 
@@ -4500,7 +4480,7 @@ arriving for disk. Disk scheduling is also known as I/O scheduling.
 1.  **Seek Time:** Seek time is the time taken to locate the disk arm to
     a specified track where the data is to be read or write.
 
-2.  **Rotational Latency: **Rotational Latency is the time taken by the
+2.  **Rotational Latency:** Rotational Latency is the time taken by the
     desired sector of disk to rotate into a position so that it can
     access the read/write heads.
 
@@ -4510,7 +4490,7 @@ arriving for disk. Disk scheduling is also known as I/O scheduling.
 
 4.  **Disk Access Time:** Seek Time + Rotational Latency + Transfer Time
 
-5.  **Disk Response Time: **Response Time is the average of time spent
+5.  **Disk Response Time:** Response Time is the average of time spent
     by a request waiting to perform its I/O operation. Average
     Response time is the response time of the all requests.
 
@@ -4540,14 +4520,14 @@ Algorithms**](https://www.geeksforgeeks.org/disk-scheduling-algorithms/):
     possible that too many requests are waiting at the other end or
     there may be zero or few requests pending at the scanned area.
 
-5.  **LOOK: **It is similar to the SCAN disk scheduling algorithm except
+5.  **LOOK:** It is similar to the SCAN disk scheduling algorithm except
     for the difference that the disk arm in spite of going to the end
     of the disk goes only to the last request to be serviced in front
     of the head and then reverses its direction from there only. Thus
     it prevents the extra delay which occurred due to unnecessary
     traversal to the end of the disk.
 
-6.  **CLOOK: **As LOOK is similar to SCAN algorithm, in a similar way,
+6.  **CLOOK:** As LOOK is similar to SCAN algorithm, in a similar way,
     CLOOK is similar to CSCAN disk scheduling algorithm. In CLOOK, the
     disk arm in spite of going to the end goes only to the last
     request to be serviced in front of the head and then from there
@@ -4555,12 +4535,11 @@ Algorithms**](https://www.geeksforgeeks.org/disk-scheduling-algorithms/):
     extra delay which occurred due to unnecessary traversal to the end
     of the disk.
 
-**COMPILER DESIGN**
+# COMPILER DESIGN
 
 [**Phases of
 Compiler**](https://www.geeksforgeeks.org/compiler-design-phases-compiler/):\
-![compilerphases](images//media/image6.jpg){width="6.263888888888889in"
-height="5.584027777777778in"}
+![compilerphases](images//media/image6.jpg)
 
 [**Symbol
 Table**](https://www.geeksforgeeks.org/symbol-table-compiler/) : It is a
@@ -4635,8 +4614,7 @@ the set of terminals which occur immediately after the nonterminal A in
 the strings derived from the starting symbol.
 
 ![Screenshot from 2017-02-09
-11-17-55](images//media/image19.jpg){width="6.263888888888889in"
-height="2.1104166666666666in"}
+11-17-55](images//media/image19.jpg)
 
 **LL(1) Parser** : LL(1) grammar is unambiguous, left factored and non
 left recursive.\
@@ -4644,8 +4622,7 @@ To check whether a grammar is LL(1) or not :\
 1. If A -> B1 | C2 ⇒ { FIRST(B1) ∩ FIRST(C2 ) = φ }\
 2. If A -> B | ∈ ⇒ { FIRST(B) ∩ FOLLOW(A) = φ }
 
-![bottomupparser](images//media/image18.jpg){width="6.263888888888889in"
-height="1.9680555555555554in"}
+![bottomupparser](images//media/image18.jpg)
 
 **LR(0) Parser** : Closure() and goto() functions are used to create
 canonical collection of LR items.\
@@ -4681,8 +4658,7 @@ LL(1) ⊂ LALR ⊂ CLR\
 If number of states LR(0) = n1, number of states SLR = n2, number of
 states LALR = n3, number of states CLR = n4 then, n1 = n2 = n3 <= n4
 
-![https://media.geeksforgeeks.org/wp-content/uploads/compiler-design4.jpg](images//media/image20.jpg){width="6.263888888888889in"
-height="4.073611111111111in"}
+![https://media.geeksforgeeks.org/wp-content/uploads/compiler-design4.jpg](images//media/image20.jpg)
 
 [**Syntax Directed
 Translation**](https://www.geeksforgeeks.org/compiler-design-syntax-directed-translation/):
@@ -4692,7 +4668,7 @@ Eg – S -> AB {print (*)}\
 A -> a {print (1)}\
 B -> b {print (2)}
 
-**Synthesized Attribute **: attribute whose value is evaluated in terms
+**Synthesized Attribute**: attribute whose value is evaluated in terms
 of attribute values of its children.
 
 **Inherited Attribute** : attribute whose value is evaluated in terms of
@@ -4705,7 +4681,7 @@ SDT. S-attributed SDTs are evaluated in bottom-up parsing, as the values
 of the parent nodes depend upon the values of the child nodes.
 
 [**L-attributed
-SDT **](https://www.geeksforgeeks.org/s-attributed-and-l-attributed-sdts-in-syntax-directed-translation/):
+SDT**](https://www.geeksforgeeks.org/s-attributed-and-l-attributed-sdts-in-syntax-directed-translation/):
 If an SDT uses either synthesized attributes or inherited attributes
 with a restriction that it can inherit values from left siblings only,
 it is called as L-attributed SDT. Attributes in L-attributed SDTs are
@@ -4717,18 +4693,18 @@ activation record. An activation record is allocated when a procedure is
 entered and it is deallocated when that procedure is exited.
 
 [**Intermediate
-Code **](https://www.geeksforgeeks.org/intermediate-code-generation-in-compiler-design/):
+Code**](https://www.geeksforgeeks.org/intermediate-code-generation-in-compiler-design/):
 They are machine independent codes. Syntax trees, postfix notation,
 3-address codes can be used to represent intermediate code.
 
 [**Three address
-code**](https://www.geeksforgeeks.org/three-address-code-compiler/):\
+code**](https://www.geeksforgeeks.org/three-address-code-compiler/):
 1. Quadruples (4 fields : operator, operand1, operand2, result)\
 2. Triplets (3 fields : operator, operand1, operand2)\
 3. Indirect triples
 
 [**Code
-Optimization **](https://www.geeksforgeeks.org/compiler-design-code-optimization/):
+Optimization**](https://www.geeksforgeeks.org/compiler-design-code-optimization/):
 
 Types of machine independent optimizations –\
 1. **Loop optimizations** :
@@ -4774,7 +4750,7 @@ As you know, if you need to design your design carefully, you should
 focus three requirement topics which are functional, nonfunctional,
 extended requirements.
 
-**  a-) Functional Requirements**
+**a-) Functional Requirements**
 
    – Users can register the system.\
    – Users can log in and log out the system.\
@@ -4788,7 +4764,7 @@ their pictures can be viewed publicly.\
    – Users can view hottest pictures in their timeline.\
    – Users can search pictures based on titles.
 
-**  b-) Nonfunctional Requirements**
+**b-) Nonfunctional Requirements**
 
    – The system should be highly available.\
    – The system should be highly reliable. As we said, users can upload
@@ -4804,7 +4780,7 @@ see photo for a while, this is fine.
 important points of the Instagram design. This is good if the optimum
 time for creation timeline is 250 ms.
 
-**  c-) Extended Requirements**
+**c-) Extended Requirements**
 
    – The system should monitor.\
    – The creation of timeline needs to effective algorithms for
