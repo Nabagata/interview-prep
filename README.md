@@ -725,16 +725,16 @@ Access specifiers are used to define how the members (functions and
 variables) can be accessed outside the class.
 
 -   **Private:** Members declared as private are accessible only within
-    > the same class and they cannot be accessed outside the class they
-    > are declared. Child classes are also not allowed to access private
-    > members of parent.
+      the same class and they cannot be accessed outside the class they
+      are declared. Child classes are also not allowed to access private
+      members of parent.
 
 -   **Public:** Members declared as public are accessible from anywhere.
 
 -   **Protected:** Only the class and its child classes can access
-    > protected
-    > members.![table5.6](images//media/image14.png){width="5.75in"
-    > height="1.625in"}
+      protected
+      members.![table5.6](images//media/image14.png){width="5.75in"
+      height="1.625in"}
 
 Do you know [*What happens when more restrictive access is given to a
 derived class method in
@@ -748,48 +748,48 @@ C++?*](https://www.geeksforgeeks.org/what-happens-when-more-restrictive-access-i
 does not take any space.
 
 -   **Object:** Objects are basic run-time entities in an object
-    > oriented system, objects are instances of a class these are
-    > defined user defined data types.
+      oriented system, objects are instances of a class these are
+      defined user defined data types.
 
 -   **Encapsulation and Data abstraction:** Wrapping up(combining) of
-    > data and functions into a single unit is known as encapsulation.
-    > The data is not accessible to the outside world and only those
-    > functions which are wrapping in the class can access it. This
-    > insulation of the data from direct access by the program is called
-    > data hiding or information hiding.
+      data and functions into a single unit is known as encapsulation.
+      The data is not accessible to the outside world and only those
+      functions which are wrapping in the class can access it. This
+      insulation of the data from direct access by the program is called
+      data hiding or information hiding.
 
 -   **Data abstraction** – providing only needed information to the
-    > outside world and hiding implementation details. For example,
-    > consider a class Complex with public functions as getReal() and
-    > getImag(). We may implement the class as an array of size 2 or as
-    > two variables. The advantage of abstractions is, we can change
-    > implementation at any point, users of Complex class wont’t be
-    > affected as our method interface remains same. Had our
-    > implementation be public, we would not have been able to change
-    > it.
+      outside world and hiding implementation details. For example,
+      consider a class Complex with public functions as getReal() and
+      getImag(). We may implement the class as an array of size 2 or as
+      two variables. The advantage of abstractions is, we can change
+      implementation at any point, users of Complex class wont’t be
+      affected as our method interface remains same. Had our
+      implementation be public, we would not have been able to change
+      it.
 
 -   **Inheritance:** Inheritance is the process by which objects of one
-    > class acquire the properties of objects of another class. It
-    > supports the concept of hierarchical classification. Inheritance
-    > provides reusability. This means that we can add additional
-    > features to an existing class without modifying it.
+      class acquire the properties of objects of another class. It
+      supports the concept of hierarchical classification. Inheritance
+      provides reusability. This means that we can add additional
+      features to an existing class without modifying it.
 
 -   **Polymorphism:** Polymorphism means ability to take more than one
-    > form. An operation may exhibit different behaviors in different
-    > instances. The behavior depends upon the types of data used in the
-    > operation.
+      form. An operation may exhibit different behaviors in different
+      instances. The behavior depends upon the types of data used in the
+      operation.
 
 -   **Dynamic Binding:** In dynamic binding, the code to be executed in
-    > response to function call is decided at runtime. C++ has virtual
-    > functions to support this.
+      response to function call is decided at runtime. C++ has virtual
+      functions to support this.
 
 -   **Message Passing:** Objects communicate with one another by sending
-    > and receiving information to each other. A message for an object
-    > is a request for execution of a procedure and therefore will
-    > invoke a function in the receiving object that generates the
-    > desired results. Message passing involves specifying the name of
-    > the object, the name of the function and the information to be
-    > sent.
+      and receiving information to each other. A message for an object
+      is a request for execution of a procedure and therefore will
+      invoke a function in the receiving object that generates the
+      desired results. Message passing involves specifying the name of
+      the object, the name of the function and the information to be
+      sent.
 
 ### 
 
@@ -1208,15 +1208,15 @@ Handling?**\
 Following are the differences between two:
 
 -   throw keyword is used to throw Exception from any method or static
-    > block whereas throws is used to indicate that which Exception can
-    > possibly be thrown by this method
+      block whereas throws is used to indicate that which Exception can
+      possibly be thrown by this method
 
 -   If any method throws checked Exception, then caller can either
-    > handle this exception(using try catch block )or can re throw it by
-    > declaring another ‘throws’ clause in method declaration.
+      handle this exception(using try catch block )or can re throw it by
+      declaring another ‘throws’ clause in method declaration.
 
 -   throw clause can be used in any part of code where you feel a
-    > specific exception needs to be thrown to the calling method
+      specific exception needs to be thrown to the calling method
 
 E.g.\
 **throw**\
@@ -1253,7 +1253,7 @@ following two main differences between them
 -   List can hold duplicate values but Set doesn’t allow this.
 
 -   In List interface data is present in the order you inserted but in
-    > the case of Set insertion order is not preserved.
+      the case of Set insertion order is not preserved.
 
  \
 **What will happen if you put System.exit(0) on try or catch block? Will
@@ -1269,25 +1269,25 @@ security exception then finally block will be executed.
 java](https://www.geeksforgeeks.org/can-we-overload-or-override-static-methods-in-java/) ?**
 
 -   **Overriding :** Overriding is related to run-time polymorphism. A
-    > subclass (or derived class) provides a specific implementation of
-    > a method in superclass (or base class) at runtime.
+      subclass (or derived class) provides a specific implementation of
+      a method in superclass (or base class) at runtime.
 
 -   **Overloading:** Overloading is related to compile time (or static)
-    > polymorphism. This feature allows different methods to have same
-    > name, but different signatures, especially number of input
-    > parameters and type of input paramaters.
+      polymorphism. This feature allows different methods to have same
+      name, but different signatures, especially number of input
+      parameters and type of input paramaters.
 
 -   **Can we overload static methods?   **The answer is **‘Yes’**. We
-    > can have two ore more static methods with same name, but
-    > differences in input parameters
+      can have two ore more static methods with same name, but
+      differences in input parameters
 
 -   **Can we Override static methods in java?  **We can declare static
-    > methods with same signature in subclass, but it is not considered
-    > overriding as there won’t be any run-time polymorphism. Hence the
-    > answer is **‘No’**. Static methods cannot be overridden because
-    > method overriding only occurs in the context of dynamic (i.e.
-    > runtime) lookup of methods. Static methods (by their name) are
-    > looked up statically (i.e. at compile-time).
+      methods with same signature in subclass, but it is not considered
+      overriding as there won’t be any run-time polymorphism. Hence the
+      answer is **‘No’**. Static methods cannot be overridden because
+      method overriding only occurs in the context of dynamic (i.e.
+      runtime) lookup of methods. Static methods (by their name) are
+      looked up statically (i.e. at compile-time).
 
 Read [more](https://www.geeksforgeeks.org/can-we-overload-or-override-static-methods-in-java/)
 
@@ -1335,16 +1335,16 @@ variables](https://www.geeksforgeeks.org/variable-scope-in-java/) in
 Java in following cases? **
 
 -   **Member Variables** (Class Level Scope) : The member variables must
-    > be declared inside class (outside any function). They can be
-    > directly accessed anywhere in class
+      be declared inside class (outside any function). They can be
+      directly accessed anywhere in class
 
 -   **Local Variables **(Method Level Scope) : Variables declared inside
-    > a method have method level scope and can’t be accessed outside the
-    > method.
+      a method have method level scope and can’t be accessed outside the
+      method.
 
 -   **Loop Variables **(Block Scope) : A variable declared inside pair
-    > of brackets “{” and “}” in a method has scope withing the brackets
-    > only.
+      of brackets “{” and “}” in a method has scope withing the brackets
+      only.
 
 Read [more](https://www.geeksforgeeks.org/variable-scope-in-java/)
 
@@ -1381,19 +1381,19 @@ implementation. Abstract classes may not be instantiated, and require
 subclasses to provide implementations for the abstract methods.
 
 -   Like C++, in Java, an instance of an abstract class cannot be
-    > created, we can have references of abstract class type though.
+      created, we can have references of abstract class type though.
 
 -   Like C++, an abstract class can contain constructors in Java. And a
-    > constructor of abstract class is called when an instance of a
-    > inherited class is created
+      constructor of abstract class is called when an instance of a
+      inherited class is created
 
 -   In Java, we can have an abstract class without any abstract method.
-    > This allows us to create classes that cannot be instantiated, but
-    > can only be inherited.
+      This allows us to create classes that cannot be instantiated, but
+      can only be inherited.
 
 -   Abstract classes can also have final methods (methods that cannot be
-    > overridden). For example, the following program compiles and runs
-    > fine.
+      overridden). For example, the following program compiles and runs
+      fine.
 
 Read [more](https://www.geeksforgeeks.org/abstract-classes-in-java/)
 
@@ -1402,31 +1402,31 @@ Read [more](https://www.geeksforgeeks.org/abstract-classes-in-java/)
 **Abstract class vs Interface**
 
 -   **Type of methods:** Interface can have only abstract methods.
-    > Abstract class can have abstract and non-abstract methods. From
-    > Java 8, it can have default and static methods also.
+     Abstract class can have abstract and non-abstract methods. From
+     Java 8, it can have default and static methods also.
 
 -   **Final Variables:** Variables declared in a Java interface are by
-    > default final. An abstract class may contain non-final variables.
+    default final. An abstract class may contain non-final variables.
 
 -   **Type of variables:** Abstract class can have final, non-final,
-    > static and non-static variables. Interface has only static and
-    > final variables.
+    static and non-static variables. Interface has only static and
+    final variables.
 
 -   **Implementation:** Abstract class can provide the implementation of
-    > interface. Interface can’t provide the implementation of abstract
-    > class.
+    interface. Interface can’t provide the implementation of abstract
+    class.
 
 -   **Inheritance vs Abstraction:** A Java interface can be implemented
-    > using keyword “implements” and abstract class can be extended
-    > using keyword “extends”.
+    using keyword “implements” and abstract class can be extended
+    using keyword “extends”.
 
 -   **Multiple implementation:** An interface can extend another Java
-    > interface only, an abstract class can extend another Java class
-    > and implement multiple Java interfaces.
+    interface only, an abstract class can extend another Java class
+    and implement multiple Java interfaces.
 
 -   **Accessibility of Data Members:** Members of a Java interface are
-    > public by default. A Java abstract class can have class members
-    > like private, protected, etc.
+    public by default. A Java abstract class can have class members
+    like private, protected, etc.
 
 ![Abstract Class vs
 Interface](images//media/image1.png){width="6.270833333333333in"
@@ -1445,12 +1445,12 @@ similar manner, JVM always looks for the method signature to launch the
 program.
 
 -   The normal main method acts as an entry point for the JVM to start
-    > the execution of program.
+    the execution of program.
 
 -   We can overload the main method in Java. But the program doesn’t
-    > execute the overloaded main method when we run your program, we
-    > need to call the overloaded main method from the actual main
-    > method only.
+    execute the overloaded main method when we run your program, we
+    need to call the overloaded main method from the actual main
+    method only.
 
 Read [more](https://www.geeksforgeeks.org/gfact-48-overloading-main-in-java/)
 
@@ -1476,50 +1476,50 @@ Read [more](http://quiz.geeksforgeeks.org/cloning-in-java/)
 from Java?](https://www.geeksforgeeks.org/comparison-of-inheritance-in-c-and-java/)**
 
 1.  In Java, all classes inherit from the Object class directly or
-    > indirectly. Therefore, there is always a single inheritance tree
-    > of classes in Java, and Object class is root of the tree.
+    indirectly. Therefore, there is always a single inheritance tree
+    of classes in Java, and Object class is root of the tree.
 
 2.  In Java, members of the grandparent class are not directly
-    > accessible. See [this
-    > G-Fact](https://www.geeksforgeeks.org/accessing-grandparents-member-in-java-using-super/)
-    > for more details.
+    accessible. See [this
+    G-Fact](https://www.geeksforgeeks.org/accessing-grandparents-member-in-java-using-super/)
+    for more details.
 
 3.  The meaning of protected member access specifier is somewhat
-    > different in Java. In Java, protected members of a class “A” are
-    > accessible in other class “B” of same package, even if B doesn’t
-    > inherit from A (they both have to be in the same package).
+    different in Java. In Java, protected members of a class “A” are
+    accessible in other class “B” of same package, even if B doesn’t
+    inherit from A (they both have to be in the same package).
 
 4.  Java uses *extends *keyword for inheritance. Unlike C++, Java
-    > doesn’t provide an inheritance specifier like public, protected or
-    > private. Therefore, we cannot change the protection level of
-    > members of base class in Java, if some data member is public or
-    > protected in base class then it remains public or protected in
-    > derived class. Like C++, private members of base class are not
-    > accessible in derived class.\
-    > Unlike C++, in Java, we don’t have to remember those rules of
-    > inheritance which are combination of base class access specifier
-    > and inheritance specifier.
+    doesn’t provide an inheritance specifier like public, protected or
+    private. Therefore, we cannot change the protection level of
+    members of base class in Java, if some data member is public or
+    protected in base class then it remains public or protected in
+    derived class. Like C++, private members of base class are not
+    accessible in derived class.\
+    Unlike C++, in Java, we don’t have to remember those rules of
+    inheritance which are combination of base class access specifier
+    and inheritance specifier.
 
 5.  In Java, methods are virtual by default. In C++, we explicitly use
-    > virtual keyword. See [this
-    > G-Fact](https://www.geeksforgeeks.org/g-fact-43/) for more
-    > details.
+    virtual keyword. See [this
+    G-Fact](https://www.geeksforgeeks.org/g-fact-43/) for more
+    details.
 
 6.  Java uses a separate keyword *interface *for interfaces,
-    > and *abstract *keyword for abstract classes and abstract
-    > functions.
+    and *abstract *keyword for abstract classes and abstract
+    functions.
 
 7.  Unlike C++, Java doesn’t support multiple inheritance. A class
-    > cannot inherit from more than one class. A class can implement
-    > multiple interfaces though.
+    cannot inherit from more than one class. A class can implement
+    multiple interfaces though.
 
 8.  In C++, default constructor of parent class is automatically called,
-    > but if we want to call parametrized constructor of a parent class,
-    > we must use [Initializer
-    > list](https://www.geeksforgeeks.org/when-do-we-use-initializer-list-in-c/).
-    > Like C++, default constructor of the parent class is automatically
-    > called in Java, but if we want to call parameterized constructor
-    > then we must use super to call the parent constructor.
+    but if we want to call parametrized constructor of a parent class,
+    we must use [Initializer
+    list](https://www.geeksforgeeks.org/when-do-we-use-initializer-list-in-c/).
+    Like C++, default constructor of the parent class is automatically
+    called in Java, but if we want to call parameterized constructor
+    then we must use super to call the parent constructor.
 
 See
 examples [here](https://www.geeksforgeeks.org/comparison-of-inheritance-in-c-and-java/)
@@ -1915,12 +1915,12 @@ Page*](http://en.wikipedia.org/wiki/Data_structure))
 **What are linear and non linear data Structures?**
 
 -   **Linear:** A data structure is said to be linear if its elements
-    > form a sequence or a linear list. Examples: Array. Linked List,
-    > Stacks and Queues
+    form a sequence or a linear list. Examples: Array. Linked List,
+    Stacks and Queues
 
 -   **Non-Linear: **A data structure is said to be non-linear if
-    > traversal of nodes is nonlinear in nature. Example: Graph and
-    > Trees.
+    traversal of nodes is nonlinear in nature. Example: Graph and
+    Trees.
 
  
 
@@ -1928,20 +1928,20 @@ Page*](http://en.wikipedia.org/wiki/Data_structure))
 Data Structures?**
 
 -   **Insertion** ? Add a new data item in the given collection of data
-    > items.
+    items.
 
 -   **Deletion** ? Delete an existing data item from the given
-    > collection of data items.
+    collection of data items.
 
 -   **Traversal** ? Access each data item exactly once so that it can be
-    > processed.
+    processed.
 
 -   **Searching** ? Find out the location of the data item if it exists
-    > in the given collection of data items.
+    in the given collection of data items.
 
 -   **Sorting** ? Arranging the data items in some order i.e. in
-    > ascending or descending order in case of numerical data and in
-    > dictionary order in case of alphanumeric data.
+    ascending or descending order in case of numerical data and in
+    dictionary order in case of alphanumeric data.
 
  
 
@@ -1951,16 +1951,16 @@ List?**](https://www.geeksforgeeks.org/linked-list-vs-array/)
 -   The size of the arrays is fixed, Linked Lists are Dynamic in size.
 
 -   Inserting and deleting a new element in an array of elements is
-    > expensive, Whereas both insertion and deletion can easily be done
-    > in Linked Lists.
+    expensive, Whereas both insertion and deletion can easily be done
+    in Linked Lists.
 
 -   Random access is not allowed in Linked Listed.
 
 -   Extra memory space for a pointer is required with each element of
-    > the Linked list.
+    the Linked list.
 
 -   Arrays have better cache locality that can make a pretty big
-    > difference in performance.
+    difference in performance.
 
  
 
@@ -1973,19 +1973,19 @@ stack are : **Push, Pop , Peek**
 Applications of Stack:
 
 1.  [*Infix to Postfix Conversion using
-    > Stack*](http://geeksquiz.com/stack-set-2-infix-to-postfix/)
+    Stack*](http://geeksquiz.com/stack-set-2-infix-to-postfix/)
 
 2.  [*Evaluation of Postfix
-    > Expression*](http://geeksquiz.com/stack-set-4-evaluation-postfix-expression/)
+    Expression*](http://geeksquiz.com/stack-set-4-evaluation-postfix-expression/)
 
 3.  [*Reverse a String using
-    > Stack*](http://geeksquiz.com/stack-set-3-reverse-string-using-stack/)
+    Stack*](http://geeksquiz.com/stack-set-3-reverse-string-using-stack/)
 
 4.  [*Implement two stacks in an
-    > array*](https://www.geeksforgeeks.org/implement-two-stacks-in-an-array/)
+    array*](https://www.geeksforgeeks.org/implement-two-stacks-in-an-array/)
 
 5.  [*Check for balanced parentheses in an
-    > expression*](https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/)
+    expression*](https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/)
 
  
 
@@ -2007,22 +2007,22 @@ using Arrays and Linked Lists.
 **What are Infix, prefix, Postfix notations?**
 
 -   **Infix notation: **X **+** Y – Operators are written in-between
-    > their operands. This is the usual way we write expressions. An
-    > expression such as
+    their operands. This is the usual way we write expressions. An
+    expression such as
 
-> A \* ( B + C ) / D
+A \* ( B + C ) / D
 
 -   **Postfix notation (also known as “Reverse Polish notation”): **X
-    > Y **+ **Operators are written after their operands. The infix
-    > expression given above is equivalent to
+    Y **+ **Operators are written after their operands. The infix
+    expression given above is equivalent to
 
-> A B C + \* D/
+A B C + \* D/
 
 -   **Prefix notation (also known as “Polish notation”): **+ X
-    > Y** **Operators are written before their operands. The expressions
-    > given above are equivalent to
+    Y** **Operators are written before their operands. The expressions
+    given above are equivalent to
 
-> / \* A + B C D
+/ \* A + B C D
 
 Converting between these notations: [*Click
 here*](http://quiz.geeksforgeeks.org/stack-set-2-infix-to-postfix/)
@@ -2037,31 +2037,31 @@ comprising of two items – the data and a reference to the next
 node.Types of Linked List :
 
 1.  **Singly Linked List : **In this type of linked list, every node
-    > stores address or reference of next node in list and the last node
-    > has next address or reference as NULL. For example
-    > 1->2->3->4->NULL
+    stores address or reference of next node in list and the last node
+    has next address or reference as NULL. For example
+    1->2->3->4->NULL
 
 2.  **Doubly Linked List : **Here,** **here are two references
-    > associated with each node, One of the reference points to the next
-    > node and one to the previous node. Eg.
-    > NULL<-1<->2<->3->NULL
+    associated with each node, One of the reference points to the next
+    node and one to the previous node. Eg.
+    NULL<-1<->2<->3->NULL
 
 3.  **Circular Linked List : **Circular linked list is a linked list
-    > where all nodes are connected to form a circle. There is no NULL
-    > at the end. A circular linked list can be a singly circular linked
-    > list or doubly circular linked list. Eg. 1->2->3->1 \[The
-    > next pointer of last node is pointing to the first\]
+    where all nodes are connected to form a circle. There is no NULL
+    at the end. A circular linked list can be a singly circular linked
+    list or doubly circular linked list. Eg. 1->2->3->1 \[The
+    next pointer of last node is pointing to the first\]
 
  
 
 **Which data structures are used for BFS and DFS of a graph?**
 
 -   [*Queue is used for
-    > BFS*](https://www.geeksforgeeks.org/breadth-first-traversal-for-a-graph/)
+    BFS*](https://www.geeksforgeeks.org/breadth-first-traversal-for-a-graph/)
 
 -   Stack is used for DFS. [*DFS can also be implemented using
-    > recursion*](https://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) (Note
-    > that recursion also uses function call stack).
+    recursion*](https://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) (Note
+    that recursion also uses function call stack).
 
  
 
@@ -2121,8 +2121,8 @@ implemented in two ways:
 -   Method 1 (By making push operation costly)
 
 -   Method 2 (By making pop operation costly) See [*Implement Stack
-    > using
-    > Queues*](https://www.geeksforgeeks.org/implement-stack-using-queue/)
+    using
+    Queues*](https://www.geeksforgeeks.org/implement-stack-using-queue/)
 
  
 
@@ -2135,7 +2135,7 @@ implemented in two ways:
 -   Method 1 (By making enQueue operation costly)
 
 -   Method 2 (By making deQueue operation costly) See [*Implement Queue
-    > using Stacks*](https://www.geeksforgeeks.org/queue-using-stacks/)
+    using Stacks*](https://www.geeksforgeeks.org/queue-using-stacks/)
 
  
 
@@ -2144,14 +2144,14 @@ implemented in two ways:
 We use two data structures to implement an LRU Cache.
 
 1.  **Queue** which is implemented using a doubly linked list. The
-    > maximum size of the queue will be equal to the total number of
-    > frames available (cache size).The most recently used pages will be
-    > near rear end and least recently pages will be near front end.
+    maximum size of the queue will be equal to the total number of
+    frames available (cache size).The most recently used pages will be
+    near rear end and least recently pages will be near front end.
 
 2.  **A Hash** with page number as key and address of the corresponding
-    > queue node as value. See [*How to implement LRU caching scheme?
-    > What data structures should be
-    > used?*](https://www.geeksforgeeks.org/implement-lru-cache/)
+    queue node as value. See [*How to implement LRU caching scheme?
+    What data structures should be
+    used?*](https://www.geeksforgeeks.org/implement-lru-cache/)
 
  
 
@@ -2169,16 +2169,16 @@ more details.
 **Linked List Questions**
 
 -   [*Linked List
-    > Insertion*](http://quiz.geeksforgeeks.org/linked-list-set-2-inserting-a-node/)
+    Insertion*](http://quiz.geeksforgeeks.org/linked-list-set-2-inserting-a-node/)
 
 -   [*Linked List
-    > Deletion*](http://quiz.geeksforgeeks.org/linked-list-set-3-deleting-node/)
+    Deletion*](http://quiz.geeksforgeeks.org/linked-list-set-3-deleting-node/)
 
 -   [*middle of a given linked
-    > list*](https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/)
+    list*](https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/)
 
 -   [*Nth node from the end of a Linked
-    > List*](https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/)
+    List*](https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/)
 
  
 
@@ -2187,13 +2187,13 @@ more details.
 -   [*Inorder*](https://www.geeksforgeeks.org/618/)
 
 -   [*Preorder and Postoder
-    > Traversals*](https://www.geeksforgeeks.org/618/)
+    Traversals*](https://www.geeksforgeeks.org/618/)
 
 -   [*Level order
-    > traversal*](https://www.geeksforgeeks.org/level-order-tree-traversal/)
+    traversal*](https://www.geeksforgeeks.org/level-order-tree-traversal/)
 
 -   [*Height of Binary
-    > Tree*](https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/)
+    Tree*](https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/)
 
  
 
@@ -2552,34 +2552,34 @@ SQL Interview Questions
 =======================
 
 1.  **What is SQL?**\
-    > SQL stands for Structured Query Language. It is a language used to
-    > interact with the database, i.e to create a database, to create a
-    > table in the database, to retrieve data or update a table in the
-    > database etc. SQL is an ANSI(American National Standards
-    > Institute) standard. Using SQL, we can do many things, for example
-    > – we can execute queries, we can insert records in a table, we can
-    > update records, we can create a database, we can create a table,
-    > we can delete a table etc.
+    SQL stands for Structured Query Language. It is a language used to
+    interact with the database, i.e to create a database, to create a
+    table in the database, to retrieve data or update a table in the
+    database etc. SQL is an ANSI(American National Standards
+    Institute) standard. Using SQL, we can do many things, for example
+    – we can execute queries, we can insert records in a table, we can
+    update records, we can create a database, we can create a table,
+    we can delete a table etc.
 
 2.  **What is a Database?**\
-    > A Database is defined as a structured form of data which is stored
-    > in a computer or data in an organised manner and can be accessed
-    > in various ways. It is also the collection of schemas, tables,
-    > queries, views etc. Database helps us in easily storing, accessing
-    > and manipulation of data held in a computer. The Database
-    > Management System allows a user to interact with the database.
+    A Database is defined as a structured form of data which is stored
+    in a computer or data in an organised manner and can be accessed
+    in various ways. It is also the collection of schemas, tables,
+    queries, views etc. Database helps us in easily storing, accessing
+    and manipulation of data held in a computer. The Database
+    Management System allows a user to interact with the database.
 
 3.  **Does SQL support programming language features ?**\
-    > It is true that SQL is a language but it does not support
-    > programming as it is not a programming language, it is a command
-    >  language. We do not have conditional statements in SQL like for
-    > loops or if..else, we only have commands which we can use to
-    > query, update , delete etc. data in the database. SQL allows us to
-    > manipulate data in a database.
+    It is true that SQL is a language but it does not support
+    programming as it is not a programming language, it is a command
+     language. We do not have conditional statements in SQL like for
+    loops or if..else, we only have commands which we can use to
+    query, update , delete etc. data in the database. SQL allows us to
+    manipulate data in a database.
 
 4.  **What are the differences between SQL and PL/SQL?**\
-    > Ans: Some common differences between SQL and PL/SQL are as shown
-    > below:
+    Ans: Some common differences between SQL and PL/SQL are as shown
+    below:
 
   **<span style="font-variant:small-caps;">SQL</span>**   **<span style="font-variant:small-caps;">PL/SQL</span>**
   ```--------------------------- ``````--
@@ -2592,99 +2592,99 @@ SQL Interview Questions
   We can embed SQL in PL/SQL                              We can not embed PL/SQL in SQL
 
 1.  **What is the difference between BETWEEN and IN operators in SQL?**\
-    > **BETWEEN**\
-    > The **BETWEEN** operator is used to fetch rows based on a range of
-    > values.\
-    > For example,
+    **BETWEEN**\
+    The **BETWEEN** operator is used to fetch rows based on a range of
+    values.\
+    For example,
 
 2.  SELECT \* FROM Students
 
 3.  WHERE ROLL\_NO BETWEEN 20 AND 30;
 
-> This query will select all those rows from the table Students where
-> the value of the field ROLL\_NO lies between 20 and 30.\
-> **IN**\
-> The **IN **operator is used to check for values contained in specific
-> sets.\
-> For example,
+This query will select all those rows from the table Students where
+the value of the field ROLL\_NO lies between 20 and 30.\
+**IN**\
+The **IN **operator is used to check for values contained in specific
+sets.\
+For example,
 >
-> SELECT \* FROM Students
+SELECT \* FROM Students
 >
-> WHERE ROLL\_NO IN (20,21,23);
+WHERE ROLL\_NO IN (20,21,23);
 >
-> This query will select all those rows from the table Students where
-> the value of the field ROLL\_NO is either 20 or 21 or 23.
+This query will select all those rows from the table Students where
+the value of the field ROLL\_NO is either 20 or 21 or 23.
 
 1.  **Write an SQL query to find names of employee start with ‘A’?**\
-    > The LIKE operator of SQL is used for this purpose. It is used to
-    > fetch filtered data by searching for a particular pattern in where
-    > clause.\
-    > The Syntax for using LIKE is,
+    The LIKE operator of SQL is used for this purpose. It is used to
+    fetch filtered data by searching for a particular pattern in where
+    clause.\
+    The Syntax for using LIKE is,
 
 2.  **SELECT column1,column2 FROM table\_name WHERE column\_name LIKE
-    > pattern;**
+    pattern;**
 
 3.  4.  **LIKE**: operator name
 
 5.  **pattern**: exact value extracted from the pattern to get related
-    > data in
+    data in
 
 6.  result set.
 
-> The required query is:
+The required query is:
 >
-> SELECT \* FROM Employees WHERE EmpName like 'A%' ;
+SELECT \* FROM Employees WHERE EmpName like 'A%' ;
 >
-> You may refer to this article on [*WHERE
-> clause*](https://www.geeksforgeeks.org/sql-where-clause/) for more
-> details on LIKE operator.
+You may refer to this article on [*WHERE
+clause*](https://www.geeksforgeeks.org/sql-where-clause/) for more
+details on LIKE operator.
 
 1.  **What is the difference between CHAR and VARCHAR2 datatype in
-    > SQL?**\
-    > Both of these datatypes are used for characters but varchar2 is
-    > used for character strings of variable length whereas char is used
-    > for character strings of fixed length. For example, if we specify
-    > the type as char(5) then we will not be allowed to store string of
-    > any other length in this variable but if we specify the type of
-    > this variable as varchar2(5) then we will be allowed to store
-    > strings of variable length, we can store a string of length 3 or 4
-    > or 2 in this variable.
+    SQL?**\
+    Both of these datatypes are used for characters but varchar2 is
+    used for character strings of variable length whereas char is used
+    for character strings of fixed length. For example, if we specify
+    the type as char(5) then we will not be allowed to store string of
+    any other length in this variable but if we specify the type of
+    this variable as varchar2(5) then we will be allowed to store
+    strings of variable length, we can store a string of length 3 or 4
+    or 2 in this variable.
 
 2.  **Name different types of case manipulation functions available in
-    > SQL.**\
-    > There are three types of case manipulation functions available in
-    > SQL. They are,
+    SQL.**\
+    There are three types of case manipulation functions available in
+    SQL. They are,
 
     -   **LOWER**: The purpose of this function is to return the string
-        > in lowercase. It takes a string as argument and returns the
-        > string by converting it into lower case.\
-        > Syntax:
+        in lowercase. It takes a string as argument and returns the
+        string by converting it into lower case.\
+        Syntax:
 
     -   LOWER('string')
 
     -   **UPPER**:The purpose of this function is to return the string
-        > in uppercase. It takes a string as argument and returns the
-        > string by converting it into uppercase.\
-        > Syntax:
+        in uppercase. It takes a string as argument and returns the
+        string by converting it into uppercase.\
+        Syntax:
 
     -   UPPER('string')
 
     -   **INITCAP**:The purpose of this function is to return the string
-        > with first letter in uppercase and rest of the letters in
-        > lowercase.\
-        > Syntax:
+        with first letter in uppercase and rest of the letters in
+        lowercase.\
+        Syntax:
 
     -   INITCAP('string')
 
 3.  **What do you mean by data definition language?**\
-    > Data definition language or DDL allows to execute queries like
-    > CREATE, DROP and ALTER. That is, those queries which define the
-    > data.
+    Data definition language or DDL allows to execute queries like
+    CREATE, DROP and ALTER. That is, those queries which define the
+    data.
 
 4.  **What do you mean by data manipulation language?**\
-    > Data manipulation Language or DML is used to access or manipulate
-    > data in the database.\
-    > It allows us to perform below listed functions:
+    Data manipulation Language or DML is used to access or manipulate
+    data in the database.\
+    It allows us to perform below listed functions:
 
     -   Insert data or rows in database
 
@@ -2695,20 +2695,20 @@ SQL Interview Questions
     -   Update data in database
 
 5.  **What is the difference between primary key and unique
-    > constraints?**\
-    > Primary key cannot have NULL value, the unique constraints can
-    > have NULL values. There is only one primary key in a table, but
-    > there can be multiple unique constrains. The primary key creates
-    > the cluster index automatically but the Unique key does not.
+    constraints?**\
+    Primary key cannot have NULL value, the unique constraints can
+    have NULL values. There is only one primary key in a table, but
+    there can be multiple unique constrains. The primary key creates
+    the cluster index automatically but the Unique key does not.
 
 6.  **What is a view in SQL?**\
-    > Views in SQL are kind of virtual tables. A view also has rows and
-    > columns as they are in a real table in the database. We can create
-    > a view by selecting fields from one or more tables present in the
-    > database. A View can either have all the rows of a table or
-    > specific rows based on certain condition.\
-    > The CREATE VIEW statement of SQL is used for creating Views.\
-    > Basic Syntax:
+    Views in SQL are kind of virtual tables. A view also has rows and
+    columns as they are in a real table in the database. We can create
+    a view by selecting fields from one or more tables present in the
+    database. A View can either have all the rows of a table or
+    specific rows based on certain condition.\
+    The CREATE VIEW statement of SQL is used for creating Views.\
+    Basic Syntax:
 
 7.  CREATE VIEW view\_name AS
 
@@ -2724,18 +2724,18 @@ SQL Interview Questions
 
 14. **condition**: Condition to select rows
 
-> For more details on how to create and use view, please refer
-> to [*this*](https://www.geeksforgeeks.org/sql-views/) article.
+For more details on how to create and use view, please refer
+to [*this*](https://www.geeksforgeeks.org/sql-views/) article.
 
 1.  **What do you mean by foreign key?**\
-    > A Foreign key is a field which can uniquely identify each row in
-    > another table. And this constraint is used to specify a field as
-    > Foreign key. That is, this field points to primary key of another
-    > table. This usually creates a kind of link between the two
-    > tables.\
-    > Consider the two tables as shown below:
+    A Foreign key is a field which can uniquely identify each row in
+    another table. And this constraint is used to specify a field as
+    Foreign key. That is, this field points to primary key of another
+    table. This usually creates a kind of link between the two
+    tables.\
+    Consider the two tables as shown below:
 
-> **Orders**
+**Orders**
 
   **<span style="font-variant:small-caps;">O\_ID</span>**   **<span style="font-variant:small-caps;">ORDER\_NO</span>**   **<span style="font-variant:small-caps;">C\_ID</span>**
   ``````- ``````----- ``````-
@@ -2744,7 +2744,7 @@ SQL Interview Questions
   3                                                         4521                                                          2
   4                                                         8532                                                          1
 
-> **Customers**
+**Customers**
 
   **<span style="font-variant:small-caps;">C\_ID</span>**   **<span style="font-variant:small-caps;">NAME</span>**   **<span style="font-variant:small-caps;">ADDRESS</span>**
   ``````- `````` ``````---
@@ -2752,70 +2752,70 @@ SQL Interview Questions
   2                                                         SURESH                                                   NOIDA
   3                                                         DHARMESH                                                 GURGAON
 
-> As we can see clearly that the field C\_ID in Orders table is the
-> primary key in Customers table, i.e. it uniquely identifies each row
-> in the Customers table. Therefore, it is a Foreign Key in Orders
-> table.\
-> Syntax:
+As we can see clearly that the field C\_ID in Orders table is the
+primary key in Customers table, i.e. it uniquely identifies each row
+in the Customers table. Therefore, it is a Foreign Key in Orders
+table.\
+Syntax:
 >
-> CREATE TABLE Orders
+CREATE TABLE Orders
 >
-> (
+(
 >
-> O\_ID int NOT NULL,
+O\_ID int NOT NULL,
 >
-> ORDER\_NO int NOT NULL,
+ORDER\_NO int NOT NULL,
 >
-> C\_ID int,
+C\_ID int,
 >
-> PRIMARY KEY (O\_ID),
+PRIMARY KEY (O\_ID),
 >
-> FOREIGN KEY (C\_ID) REFERENCES Customers(C\_ID)
+FOREIGN KEY (C\_ID) REFERENCES Customers(C\_ID)
 >
-> )
+)
 
 1.  **What is a join in SQL? What are the types of joins?**\
-    > An SQL Join statement is used to combine data or rows from two or
-    > more tables based on a common field between them. Different types
-    > of Joins are:
+    An SQL Join statement is used to combine data or rows from two or
+    more tables based on a common field between them. Different types
+    of Joins are:
 
     -   **INNER JOIN**: The INNER JOIN keyword selects all rows from
-        > both the tables as long as the condition satisfies. This
-        > keyword will create the result-set by combining all rows from
-        > both the tables where the condition satisfies i.e value of the
-        > common field will be same.
+        both the tables as long as the condition satisfies. This
+        keyword will create the result-set by combining all rows from
+        both the tables where the condition satisfies i.e value of the
+        common field will be same.
 
     -   **LEFT JOIN**:This join returns all the rows of the table on the
-        > left side of the join and matching rows for the table on the
-        > right side of join. The rows for which there is no matching
-        > row on right side, the result-set will contain null. LEFT JOIN
-        > is also known as LEFT OUTER JOIN
+        left side of the join and matching rows for the table on the
+        right side of join. The rows for which there is no matching
+        row on right side, the result-set will contain null. LEFT JOIN
+        is also known as LEFT OUTER JOIN
 
     -   **RIGHT JOIN**:RIGHT JOIN is similar to LEFT JOIN. This join
-        > returns all the rows of the table on the right side of the
-        > join and matching rows for the table on the left side of join.
-        > The rows for which there is no matching row on left side, the
-        > result-set will contain null. RIGHT JOIN is also known as
-        > RIGHT OUTER JOIN.
+        returns all the rows of the table on the right side of the
+        join and matching rows for the table on the left side of join.
+        The rows for which there is no matching row on left side, the
+        result-set will contain null. RIGHT JOIN is also known as
+        RIGHT OUTER JOIN.
 
     -   **FULL JOIN**: FULL JOIN creates the result-set by combining
-        > result of both LEFT JOIN and RIGHT JOIN. The result-set will
-        > contain all the rows from both the tables. The rows for which
-        > there is no matching, the result-set will contain NULL values.
+        result of both LEFT JOIN and RIGHT JOIN. The result-set will
+        contain all the rows from both the tables. The rows for which
+        there is no matching, the result-set will contain NULL values.
 
-> To know about each of these joins in details,
-> refer [*this*](https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/).
+To know about each of these joins in details,
+refer [*this*](https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/).
 
 1.  **What is an index?**\
-    > A database index is a data structure that improves the speed of
-    > data retrieval operations on a database table at the cost of
-    > additional writes and the use of more storage space to maintain
-    > the extra copy of data. Data can be stored only in one order on
-    > disk. To support faster access according to different values,
-    > faster search like binary search for different values is desired.
-    > For this purpose, indexes are created on tables. These indexes
-    > need extra space on disk, but they allow faster search according
-    > to different frequently searched values.
+    A database index is a data structure that improves the speed of
+    data retrieval operations on a database table at the cost of
+    additional writes and the use of more storage space to maintain
+    the extra copy of data. Data can be stored only in one order on
+    disk. To support faster access according to different values,
+    faster search like binary search for different values is desired.
+    For this purpose, indexes are created on tables. These indexes
+    need extra space on disk, but they allow faster search according
+    to different frequently searched values.
 
 **NOTES**
 
@@ -2851,20 +2851,20 @@ relation***](https://www.geeksforgeeks.org/dbms-keys-candidate-super-primary-alt
 There are various types of keys in a relation which are:
 
 -   **Candidate Key: **The minimal set of attributes which can determine
-    > a tuple uniquely. There can be more than 1 candidate key of a
-    > relation and its proper subset can’t determine tuple uniquely and
-    > it can’t be NULL.
+    a tuple uniquely. There can be more than 1 candidate key of a
+    relation and its proper subset can’t determine tuple uniquely and
+    it can’t be NULL.
 
 -   **Super Key: **The set of attributes which can determine a tuple
-    > uniquely. A candidate key is always a super key but vice versa is
-    > not true.
+    uniquely. A candidate key is always a super key but vice versa is
+    not true.
 
 -   **Primary Key and Alternate Key:** Among various candidate keys, one
-    > key is taken primary key and others are alternate keys.
+    key is taken primary key and others are alternate keys.
 
 -   **Foreign Key:** Foreign Key is a set of attributes in a table which
-    > is used to refer the primary key or alternative key of the same or
-    > other table.
+    is used to refer the primary key or alternative key of the same or
+    other table.
 
  
 
@@ -2872,23 +2872,23 @@ There are various types of keys in a relation which are:
 Forms***](https://www.geeksforgeeks.org/database-normalization-normal-forms/)
 
 -   **First Normal Form: **A relation is in first normal form if it does
-    > not contain any multi-valued or composite attribute.
+    not contain any multi-valued or composite attribute.
 
 -   **Second Normal Form: **A relation is in second normal form if it
-    > does not contain any partial dependency. A dependency is called
-    > partial dependency if any proper subset of candidate key
-    > determines non-prime (which are not part of candidate key)
-    > attribute.
+    does not contain any partial dependency. A dependency is called
+    partial dependency if any proper subset of candidate key
+    determines non-prime (which are not part of candidate key)
+    attribute.
 
 -   **Third Normal Form: **A relation is in third normal form if it does
-    > not contain any transitive dependency. For a relation to be in
-    > Third Normal Form, either LHS of FD should be super key or RHS
-    > should be prime attribute.
+    not contain any transitive dependency. For a relation to be in
+    Third Normal Form, either LHS of FD should be super key or RHS
+    should be prime attribute.
 
 -   **Boyce-Codd Normal Form: **A relation is
-    > in** **Boyce-Codd** **Normal Form if LHS of every FD is super key.
-    > The relationship between Normal Forms can be represented
-    > as: **1NF⊃2NF ⊃3NF ⊃BCNF**
+    in** **Boyce-Codd** **Normal Form if LHS of every FD is super key.
+    The relationship between Normal Forms can be represented
+    as: **1NF⊃2NF ⊃3NF ⊃BCNF**
 
  
 
@@ -2974,14 +2974,14 @@ Two schedules S1 and S2 are said to be view-equivalent if all conditions
 are satisfied for all objects:
 
 -   If the transaction Ti in S1 reads an initial value for object X, in
-    > S2 also, Ti must read the initial value of X.
+    S2 also, Ti must read the initial value of X.
 
 -   If the transaction Ti in S1 reads the value written by
-    > transaction Tj in S1 for object X, same should be done in S2.
+    transaction Tj in S1 for object X, same should be done in S2.
 
 -   If the transaction Ti in S1 is the final transaction to write the
-    > value for an object X, in S2 also, Ti must write the final value
-    > of X.
+    value for an object X, in S2 also, Ti must write the final value
+    of X.
 
 A schedule is view serializable if it is view equivalent to any serial
 schedule.
@@ -3098,7 +3098,7 @@ DHCP and ARP use broadcasting.
 6.  Presentation Layer Transform data into application layer format.
 
 7.  Application Layer An end user will interact with the Application
-    > layer.
+    layer.
 
 The model is a theoretical stack of seven layers that can be used as a
 reference to
@@ -3228,37 +3228,37 @@ more details.
 A URL may contain a request to HTML, image file or any other type.
 
 1.  If the content of the typed URL is in the cache and fresh, then
-    > display the content.
+    display the content.
 
 2.  Else find the IP address for the domain so that a TCP connection can
-    > be set up. Browser does a DNS lookup.
+    be set up. Browser does a DNS lookup.
 
 3.  Browser needs to know the IP address for a URL so that it can set up
-    > a TCP connection.  This is why browser needs DNS service. The
-    > browser first looks for URL-IP mapping browser cache, then in OS
-    > cache. If all caches are empty, then it makes a recursive query to
-    > the local DNS server.   The local DNS server provides the IP
-    > address.
+    a TCP connection.  This is why browser needs DNS service. The
+    browser first looks for URL-IP mapping browser cache, then in OS
+    cache. If all caches are empty, then it makes a recursive query to
+    the local DNS server.   The local DNS server provides the IP
+    address.
 
 4.  Browser sets up a TCP connection using three-way handshake.
 
 5.  Browser sends a HTTP request.
 
 6.  Server has a web server like Apache, IIS running that handles
-    > incoming HTTP request and sends an HTTP response.
+    incoming HTTP request and sends an HTTP response.
 
 7.  Browser receives the HTTP response and renders the content.
 
 **What is DHCP, how does it work?**
 
 1.  The idea of DHCP (Dynamic Host Configuration Protocol) is to enable
-    > devices to get IP address without any manual configuration.
+    devices to get IP address without any manual configuration.
 
 2.  The device sends a broadcast message saying “I am new here”
 
 3.  The DHCP server sees the message and responds back to the device and
-    > typically allocates an IP address. All other devices on network
-    > ignore the message of the new device as they are not DHCP server.
+    typically allocates an IP address. All other devices on network
+    ignore the message of the new device as they are not DHCP server.
 
 In Wi-Fi networks, Access Points generally work as a DHCP server.
 
@@ -3269,7 +3269,7 @@ send a packet, the nodes need link layer address to send a frame over a
 local link. The ARP protocol helps here.
 
 1.  The node sends a broadcast message to all nodes saying what is the
-    > MAC address of this IP address.
+    MAC address of this IP address.
 
 2.  Node with the provided IP address replies with the MAC address.
 
@@ -3283,15 +3283,15 @@ server here.
 There are various kinds of DOMAIN :
 
 1.  Generic domain : .com(commercial) .edu(educational) .mil(military)
-    > .org(non profit organization) .net(similar to commercial) all
-    > these are generic domain.
+    .org(non profit organization) .net(similar to commercial) all
+    these are generic domain.
 
 2.  Country domain .in (india) .us .uk
 
 3.  Inverse domain if we want to know what is the domain name of the
-    > website. Ip to domain name mapping.So DNS can provide both the
-    > mapping for example to find the ip addresses of geeksforgeeks.org
-    > then we have to type nslookup www.geeksforgeeks.org.
+    website. Ip to domain name mapping.So DNS can provide both the
+    mapping for example to find the ip addresses of geeksforgeeks.org
+    then we have to type nslookup www.geeksforgeeks.org.
 
 **Hierarchy of Name Servers**
 
@@ -3370,38 +3370,38 @@ height="1.78125in"}
 Topologies:***](https://www.geeksforgeeks.org/network-topologies-computer-networks/)
 
 -   **Mesh Topology:**\
-    > In mesh topology, every device is connected to another device via
-    > particular channel.If suppose, N number of devices are connected
-    > with each other, then total number of links required to connect
-    > NC~2~.
+    In mesh topology, every device is connected to another device via
+    particular channel.If suppose, N number of devices are connected
+    with each other, then total number of links required to connect
+    NC~2~.
 
 -   **Bus Topology:**\
-    > Bus topology is a network type in which every computer and network
-    > device is connected to single cable. If N devices are connected,
-    > then the number of cables required 1 which is known as backbone
-    > cable and N drop lines are required.
+    Bus topology is a network type in which every computer and network
+    device is connected to single cable. If N devices are connected,
+    then the number of cables required 1 which is known as backbone
+    cable and N drop lines are required.
 
 -   **Star Topology:**\
-    > In star topology, all the devices are connected to a single hub
-    > through a cable. If N devices are connected to each other, then
-    > the no. of cables required N.
+    In star topology, all the devices are connected to a single hub
+    through a cable. If N devices are connected to each other, then
+    the no. of cables required N.
 
 -   **Ring Topology:**\
-    > In this topology, it forms a ring connecting a devices with its
-    > exactly two neighboring devices.
+    In this topology, it forms a ring connecting a devices with its
+    exactly two neighboring devices.
 
 [***Transmission
 Modes:***](https://www.geeksforgeeks.org/transmission-modes-computer-networks/)
 
 -   **Simplex Mode**: the communication is unidirectional, as on a
-    > one-way street.Only one of the two devices on a link can transmit,
-    > the other can only receive.
+    one-way street.Only one of the two devices on a link can transmit,
+    the other can only receive.
 
 -   **Half-duplex Mode**: each station can both transmit and receive,
-    > but not at the same time.
+    but not at the same time.
 
 -   **Full-duplex Mode**: both stations can transmit and receive
-    > simultaneously.
+    simultaneously.
 
 [***Manchester
 Encoding***](https://www.geeksforgeeks.org/computer-network-manchester-encoding/):
@@ -3410,80 +3410,80 @@ receiving end. The problem is that the synchronization is lost due to
 lack of transmissions.
 
 -   **NRZ-level encoding **: The polarity of signals changes when
-    > incoming siganl changes from ‘1’ to ‘0’ or from ‘0’ to ‘1’. It
-    > considers the first bit data as polarity change.
+    incoming siganl changes from ‘1’ to ‘0’ or from ‘0’ to ‘1’. It
+    considers the first bit data as polarity change.
 
 -   **NRZ-Inverted/ Differential encoding**:In this, the transitions at
-    > the beginning of bit interval is equal to 1 and if there is no
-    > transition at the beginning of bit interval is equal to 0.
+    the beginning of bit interval is equal to 1 and if there is no
+    transition at the beginning of bit interval is equal to 0.
 
 **Data Link Layer**
 
 1.  **Flow Control**\
-    > N = Sender’s Window Size. (in SR both sender and receiver window
-    > are same)\
-    > a = T~p~ /T~t~
+    N = Sender’s Window Size. (in SR both sender and receiver window
+    are same)\
+    a = T~p~ /T~t~
 
 ![https://media.geeksforgeeks.org/wp-content/uploads/2-40.jpg](images//media/image5.jpg){width="6.263888888888889in"
 height="1.9895833333333333in"}
 
 1.  Sequence No. >= (Sender’s Window Size) + (Reciever’s Window Size
-    > )
+    )
 
 2.  Efficiency in TDM(polling) = T~t~ / (T~poll~ + T~t~)
 
 3.  In CSMA/CD, T~t~ >= 2\*T~p~\
-    > Hence, min frame length = 2\*T~p~\*B
+    Hence, min frame length = 2\*T~p~\*B
 
 4.  In CSMA/CD, Efficiency = 1/(1 + 6.44a)
 
 5.  [***Back-off Algorithm for
-    > CSMA/CD***](https://www.geeksforgeeks.org/back-off-algorithm-csmacd/)\
-    > Waiting time = back–off time\
-    > Let n = collision number or re-transmission serial number.\
-    > Then, Waiting time = K \* T~slot~\
-    > where K = \[0, 2^n^ – 1 \]
+    CSMA/CD***](https://www.geeksforgeeks.org/back-off-algorithm-csmacd/)\
+    Waiting time = back–off time\
+    Let n = collision number or re-transmission serial number.\
+    Then, Waiting time = K \* T~slot~\
+    where K = \[0, 2^n^ – 1 \]
 
 6.  N = No. of stations\
-    > Early Token Reinsertion : Efficiency = 1/(1 + a/N)\
-    > Delayed Token Reinsertion : Efficiency = 1/(1 + (N+1)a/N)
+    Early Token Reinsertion : Efficiency = 1/(1 + a/N)\
+    Delayed Token Reinsertion : Efficiency = 1/(1 + (N+1)a/N)
 
 7.  Pure Aloha Efficiency = 18.4 %\
-    > Slotted Aloha Efficiency = 36.8%
+    Slotted Aloha Efficiency = 36.8%
 
 8.  [***Maximum data rate (channel capacity) for noiseless and noisy
-    > channels***](https://www.geeksforgeeks.org/computer-network-maximum-data-rate-channel-capacity-noiseless-noisy-channels/)
+    channels***](https://www.geeksforgeeks.org/computer-network-maximum-data-rate-channel-capacity-noiseless-noisy-channels/)
 
     -   **Noiseless Channel : Nyquist Bit Rate**\
-        > BitRate = 2 \* Bandwidth \* log2(L)\
-        > where,L is the number of signal levels used to represent data.
+        BitRate = 2 \* Bandwidth \* log2(L)\
+        where,L is the number of signal levels used to represent data.
 
     -   **Noisy Channel : Shannon Capacity**\
-        > Capacity = bandwidth \* log2(1 + SNR)\
-        > where, SNR is the signal-to-noise ratio
+        Capacity = bandwidth \* log2(1 + SNR)\
+        where, SNR is the signal-to-noise ratio
 
  
 
 1.  **Error Control**
 
     -   [***Hamming
-        > Code***](https://www.geeksforgeeks.org/computer-network-hamming-code/):
-        > is a set of error-correction codes that can be used to detect
-        > and correct the errors that can occur when the data is moved
-        > or stored from the sender to the receiver.\
-        > **Redundant bits:**\
-        > 2^r^ ≥ m + r + 1\
-        > where, r = redundant bit, m = data bit
+        Code***](https://www.geeksforgeeks.org/computer-network-hamming-code/):
+        is a set of error-correction codes that can be used to detect
+        and correct the errors that can occur when the data is moved
+        or stored from the sender to the receiver.\
+        **Redundant bits:**\
+        2^r^ ≥ m + r + 1\
+        where, r = redundant bit, m = data bit
 
     -   [***Framing in
-        > DLL***](https://www.geeksforgeeks.org/computer-network-framing-data-link-layer/):
-        > It provides a way for a sender to transmit a set of bits that
-        > are meaningful to the receiver.\
-        > **Character/Byte Stuffing:** Used when frames consist of
-        > character. If data contains ED then, byte is stuffed into data
-        > to diffentiate it from ED.\
-        > **Bit stuffing**: Sender stuffs a bit to break the pattern
-        > i.e. here appends a 0 in data = 0111**0**1.
+        DLL***](https://www.geeksforgeeks.org/computer-network-framing-data-link-layer/):
+        It provides a way for a sender to transmit a set of bits that
+        are meaningful to the receiver.\
+        **Character/Byte Stuffing:** Used when frames consist of
+        character. If data contains ED then, byte is stuffed into data
+        to diffentiate it from ED.\
+        **Bit stuffing**: Sender stuffs a bit to break the pattern
+        i.e. here appends a 0 in data = 0111**0**1.
 
 **Network Layer**
 
@@ -3534,9 +3534,9 @@ place in broadcast network or multi-access network.\
 1.  Router having the highest router priority will be declared as DR.
 
 2.  If there is a tie in router priority then highest router will be
-    > considered. First, highest loopback address is considered. If no
-    > loopback is configured then the highest active IP address on the
-    > interface of the router is considered.
+    considered. First, highest loopback address is considered. If no
+    loopback is configured then the highest active IP address on the
+    interface of the router is considered.
 
 [***Routing Information
 Protocol(RIP)***](https://www.geeksforgeeks.org/computer-network-routing-information-protocol-rip/):
@@ -3548,12 +3548,12 @@ on the application layer of OSI model. RIP uses port number 520.
 **Hop Count **:
 
 1.  Hop count is the number of routers occurring in between the source
-    > and destination network. The path with the lowest hop count is
-    > considered as the best route to reach a network and therefore
-    > placed in the routing table.
+    and destination network. The path with the lowest hop count is
+    considered as the best route to reach a network and therefore
+    placed in the routing table.
 
 2.  The maximum hop count allowed for RIP is 15 and hop count of 16 is
-    > considered as network unreachable.
+    considered as network unreachable.
 
 **Transport Layer**
 
@@ -3952,29 +3952,29 @@ computer hardware.
 (OS):**](https://www.geeksforgeeks.org/operating-system-types-operating-systems-awaiting-author/)
 
 1.  **Batch OS –** A set of similar jobs are stored in the main memory
-    > for execution. A job gets assigned to the CPU, only when the
-    > execution of the previous job completes.
+    for execution. A job gets assigned to the CPU, only when the
+    execution of the previous job completes.
 
 2.  **Multiprogramming OS –** The main memory consists of jobs waiting
-    > for CPU time. The OS selects one of the processes and assigns it
-    > to the CPU. Whenever the executing process needs to wait for any
-    > other operation (like I/O), the OS selects another process from
-    > the job queue and assigns it to the CPU. This way, the CPU is
-    > never kept idle and the user gets the flavor of getting multiple
-    > tasks done at once.
+    for CPU time. The OS selects one of the processes and assigns it
+    to the CPU. Whenever the executing process needs to wait for any
+    other operation (like I/O), the OS selects another process from
+    the job queue and assigns it to the CPU. This way, the CPU is
+    never kept idle and the user gets the flavor of getting multiple
+    tasks done at once.
 
 3.  **Multitasking OS –** Multitasking OS combines the benefits of
-    > Multiprogramming OS and CPU scheduling to perform quick switches
-    > between jobs. The switch is so quick that the user can interact
-    > with each program as it runs
+    Multiprogramming OS and CPU scheduling to perform quick switches
+    between jobs. The switch is so quick that the user can interact
+    with each program as it runs
 
 4.  **Time Sharing OS –** Time-sharing systems require interaction with
-    > the user to instruct the OS to perform various tasks. The OS
-    > responds with an output. The instructions are usually given
-    > through an input device like the keyboard.
+    the user to instruct the OS to perform various tasks. The OS
+    responds with an output. The instructions are usually given
+    through an input device like the keyboard.
 
 5.  **Real Time OS –** Real-Time OS are usually built for dedicated
-    > systems to accomplish a specific set of tasks within deadlines.
+    systems to accomplish a specific set of tasks within deadlines.
 
 [**Threads:**](https://www.geeksforgeeks.org/operating-system-threads-types/)\
 A thread is a lightweight process and forms the basic unit of CPU
@@ -3984,7 +3984,7 @@ by including multiple threads.
 -   A thread has its own program counter, register set, and stack
 
 -   A thread shares resources with other threads of the same process the
-    > code section, the data section, files and signals.
+    code section, the data section, files and signals.
 
 A new thread, or a child process of a given process, can be introduced
 by using the fork() system call. A process with n fork() system calls
@@ -4019,21 +4019,21 @@ Scheduling:**](https://www.geeksforgeeks.org/gate-notes-operating-system-process
 are different times with respect to a process.
 
 1.  **Arrival Time –** Time at which the process arrives in the ready
-    > queue.
+    queue.
 
 2.  **Completion Time –** Time at which process completes its execution.
 
 3.  **Burst Time –** Time required by a process for CPU execution.
 
 4.  **Turn Around Time –** Time Difference between completion time and
-    > arrival time.
+    arrival time.
 
-> Turn Around Time = Completion Time - Arrival Time
+Turn Around Time = Completion Time - Arrival Time
 
 1.  **Waiting Time (WT) –** Time Difference between turn around time and
-    > burst time.
+    burst time.
 
-> Waiting Time = Turn Around Time - Burst Time
+Waiting Time = Turn Around Time - Burst Time
 
 **Why do we need scheduling?**\
 A typical process involves both I/O time and CPU time. In a
@@ -4049,7 +4049,7 @@ only with process scheduling.
 -   Fair allocation of CPU.
 
 -   Max throughput (Number of processes that complete their execution
-    > per time unit)
+    per time unit)
 
 -   Min turnaround time (Time taken by a process to finish execution)
 
@@ -4060,96 +4060,96 @@ only with process scheduling.
 **Different Scheduling Algorithms:**
 
 1.  [**First Come First Serve
-    > (FCFS) **](https://www.geeksforgeeks.org/program-fcfs-scheduling-set-1/):
-    > Simplest scheduling algorithm that schedules according to arrival
-    > times of processes.
+    (FCFS) **](https://www.geeksforgeeks.org/program-fcfs-scheduling-set-1/):
+    Simplest scheduling algorithm that schedules according to arrival
+    times of processes.
 
 2.  [**Shortest Job First
-    > (SJF)**](https://www.geeksforgeeks.org/program-shortest-job-first-sjf-scheduling-set-1-non-preemptive/):
-    > Process which have the shortest burst time are scheduled first.
+    (SJF)**](https://www.geeksforgeeks.org/program-shortest-job-first-sjf-scheduling-set-1-non-preemptive/):
+    Process which have the shortest burst time are scheduled first.
 
 3.  [**Shortest Remaining Time First
-    > (SRTF)**](https://www.geeksforgeeks.org/program-shortest-job-first-scheduling-set-2srtf-make-changesdoneplease-review/):
-    > It is preemptive mode of SJF algorithm in which jobs are scheduled
-    > according to the shortest remaining time.
+    (SRTF)**](https://www.geeksforgeeks.org/program-shortest-job-first-scheduling-set-2srtf-make-changesdoneplease-review/):
+    It is preemptive mode of SJF algorithm in which jobs are scheduled
+    according to the shortest remaining time.
 
 4.  [**Round Robin (RR)
-    > Scheduling**](https://www.geeksforgeeks.org/program-round-robin-scheduling-set-1/):
-    > Each process is assigned a fixed time, in cyclic way.
+    Scheduling**](https://www.geeksforgeeks.org/program-round-robin-scheduling-set-1/):
+    Each process is assigned a fixed time, in cyclic way.
 
 5.  [**Priority Based scheduling (Non
-    > Preemptive)**](https://www.geeksforgeeks.org/program-priority-scheduling-set-1/):
-    > In this scheduling, processes are scheduled according to their
-    > priorities, i.e., highest priority process is schedule first. If
-    > priorities of two processes match, then scheduling is according to
-    > the arrival time.
+    Preemptive)**](https://www.geeksforgeeks.org/program-priority-scheduling-set-1/):
+    In this scheduling, processes are scheduled according to their
+    priorities, i.e., highest priority process is schedule first. If
+    priorities of two processes match, then scheduling is according to
+    the arrival time.
 
 6.  [**Highest Response Ratio Next
-    > (HRRN)**](https://www.geeksforgeeks.org/operating-system-highest-response-ratio-next-hrrn-scheduling/):
-    > In this scheduling, processes with highest response ratio is
-    > scheduled. This algorithm avoids starvation.
+    (HRRN)**](https://www.geeksforgeeks.org/operating-system-highest-response-ratio-next-hrrn-scheduling/):
+    In this scheduling, processes with highest response ratio is
+    scheduled. This algorithm avoids starvation.
 
-> Response Ratio = (Waiting Time + Burst time) / Burst time
+Response Ratio = (Waiting Time + Burst time) / Burst time
 
 1.  [**Multilevel Queue Scheduling
-    > (MLQ)**](https://www.geeksforgeeks.org/operating-system-multilevel-queue-scheduling/):
-    > According to the priority of process, processes are placed in the
-    > different queues. Generally high priority process are placed in
-    > the top level queue. Only after completion of processes from top
-    > level queue, lower level queued processes are scheduled.
+    (MLQ)**](https://www.geeksforgeeks.org/operating-system-multilevel-queue-scheduling/):
+    According to the priority of process, processes are placed in the
+    different queues. Generally high priority process are placed in
+    the top level queue. Only after completion of processes from top
+    level queue, lower level queued processes are scheduled.
 
 2.  [**Multi level Feedback Queue (MLFQ)
-    > Scheduling**](https://www.geeksforgeeks.org/multilevel-feedback-queue-scheduling/):
-    > It allows the process to move in between queues. The idea is to
-    > separate processes according to the characteristics of their CPU
-    > bursts. If a process uses too much CPU time, it is moved to a
-    > lower-priority queue.
+    Scheduling**](https://www.geeksforgeeks.org/multilevel-feedback-queue-scheduling/):
+    It allows the process to move in between queues. The idea is to
+    separate processes according to the characteristics of their CPU
+    bursts. If a process uses too much CPU time, it is moved to a
+    lower-priority queue.
 
 **Some useful facts about Scheduling Algorithms:**
 
 1.  FCFS can cause long waiting times, especially when the first job
-    > takes too much CPU time.
+    takes too much CPU time.
 
 2.  Both SJF and Shortest Remaining time first algorithms may cause
-    > starvation. Consider a situation when a long process is there in
-    > the ready queue and shorter processes keep coming.
+    starvation. Consider a situation when a long process is there in
+    the ready queue and shorter processes keep coming.
 
 3.  If time quantum for Round Robin scheduling is very large, then it
-    > behaves same as FCFS scheduling.
+    behaves same as FCFS scheduling.
 
 4.  SJF is optimal in terms of average waiting time for a given set of
-    > processes. SJF gives minimum average waiting time, but problems
-    > with SJF is how to know/predict the time of next job.
+    processes. SJF gives minimum average waiting time, but problems
+    with SJF is how to know/predict the time of next job.
 
 **The Critical Section Problem:**
 
 1.  **Critical Section –** The portion of the code in the program where
-    > shared variables are accessed and/or updated.
+    shared variables are accessed and/or updated.
 
 2.  **Remainder Section –** The remaining portion of the program
-    > excluding the Critical Section.
+    excluding the Critical Section.
 
 3.  **Race around Condition –** The final output of the code depends on
-    > the order in which the variables are accessed. This is termed as
-    > the race around condition.
+    the order in which the variables are accessed. This is termed as
+    the race around condition.
 
 A solution for the critical section problem must satisfy the following
 three conditions:
 
 1.  **Mutual Exclusion –** If a process Pi is executing in its critical
-    > section, then no other process is allowed to enter into the
-    > critical section.
+    section, then no other process is allowed to enter into the
+    critical section.
 
 2.  **Progress –** If no process is executing in the critical section,
-    > then the decision of a process to enter a critical section cannot
-    > be made by any other process that is executing in its remainder
-    > section. The selection of the process cannot be postponed
-    > indefinitely.
+    then the decision of a process to enter a critical section cannot
+    be made by any other process that is executing in its remainder
+    section. The selection of the process cannot be postponed
+    indefinitely.
 
 3.  **Bounded Waiting –** There exists a bound on the number of times
-    > other processes can enter into the critical section after a
-    > process has made request to access the critical section and before
-    > the requested is granted.
+    other processes can enter into the critical section after a
+    process has made request to access the critical section and before
+    the requested is granted.
 
  \
 **Synchronization Tools:**\
@@ -4159,11 +4159,11 @@ executed in a single CPU time slice without any pre-emption. Semaphores
 are of two types:
 
 1.  **Counting Semaphore –** A counting semaphore is an integer variable
-    > whose value can range over an unrestricted domain.
+    whose value can range over an unrestricted domain.
 
 2.  **Mutex –** Binary Semaphores are called Mutex. These can have only
-    > two values, 0 or 1. The operations wait () and signal () operate
-    > on these in a similar fashion.
+    two values, 0 or 1. The operations wait () and signal () operate
+    on these in a similar fashion.
 
 [**Deadlock**](https://www.geeksforgeeks.org/operating-system-process-management-deadlock-introduction/):\
 A situation where a set of processes are blocked because each process is
@@ -4172,82 +4172,82 @@ other process. Deadlock can arise if following four conditions hold
 simultaneously (Necessary Conditions):
 
 1.  **Mutual Exclusion –** One or more than one resource are
-    > non-sharable (Only one process can use at a time).
+    non-sharable (Only one process can use at a time).
 
 2.  **Hold and Wait –** A process is holding at least one resource and
-    > waiting for resources.
+    waiting for resources.
 
 3.  **No Preemption –** A resource cannot be taken from a process unless
-    > the process releases the resource.
+    the process releases the resource.
 
 4.  **Circular Wait –** A set of processes are waiting for each other in
-    > circular form.
+    circular form.
 
 **Methods for handling deadlock:** There are three ways to handle
 deadlock
 
 1.  [***Deadlock prevention or
-    > avoidance***](https://www.geeksforgeeks.org/deadlock-prevention/):
-    > The idea is to not let the system into deadlock state.
+    avoidance***](https://www.geeksforgeeks.org/deadlock-prevention/):
+    The idea is to not let the system into deadlock state.
 
-> **Deadlock Prevention**
+**Deadlock Prevention**
 >
-> We can prevent Deadlock by eliminating any of the above four
-> conditions.
+We can prevent Deadlock by eliminating any of the above four
+conditions.
 >
-> **Eliminate Mutual Exclusion **\
-> It is not possible to dis-satisfy the mutual exclusion because some
-> resources, such as the tap drive and printer, are inherently
-> non-shareable.
+**Eliminate Mutual Exclusion **\
+It is not possible to dis-satisfy the mutual exclusion because some
+resources, such as the tap drive and printer, are inherently
+non-shareable.
 >
->  
+ 
 >
-> **Eliminate Hold and wait**
+**Eliminate Hold and wait**
 
 1.  Allocate all required resources to the process before the start of
-    > its execution, this way hold and wait condition is eliminated but
-    > it will lead to low device utilization. for example, if a process
-    > requires printer at a later time and we have allocated printer
-    > before the start of its execution printer will remain blocked till
-    > it has completed its execution.
+    its execution, this way hold and wait condition is eliminated but
+    it will lead to low device utilization. for example, if a process
+    requires printer at a later time and we have allocated printer
+    before the start of its execution printer will remain blocked till
+    it has completed its execution.
 
 2.  The process will make a new request for resources after releasing
-    > the current set of resources. This solution may lead to
-    > starvation.
+    the current set of resources. This solution may lead to
+    starvation.
 
-> ![holdnwait](images//media/image2.png){width="4.163194444444445in"
-> height="2.54375in"}
+![holdnwait](images//media/image2.png){width="4.163194444444445in"
+height="2.54375in"}
 >
-> **Eliminate No Preemption**\
-> Preempt resources from the process when resources required by other
-> high priority processes.
+**Eliminate No Preemption**\
+Preempt resources from the process when resources required by other
+high priority processes.
 >
->  
+ 
 >
-> **Eliminate Circular Wait**\
-> Each resource will be assigned with a numerical number. A process can
-> request the resources increasing/decreasing. order of numbering.\
-> For Example, if P1 process is allocated R5 resources, now next time if
-> P1 ask for R4, R3 lesser than R5 such request will not be granted,
-> only request for resources more than R5 will be granted.
+**Eliminate Circular Wait**\
+Each resource will be assigned with a numerical number. A process can
+request the resources increasing/decreasing. order of numbering.\
+For Example, if P1 process is allocated R5 resources, now next time if
+P1 ask for R4, R3 lesser than R5 such request will not be granted,
+only request for resources more than R5 will be granted.
 >
->  
+ 
 >
->  
+ 
 >
-> **Deadlock Avoidance**
+**Deadlock Avoidance**
 >
-> Deadlock avoidance can be done with Banker’s Algorithm.
+Deadlock avoidance can be done with Banker’s Algorithm.
 >
-> **Banker’s Algorithm**
+**Banker’s Algorithm**
 >
-> Bankers’s Algorithm is resource allocation and deadlock avoidance
-> algorithm which test all the request made by processes for resources,
-> it checks for the safe state, if after granting request system remains
-> in the safe state it allows the request and if there is no safe state
-> it doesn’t allow the request made by the process.
+Bankers’s Algorithm is resource allocation and deadlock avoidance
+algorithm which test all the request made by processes for resources,
+it checks for the safe state, if after granting request system remains
+in the safe state it allows the request and if there is no safe state
+it doesn’t allow the request made by the process.
 >
-> **Inputs to Banker’s Algorithm:**
+**Inputs to Banker’s Algorithm:**
 
 1.  Max need of resources by each process.
 
@@ -4255,106 +4255,106 @@ deadlock
 
 3.  Max free available resources in the system.
 
-> **The request will only be granted under the below condition:**
+**The request will only be granted under the below condition:**
 
 1.  If the request made by the process is less than equal to max need to
-    > that process.
+    that process.
 
 2.  If the request made by the process is less than equal to the freely
-    > available resource in the system.
+    available resource in the system.
 
-> **Example:**
+**Example:**
 >
-> Total resources in system:
+Total resources in system:
 >
-> A B C D
+A B C D
 >
-> 6 5 7 6
+6 5 7 6
 >
-> Available system resources are:
+Available system resources are:
 >
-> A B C D
+A B C D
 >
-> 3 1 1 2
+3 1 1 2
 >
-> Processes (currently allocated resources):
+Processes (currently allocated resources):
 >
-> A B C D
+A B C D
 >
-> P1 1 2 2 1
+P1 1 2 2 1
 >
-> P2 1 0 3 3
+P2 1 0 3 3
 >
-> P3 1 2 1 0
+P3 1 2 1 0
 >
-> Processes (maximum resources):
+Processes (maximum resources):
 >
-> A B C D
+A B C D
 >
-> P1 3 3 2 2
+P1 3 3 2 2
 >
-> P2 1 2 3 4
+P2 1 2 3 4
 >
-> P3 1 3 5 0
+P3 1 3 5 0
 >
-> Need = maximum resources - currently allocated resources.
+Need = maximum resources - currently allocated resources.
 >
-> Processes (need resources):
+Processes (need resources):
 >
-> A B C D
+A B C D
 >
-> P1 2 1 0 1
+P1 2 1 0 1
 >
-> P2 0 2 0 1
+P2 0 2 0 1
 >
-> P3 0 1 4 0
+P3 0 1 4 0
 >
-> **Note:**Deadlock prevention is more strict that Deadlock Avoidance.
+**Note:**Deadlock prevention is more strict that Deadlock Avoidance.
 
 1.  [***Deadlock detection and
-    > recovery***](https://www.geeksforgeeks.org/deadlock-detection-recovery/) :
-    > Let deadlock occur, then do preemption to handle it once occurred.
+    recovery***](https://www.geeksforgeeks.org/deadlock-detection-recovery/) :
+    Let deadlock occur, then do preemption to handle it once occurred.
 
-> **Deadlock Detection**
+**Deadlock Detection**
 
 1.  If resources have single instance:\
-    > In this case for Deadlock detection we can run an algorithm to
-    > check for cycle in the Resource Allocation Graph. Presence of
-    > cycle in the graph is the sufficient condition for deadlock.\
-    > ![deadlock](images//media/image17.png){width="4.163194444444445in"
-    > height="2.890972222222222in"}
+    In this case for Deadlock detection we can run an algorithm to
+    check for cycle in the Resource Allocation Graph. Presence of
+    cycle in the graph is the sufficient condition for deadlock.\
+    ![deadlock](images//media/image17.png){width="4.163194444444445in"
+    height="2.890972222222222in"}
 
-> In the above diagram, resource 1 and resource 2 have single instances.
-> There is a cycle R1 → P1 → R2 → P2. So, Deadlock is Confirmed.
+In the above diagram, resource 1 and resource 2 have single instances.
+There is a cycle R1 → P1 → R2 → P2. So, Deadlock is Confirmed.
 
 1.  If there are multiple instances of resources:\
-    > Detection of the cycle is necessary but not sufficient condition
-    > for deadlock detection, in this case, the system may or may not be
-    > in deadlock varies according to different situations.
+    Detection of the cycle is necessary but not sufficient condition
+    for deadlock detection, in this case, the system may or may not be
+    in deadlock varies according to different situations.
 
-> **Deadlock Recovery**\
-> A traditional operating system such as Windows doesn’t deal with
-> deadlock recovery as it is time and space consuming process. Real-time
-> operating systems use Deadlock recovery.
+**Deadlock Recovery**\
+A traditional operating system such as Windows doesn’t deal with
+deadlock recovery as it is time and space consuming process. Real-time
+operating systems use Deadlock recovery.
 >
-> **Recovery method**
+**Recovery method**
 
 1.  **Killing the process:** killing all the process involved in the
-    > deadlock. Killing process one by one. After killing each process
-    > check for deadlock again keep repeating the process till system
-    > recover from deadlock.
+    deadlock. Killing process one by one. After killing each process
+    check for deadlock again keep repeating the process till system
+    recover from deadlock.
 
 2.  **Resource Preemption:** Resources are preempted from the processes
-    > involved in the deadlock, preempted resources are allocated to
-    > other processes so that there is a possibility of recovering the
-    > system from deadlock. In this case, the system goes into
-    > starvation.
+    involved in the deadlock, preempted resources are allocated to
+    other processes so that there is a possibility of recovering the
+    system from deadlock. In this case, the system goes into
+    starvation.
 
 <!-- -->
 
 1.  **Ignore the problem all together –** : If deadlock is very rare,
-    > then let it happen and reboot the system. This is the approach
-    > that both Windows and UNIX take.
+    then let it happen and reboot the system. This is the approach
+    that both Windows and UNIX take.
 
 [**Banker’s
 Algorithm:**](https://www.geeksforgeeks.org/operating-system-bankers-algorithm/)\
@@ -4364,10 +4364,10 @@ This algorithm handles multiple instances of the same resource.
 These techniques allow the memory to be shared among multiple processes.
 
 -   **Overlays –** The memory should contain only those instructions and
-    > data that are required at a given time.
+    data that are required at a given time.
 
 -   **Swapping –** In multiprogramming, the instructions that have used
-    > the time slice are swapped out from the memory.
+    the time slice are swapped out from the memory.
 
 [**Memory Management
 Techniques:**](https://www.geeksforgeeks.org/operating-system-memory-management-partition-allocation-method/)
@@ -4379,41 +4379,41 @@ OS and the other is kept to be used by the users.
 **(b) Multiple Partition Schemes –**
 
 1.  **Fixed Partition –** The memory is divided into fixed size
-    > partitions.
+    partitions.
 
 2.  **Variable Partition –** The memory is divided into variable sized
-    > partitions.
+    partitions.
 
 Variable partition allocation schemes:
 
 1.  **First Fit –** The arriving process is allotted the first hole of
-    > memory in which it fits completely.
+    memory in which it fits completely.
 
 2.  **Best Fit –** The arriving process is allotted the hole of memory
-    > in which it fits the best by leaving the minimum memory empty.
+    in which it fits the best by leaving the minimum memory empty.
 
 3.  **Worst Fit –** The arriving process is allotted the hole of memory
-    > in which it leaves the maximum gap.
+    in which it leaves the maximum gap.
 
 **Note:**
 
 -   Best fit does not necessarily give the best results for memory
-    > allocation.
+    allocation.
 
 -   The cause of external fragmentation is the condition in Fixed
-    > partitioning and Variable partitioning saying that entire process
-    > should be allocated in a contiguous memory location.
-    > Therefore **Paging** is used.
+    partitioning and Variable partitioning saying that entire process
+    should be allocated in a contiguous memory location.
+    Therefore **Paging** is used.
 
 1.  **Paging –**\
-    > The physical memory is divided into equal sized frames. The main
-    > memory is divided into fixed size pages. The size of a physical
-    > memory frame is equal to the size of a virtual memory frame.
+    The physical memory is divided into equal sized frames. The main
+    memory is divided into fixed size pages. The size of a physical
+    memory frame is equal to the size of a virtual memory frame.
 
 2.  **Segmentation –**\
-    > Segmentation is implemented to give users view of memory. The
-    > logical address space is a collection of segments. Segmentation
-    > can be implemented with or without the use of paging.
+    Segmentation is implemented to give users view of memory. The
+    logical address space is a collection of segments. Segmentation
+    can be implemented with or without the use of paging.
 
 [**Page Fault:**\
 ](https://www.geeksforgeeks.org/operating-system-page-fault-handling/)\
@@ -4425,166 +4425,166 @@ address space, but not loaded in physical memory.
 Algorithms:**](https://www.geeksforgeeks.org/page-replacement-algorithms-in-operating-systems/)
 
 1.  **First In First Out (FIFO) –**\
-    > This is the simplest page replacement algorithm. In this
-    > algorithm, operating system keeps track of all pages in the memory
-    > in a queue, oldest page is in the front of the queue. When a page
-    > needs to be replaced page in the front of the queue is selected
-    > for removal.
+    This is the simplest page replacement algorithm. In this
+    algorithm, operating system keeps track of all pages in the memory
+    in a queue, oldest page is in the front of the queue. When a page
+    needs to be replaced page in the front of the queue is selected
+    for removal.
 
-> For example, consider page reference string 1, 3, 0, 3, 5, 6 and 3
-> page slots. Initially, all slots are empty, so when 1, 3, 0 came they
-> are allocated to the empty slots —> 3 Page Faults. When 3 comes, it
-> is already in  memory so —> 0 Page Faults. Then 5 comes, it is not
-> available in  memory so it replaces the oldest page slot i.e 1. —>
-> 1 Page Fault. Finally, 6 comes,  it is also not available in memory so
-> it replaces the oldest page slot i.e 3 —> 1 Page Fault.
+For example, consider page reference string 1, 3, 0, 3, 5, 6 and 3
+page slots. Initially, all slots are empty, so when 1, 3, 0 came they
+are allocated to the empty slots —> 3 Page Faults. When 3 comes, it
+is already in  memory so —> 0 Page Faults. Then 5 comes, it is not
+available in  memory so it replaces the oldest page slot i.e 1. —>
+1 Page Fault. Finally, 6 comes,  it is also not available in memory so
+it replaces the oldest page slot i.e 3 —> 1 Page Fault.
 >
-> **Belady’s anomaly:**\
-> Belady’s anomaly proves that it is possible to have more page faults
-> when increasing the number of page frames while using the First in
-> First Out (FIFO) page replacement algorithm.  For example, if we
-> consider reference string      3     2     1     0     3     2     4
->     3     2     1     0     4 and 3 slots, we get 9 total page faults,
-> but if we increase slots to 4, we get 10 page faults.
+**Belady’s anomaly:**\
+Belady’s anomaly proves that it is possible to have more page faults
+when increasing the number of page frames while using the First in
+First Out (FIFO) page replacement algorithm.  For example, if we
+consider reference string      3     2     1     0     3     2     4
+    3     2     1     0     4 and 3 slots, we get 9 total page faults,
+but if we increase slots to 4, we get 10 page faults.
 
 1.  **Optimal Page replacement –**\
-    > In this algorithm, pages are replaced which are not used for the
-    > longest duration of time in the future.
+    In this algorithm, pages are replaced which are not used for the
+    longest duration of time in the future.
 
-> Let us consider page reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 and 4
-> page slots. Initially, all slots are empty, so when 7 0 1 2 are
-> allocated to the empty slots —> 4 Page faults. 0 is already there
-> so —> 0 Page fault. When 3 came it will take the place of 7 because
-> it is not used for the longest duration of time in the future.—> 1
-> Page fault. 0 is already there so —> 0 Page fault. 4 will takes
-> place of 1 —> 1 Page Fault. Now for the further page reference
-> string —> 0 Page fault because they are already available in the
-> memory.
+Let us consider page reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 and 4
+page slots. Initially, all slots are empty, so when 7 0 1 2 are
+allocated to the empty slots —> 4 Page faults. 0 is already there
+so —> 0 Page fault. When 3 came it will take the place of 7 because
+it is not used for the longest duration of time in the future.—> 1
+Page fault. 0 is already there so —> 0 Page fault. 4 will takes
+place of 1 —> 1 Page Fault. Now for the further page reference
+string —> 0 Page fault because they are already available in the
+memory.
 >
-> Optimal page replacement is perfect, but not possible in practice as
-> an operating system cannot know future requests. The use of Optimal
-> Page replacement is to set up a benchmark so that other replacement
-> algorithms can be analyzed against it.
+Optimal page replacement is perfect, but not possible in practice as
+an operating system cannot know future requests. The use of Optimal
+Page replacement is to set up a benchmark so that other replacement
+algorithms can be analyzed against it.
 
 1.  **Least Recently Used (LRU) –**\
-    > In this algorithm, the page will be replaced which is least
-    > recently used.
+    In this algorithm, the page will be replaced which is least
+    recently used.
 
-> Let say the page reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 .
-> Initially, we have 4-page slots empty. Initially, all slots are empty,
-> so when 7 0 1 2 are allocated to the empty slots —> 4 Page faults.
-> 0 is already their so —> 0 Page fault. When 3 came it will take the
-> place of 7 because it is least recently used —> 1 Page fault. 0 is
-> already in memory so —> 0 Page fault. 4 will takes place of 1 —>
-> 1 Page Fault. Now for the further page reference string —>** 0 Page
-> fault** because they are already available in the memory.
+Let say the page reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 .
+Initially, we have 4-page slots empty. Initially, all slots are empty,
+so when 7 0 1 2 are allocated to the empty slots —> 4 Page faults.
+0 is already their so —> 0 Page fault. When 3 came it will take the
+place of 7 because it is least recently used —> 1 Page fault. 0 is
+already in memory so —> 0 Page fault. 4 will takes place of 1 —>
+1 Page Fault. Now for the further page reference string —>** 0 Page
+fault** because they are already available in the memory.
 >
->  \
->  
+ \
+ 
 >
-> [**File
-> System**](https://www.geeksforgeeks.org/file-system-operating-systems/):
-> A file is a collection of related information that is recorded on
-> secondary storage. Or file is a collection of logically related
-> entities.
+[**File
+System**](https://www.geeksforgeeks.org/file-system-operating-systems/):
+A file is a collection of related information that is recorded on
+secondary storage. Or file is a collection of logically related
+entities.
 >
-> [**File
-> Directories**](https://www.geeksforgeeks.org/file-system-operating-systems/):
-> Collection of files is a file directory. The directory contains
-> information about the files, including attributes, location and
-> ownership. Much of this information, especially that is concerned with
-> storage, is managed by the operating system.
+[**File
+Directories**](https://www.geeksforgeeks.org/file-system-operating-systems/):
+Collection of files is a file directory. The directory contains
+information about the files, including attributes, location and
+ownership. Much of this information, especially that is concerned with
+storage, is managed by the operating system.
 
 1.  **SINGLE-LEVEL DIRECTORY**: In this a single directory is maintained
-    > for all the users
+    for all the users
 
 2.  **TWO-LEVEL DIRECTORY**: Due to two levels there is a path name for
-    > every file to locate that file.
+    every file to locate that file.
 
 3.  **TREE-STRUCTURED DIRECTORY **: Directory is maintained in the form
-    > of a tree. Searching is efficient and also there is grouping
-    > capability.
+    of a tree. Searching is efficient and also there is grouping
+    capability.
 
->  
+ 
 >
-> [**File Allocation
-> Methods**](https://www.geeksforgeeks.org/file-system-operating-systems/):
+[**File Allocation
+Methods**](https://www.geeksforgeeks.org/file-system-operating-systems/):
 
 1.  **Continuous Allocation**: A single continuous set of blocks is
-    > allocated to a file at the time of file creation.
+    allocated to a file at the time of file creation.
 
 2.  **Linked Allocation(Non-contiguous allocation)**: Allocation is on
-    > an individual block basis. Each block contains a pointer to the
-    > next block in the chain.
+    an individual block basis. Each block contains a pointer to the
+    next block in the chain.
 
 3.  **Indexed Allocation **: It addresses many of the problems of
-    > contiguous and chained allocation. In this case, the file
-    > allocation table contains a separate one-level index for each file
+    contiguous and chained allocation. In this case, the file
+    allocation table contains a separate one-level index for each file
 
->  
+ 
 >
-> [**Disk
-> Scheduling**](https://www.geeksforgeeks.org/disk-scheduling-algorithms/):\
-> Disk scheduling is done by operating systems to schedule I/O requests
-> arriving for disk. Disk scheduling is also known as I/O scheduling.
+[**Disk
+Scheduling**](https://www.geeksforgeeks.org/disk-scheduling-algorithms/):\
+Disk scheduling is done by operating systems to schedule I/O requests
+arriving for disk. Disk scheduling is also known as I/O scheduling.
 
 1.  **Seek Time:** Seek time is the time taken to locate the disk arm to
-    > a specified track where the data is to be read or write.
+    a specified track where the data is to be read or write.
 
 2.  **Rotational Latency: **Rotational Latency is the time taken by the
-    > desired sector of disk to rotate into a position so that it can
-    > access the read/write heads.
+    desired sector of disk to rotate into a position so that it can
+    access the read/write heads.
 
 3.  **Transfer Time:** Transfer time is the time to transfer the data.
-    > It depends on the rotating speed of the disk and number of bytes
-    > to be transferred.
+    It depends on the rotating speed of the disk and number of bytes
+    to be transferred.
 
 4.  **Disk Access Time:** Seek Time + Rotational Latency + Transfer Time
 
 5.  **Disk Response Time: **Response Time is the average of time spent
-    > by a request waiting to perform its I/O operation. Average
-    > Response time is the response time of the all requests.
+    by a request waiting to perform its I/O operation. Average
+    Response time is the response time of the all requests.
 
->  
+ 
 >
-> [**Disk Scheduling
-> Algorithms**](https://www.geeksforgeeks.org/disk-scheduling-algorithms/):
+[**Disk Scheduling
+Algorithms**](https://www.geeksforgeeks.org/disk-scheduling-algorithms/):
 
 1.  **FCFS:** FCFS is the simplest of all the Disk Scheduling
-    > Algorithms. In FCFS, the requests are addressed in the order they
-    > arrive in the disk queue.
+    Algorithms. In FCFS, the requests are addressed in the order they
+    arrive in the disk queue.
 
 2.  **SSTF: **In SSTF (Shortest Seek Time First), requests having
-    > shortest seek time are executed first. So, the seek time of every
-    > request is calculated in advance in a queue and then they are
-    > scheduled according to their calculated seek time. As a result,
-    > the request near the disk arm will get executed first.
+    shortest seek time are executed first. So, the seek time of every
+    request is calculated in advance in a queue and then they are
+    scheduled according to their calculated seek time. As a result,
+    the request near the disk arm will get executed first.
 
 3.  **SCAN:** In SCAN algorithm the disk arm moves into a particular
-    > direction and services the requests coming in its path and after
-    > reaching the end of the disk, it reverses its direction and again
-    > services the request arriving in its path. So, this algorithm
-    > works like an elevator and hence also known as elevator algorithm.
+    direction and services the requests coming in its path and after
+    reaching the end of the disk, it reverses its direction and again
+    services the request arriving in its path. So, this algorithm
+    works like an elevator and hence also known as elevator algorithm.
 
 4.  **CSCAN:** In SCAN algorithm, the disk arm again scans the path that
-    > has been scanned, after reversing its direction. So, it may be
-    > possible that too many requests are waiting at the other end or
-    > there may be zero or few requests pending at the scanned area.
+    has been scanned, after reversing its direction. So, it may be
+    possible that too many requests are waiting at the other end or
+    there may be zero or few requests pending at the scanned area.
 
 5.  **LOOK: **It is similar to the SCAN disk scheduling algorithm except
-    > for the difference that the disk arm in spite of going to the end
-    > of the disk goes only to the last request to be serviced in front
-    > of the head and then reverses its direction from there only. Thus
-    > it prevents the extra delay which occurred due to unnecessary
-    > traversal to the end of the disk.
+    for the difference that the disk arm in spite of going to the end
+    of the disk goes only to the last request to be serviced in front
+    of the head and then reverses its direction from there only. Thus
+    it prevents the extra delay which occurred due to unnecessary
+    traversal to the end of the disk.
 
 6.  **CLOOK: **As LOOK is similar to SCAN algorithm, in a similar way,
-    > CLOOK is similar to CSCAN disk scheduling algorithm. In CLOOK, the
-    > disk arm in spite of going to the end goes only to the last
-    > request to be serviced in front of the head and then from there
-    > goes to the other end’s last request. Thus, it also prevents the
-    > extra delay which occurred due to unnecessary traversal to the end
-    > of the disk.
+    CLOOK is similar to CSCAN disk scheduling algorithm. In CLOOK, the
+    disk arm in spite of going to the end goes only to the last
+    request to be serviced in front of the head and then from there
+    goes to the other end’s last request. Thus, it also prevents the
+    extra delay which occurred due to unnecessary traversal to the end
+    of the disk.
 
 **COMPILER DESIGN**
 
@@ -4600,26 +4600,26 @@ the identifier’s name along with their types. It helps the compiler to
 function smoothly by finding the identifiers quickly.
 
 1.  **Lexical Analysis** : Lexical analyzer reads a source program
-    > character by character to produce tokens. Tokens can be
-    > identifiers, keywords, operators, separators etc.
+    character by character to produce tokens. Tokens can be
+    identifiers, keywords, operators, separators etc.
 
 2.  **Syntax Analysis** : Syntax analyzer is also known as parser. It
-    > constructs the parse tree. It takes all the tokens one by one and
-    > uses Context Free Grammar to construct the parse tree.
+    constructs the parse tree. It takes all the tokens one by one and
+    uses Context Free Grammar to construct the parse tree.
 
 3.  **Semantic Analyzer** : It verifies the parse tree, whether it’s
-    > meaningful or not. It furthermore produces a verified parse tree.
+    meaningful or not. It furthermore produces a verified parse tree.
 
 4.  **Intermediate Code Generator **: It generates intermediate code,
-    > that is a form which can be readily executed by machine We have
-    > many popular intermediate codes.
+    that is a form which can be readily executed by machine We have
+    many popular intermediate codes.
 
 5.  **Code Optimizer** : It transforms the code so that it consumes
-    > fewer resources and produces more speed.
+    fewer resources and produces more speed.
 
 6.  **Target Code Generator** : The main purpose of Target Code
-    > generator is to write a code that the machine can understand. The
-    > output is dependent on the type of assembler.
+    generator is to write a code that the machine can understand. The
+    output is dependent on the type of assembler.
 
 [**Error
 handling**](https://www.geeksforgeeks.org/error-handling-compiler-design/) :\
@@ -4636,12 +4636,12 @@ adverse system parameters or invalid input data.
 before execution of the program.
 
 1.  **Lexical :**This includes misspellings of identifiers, keywords or
-    > operators.
+    operators.
 
 2.  **Syntactical :**missing semicolon or unbalanced parenthesis.
 
 3.  **Semantical :**incompatible value assignment or type mismatches
-    > between operator and operand.
+    between operator and operand.
 
 4.  **Logical :**code not reachable, infinite loop.
 
@@ -4769,7 +4769,7 @@ Types of machine independent optimizations –\
 -   Loop unrolling : to execute less number of iterations
 
 -   Loop jamming : combine body of two loops whenever they are sharing
-    > same index.
+    same index.
 
 2. **Constant folding** : replacing the value of constants during
 compilation\
