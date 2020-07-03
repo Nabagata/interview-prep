@@ -21,7 +21,7 @@ variable/function can be declared any number of times but it can be
 defined only once. (Remember the basic principle that you can’t have two
 locations of the same variable/function).
 
-```
+```cpp
 // This is only declaration. y is not allocated memory by this statement
 
 extern int y;
@@ -40,7 +40,7 @@ in [*C*](http://www.geeksforgeeks.org/c/)?**\
 **Ans:** Scope of a variable is the part of the program where the
 variable may directly be accessible. In C, all identifiers are lexically
 (or statically) scoped.
-See [*this *](https://www.geeksforgeeks.org/scope-rules-in-c/)for more
+See [*this*](https://www.geeksforgeeks.org/scope-rules-in-c/) for more
 details.
 
 **What is the difference between Scope and Lifetime?**
@@ -61,7 +61,7 @@ begin with.
 **How will you print “Hello World” without semicolon?**\
 **Ans:**
 
-```
+```cpp
   #include <stdio.h>
   
   int main(void)
@@ -98,7 +98,7 @@ by f() is not dependent on who is calling it. f() always returns the
 value of global variable x.
 
   ```cpp
-  # include <stdio.h>
+  #include <stdio.h>
 
   int x = 0;
   
@@ -291,14 +291,14 @@ low-level access to memory, simple set of keywords, and clean style.
 These features make it suitable for system programming like operating
 system or compiler development.
 
-**What is difference between i++ and ++i?**\
+**What is difference between i++ and ++i?** \
 1) The expression ‘i++’ returns the old value and then increments i. The
-expression ++i increments the value and returns new value.\
-2) Precedence of postfix ++ is higher than that of prefix ++.\
+expression ++i increments the value and returns new value.
+2) Precedence of postfix ++ is higher than that of prefix ++.
 3) Associativity of postfix ++ is left to right and associativity of
-prefix ++ is right to left.\
+prefix ++ is right to left.
 4) In C++, ++i can be used as l-value, but i++ cannot be. In C, they
-both cannot be used as l-value.\
+both cannot be used as l-value.
 See [Difference between ++*p, *p++ and
 *++p](https://www.geeksforgeeks.org/difference-between-p-p-and-p/) for
 more details.
@@ -323,7 +323,7 @@ Pointer](https://www.geeksforgeeks.org/difference-pointer-array-c/)
 **How to write your own sizeof operator?**
 
   ```cpp
-  #define my\_sizeof(type) (char *)(&type+1)-(char*)(&type)
+  #define my_sizeof(type) (char *)(&type+1)-(char*)(&type)
   ```
 
 See [Implement your own
@@ -368,7 +368,7 @@ yes, the const means that the variable cannot be assigned a new value.
 The value can be changed by other code or pointer. For example the
 following program works fine.
 
-  ``````
+  ```cpp
   int main(void)
   
   {
@@ -386,7 +386,7 @@ following program works fine.
       return 0;
   
   }
-  ``````
+  ```
 
 # C++
 
@@ -394,7 +394,7 @@ following program works fine.
 
 **What are the differences between C and C++?**\
 **1)** C++ is a kind of superset of C, most of C programs except few
-exceptions (See [*this *](https://www.geeksforgeeks.org/write-c-program-produce-different-result-c/)and [*this*](https://www.geeksforgeeks.org/write-c-program-wont-compiler-c/))
+exceptions (See [*this*](https://www.geeksforgeeks.org/write-c-program-produce-different-result-c/) and [*this*](https://www.geeksforgeeks.org/write-c-program-wont-compiler-c/))
 work in C++ as well.\
 **2)** C is a procedural programming language, but C++ supports both
 procedural and Object Oriented programming.\
@@ -404,7 +404,7 @@ functions, friend functions. These features are absent in C.\
 **4)** C++ supports exception handling at language level, in C exception
 handling is done in traditional if-else style.\
 **5)** C++
-supports [*references*](https://www.geeksforgeeks.org/references-in-c/)**, **C
+supports [*references*](https://www.geeksforgeeks.org/references-in-c/), C
 doesn’t.\
 **6)** In C, scanf() and printf() are mainly used input/output. C++
 mainly uses streams to perform input and output operations. cin is
@@ -467,37 +467,26 @@ bp points to an object of Derived class.
 
   ```cpp
   #include<iostream>
-  
   using namespace std;
-  
-    
   
   class Base {
   
   public:
-  
       virtual void show() { cout<<" In Base \\n"; }
-  
-  };
-  
-    
-  
+
+  }
+    
   class Derived: public Base {
   
   public:
-  
       void show() { cout<<"In Derived \\n"; } 
   
   };
   
-    
-  
   int main(void) {   
   
       Base *bp = new Derived;     
-  
       bp->show();  // RUN-TIME POLYMORPHISM
-  
       return 0;
   
   }
@@ -617,9 +606,9 @@ not be accessed after deletion.
 vtable is a table of function pointers. It is maintained per class.\
 vptr is a pointer to vtable. It is maintained per object\
 Compiler adds additional code at two places to maintain and use vtable
-and vptr.\
+and vptr.
 1) Code in every constructor. This code sets vptr of the object being
-created. This code sets vptr to point to vtable of the class.\
+created. This code sets vptr to point to vtable of the class.
 2) Code with polymorphic function call (e.g. bp->show() in above
 code). Wherever a polymorphic call is made, compiler inserts code to
 first look for vptr using base class pointer or reference (In the above
@@ -631,57 +620,44 @@ function show() is accessed and called.
 #include<iostream.h>
 
 class Base
-
 {
 
 public:
 
-virtual void function1() {cout<<"Base :: function1()\\n";};
+virtual void function1() {cout<<"Base :: function1()\n";};
 
-virtual void function2() {cout<<"Base :: function2()\\n";};
+virtual void function2() {cout<<"Base :: function2()\n";};
 
-virtual \~Base(){};
+virtual ~Base(){};
 
 };
 
 class D1: public Base
-
 {
 
 public:
-
-\~D1(){};
-
-virtual void function1() { cout<<"D1 :: function1()\\n";};
+~D1(){};
+virtual void function1() { cout<<"D1 :: function1()\n";};
 
 };
 
 class D2: public Base
-
 {
 
 public:
-
-\~D2(){};
-
-virtual void function2() { cout<< "D2 :: function2\\n";};
+~D2(){};
+virtual void function2() { cout<< "D2 :: function2\n";};
 
 };
 
 int main()
-
 {
 
 D1 *d = new D1;;
-
 Base *b = d;
-
 b->function1();
-
 b->function2();
-
 delete (b);
-
 return (0);
 
 }
@@ -694,12 +670,10 @@ D1 :: function1() // base virtual member function got overloaded
 
 Base :: function2()
 
-![](images//media/image22.png){width="6.270833333333333in"
-height="5.083333333333333in"}
+![](images//media/image22.png)
+
 
 ## Commonly Asked C++ Interview Questions | Set 2
-
- 
 
 ### Q. Major Differences between JAVA and C++ 
 
