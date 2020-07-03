@@ -1,6 +1,6 @@
-**C**
+# C
 
-Commonly Asked C Programming Interview Questions | Set 1
+## Commonly Asked C Programming Interview Questions | Set 1
 
 **What is the difference between declaration and definition of a
 variable/function**\
@@ -21,6 +21,7 @@ variable/function can be declared any number of times but it can be
 defined only once. (Remember the basic principle that you can’t have two
 locations of the same variable/function).
 
+```
 // This is only declaration. y is not allocated memory by this statement
 
 extern int y;
@@ -29,6 +30,7 @@ extern int y;
 this statement.
 
 int x;
+```
 
 **What are different storage class specifiers in C?**\
 **Ans:** auto, register, static, extern
@@ -42,15 +44,10 @@ See [*this *](https://www.geeksforgeeks.org/scope-rules-in-c/)for more
 details.
 
 **What is the difference between Scope and Lifetime?**
-
-**Ans: **
-
-**What is Scope?**
+**Ans:**
 
 ***Scope*** is the region or section of code where a variable can be
 accessed.
-
-**What is a lifetime?**
 
 ***Lifetime*** is the time duration where an object/variable is in a
 valid state.
@@ -64,8 +61,8 @@ begin with.
 **How will you print “Hello World” without semicolon?**\
 **Ans:**
 
-  ----------------------------------
-  \#include &lt;stdio.h&gt;
+```
+  #include <stdio.h>
   
   int main(void)
   
@@ -76,18 +73,17 @@ begin with.
       }
   
   }
-  ----------------------------------
-
+```
 See [*print “Geeks for Geeks” without using a semicolon for
 answer*](https://www.geeksforgeeks.org/write-a-c-program-to-print-geeks-for-geeks-without-using-a-semicolon/).
 
 **When should we use pointers in a C program?**\
 **1.** To get address of a variable\
-***2.** For achieving pass by reference in C:* Pointers allow different
+**2.** For achieving pass by reference in C:* Pointers allow different
 functions to share and modify their local variables.\
-***3.** To pass large structures* so that complete copy of the structure
+**3.** To pass large structures* so that complete copy of the structure
 can be avoided.\
-***4.** To implement “linked” data structures *like linked lists and
+**4.** To implement “linked” data structures *like linked lists and
 binary trees.
 
 **How are variables scoped in C – Static or Dynamic?**
@@ -101,45 +97,31 @@ For example, output for the below program is 0, i.e., the value returned
 by f() is not dependent on who is calling it. f() always returns the
 value of global variable x.
 
-  ----------------------------
-  \# include &lt;stdio.h&gt;
-  
-    
-  
+  ```cpp
+  # include <stdio.h>
+
   int x = 0;
   
-  int f()
-  
+  int f()  
   {
-  
      return x;
-  
   }
   
   int g()
-  
   {
-  
      int x = 1;
-  
      return f();
-  
   }
   
   int main()
-  
   {
-  
     printf("%d", g());
-  
     printf("\\n");
-  
     getchar();
-  
   }
-  ----------------------------
+  ```
 
-**What is NULL pointer? **\
+**What is NULL pointer?**\
 **Ans:** NULL is used to indicate that the pointer doesn’t point to a
 valid location. Ideally, we should initialize pointers as NULL if we
 don’t know their value at the time of declaration. Also, we should make
@@ -153,55 +135,43 @@ deallocated, without modifying the value of the pointer, so that the
 pointer still points to the memory location of the deallocated memory.
 Following are examples.
 
-  ----------------------------------------------------------------------------
+```cpp
   // EXAMPLE 1
   
-  int\* ptr = (int\*)malloc(sizeof(int));
+  int* ptr = (int*)malloc(sizeof(int));
   
-  ..........................free(ptr);
-  
-    
+  free(ptr);
   
   // ptr is a dangling pointer now and operations like following are invalid
   
-  \*ptr = 10; // or printf("%d", \*ptr);
-  ----------------------------------------------------------------------------
-
-  ---------------------------------------------------------------
+  *ptr = 10; // or printf("%d", \*ptr);
+  
   // EXAMPLE 2
   
-  int\* ptr = NULL
-  
+  int* ptr = NULL
   {
-  
       int x = 10;
-  
       ptr = &x;
-  
   }
   
   // x goes out of scope and memory allocated to x is free now.
   
   // So ptr is a dangling pointer now.
-  ---------------------------------------------------------------
+  ```
 
 **What is memory leak? Why it should be avoided**\
 **Ans:** Memory leak occurs when programmers create a memory in heap and
 forget to delete it. Memory leaks are particularly serious issues for
 programs like daemons and servers which by definition never terminate.
 
-  -----------------------------------------------
-  /\* Function with memory leak \*/
+  ```cpp
+  //Function with memory leak 
   
-  \#include &lt;stdlib.h&gt;
-  
-    
+  #include <stdlib.h>
   
   void f()
-  
   {
-  
-      int\* ptr = (int\*)malloc(sizeof(int));
+      int* ptr = (int*)malloc(sizeof(int));
   
     
   
@@ -212,7 +182,7 @@ programs like daemons and servers which by definition never terminate.
       return; /\* Return without freeing ptr\*/
   
   }
-  -----------------------------------------------
+  ```
 
 **What are local static variables? What is their use?**\
 **Ans:**A local static variable is a variable whose lifetime doesn’t end
@@ -222,8 +192,8 @@ local static variables. Static variables can be used to count the number
 of times a function is called. Also, static variables get the default
 value as 0. For example, the following program prints “0 1”
 
-  -----------------------------------------------------
-  \#include &lt;stdio.h&gt;
+  ```-------------------------
+  \#include <stdio.h>
   
   void fun()
   
@@ -254,7 +224,7 @@ value as 0. For example, the following program prints “0 1”
   }
   
   // Output: 0 1
-  -----------------------------------------------------
+  ```-------------------------
 
 **What are static functions? What is their use?**\
 **Ans:**
@@ -263,7 +233,7 @@ In C, functions are global by default. The “*static*” keyword before a
 function name makes it static. For example, below function *fun() *is
 static.
 
-  --------------------------------------
+  ```----------
   static int fun(void)
   
   {
@@ -271,7 +241,7 @@ static.
     printf("I am a static function ");
   
   }
-  --------------------------------------
+  ```----------
 
 Unlike global functions in C, access to static functions is restricted
 to the file where they are declared. Therefore, when we want to restrict
@@ -352,9 +322,9 @@ Pointer](https://www.geeksforgeeks.org/difference-pointer-array-c/)
 
 **How to write your own sizeof operator?**
 
-  --------------------------------------------------------------
+  ``````------
   \#define my\_sizeof(type) (char \*)(&type+1)-(char\*)(&type)
-  --------------------------------------------------------------
+  ``````------
 
 See [Implement your own
 sizeof](https://www.geeksforgeeks.org/implement-your-own-sizeof/) for
@@ -363,14 +333,14 @@ more details.
 **How will you print numbers from 1 to 100 without using loop?**\
 We can use recursion for this purpose.
 
-  ------------------------------------
+  ```--------
   /\* Prints numbers from 1 to n \*/
   
   void printNos(unsigned int n)
   
   {
   
-    if(n &gt; 0)
+    if(n > 0)
   
     {
   
@@ -381,7 +351,7 @@ We can use recursion for this purpose.
     } 
   
   }
-  ------------------------------------
+  ```--------
 
 **What is volatile keyword?**\
 The volatile keyword is intended to prevent the compiler from applying
@@ -398,7 +368,7 @@ yes, the const means that the variable cannot be assigned a new value.
 The value can be changed by other code or pointer. For example the
 following program works fine.
 
-  --------------------------------------------------------
+  ``````
   int main(void)
   
   {
@@ -416,7 +386,7 @@ following program works fine.
       return 0;
   
   }
-  --------------------------------------------------------
+  ``````
 
 **C++**
 
@@ -474,7 +444,7 @@ in the below exercise )\
 the value. They can be used like normal variables. ‘&’ operator is
 needed only at the time of declaration. Also, members of an object
 reference can be accessed with dot operator (‘.’), unlike pointers where
-arrow operator (-&gt;) is needed to access members.
+arrow operator (->) is needed to access members.
 
 **What are virtual functions – Write an example? **\
 [*Virtual
@@ -492,11 +462,11 @@ polymorphism (use of virtual functions)\
 object of derived class.
 
 For example, in the following program bp is a pointer of type Base, but
-a call to bp-&gt;show() calls show() function of Derived class, because
+a call to bp->show() calls show() function of Derived class, because
 bp points to an object of Derived class.
 
-  ---------------------------------------------------------
-  \#include&lt;iostream&gt;
+  ``````-
+  \#include<iostream>
   
   using namespace std;
   
@@ -506,7 +476,7 @@ bp points to an object of Derived class.
   
   public:
   
-      virtual void show() { cout&lt;&lt;" In Base \\n"; }
+      virtual void show() { cout<<" In Base \\n"; }
   
   };
   
@@ -516,7 +486,7 @@ bp points to an object of Derived class.
   
   public:
   
-      void show() { cout&lt;&lt;"In Derived \\n"; } 
+      void show() { cout<<"In Derived \\n"; } 
   
   };
   
@@ -526,12 +496,12 @@ bp points to an object of Derived class.
   
       Base \*bp = new Derived;     
   
-      bp-&gt;show();  // RUN-TIME POLYMORPHISM
+      bp->show();  // RUN-TIME POLYMORPHISM
   
       return 0;
   
   }
-  ---------------------------------------------------------
+  ``````-
 
 Output:
 
@@ -558,7 +528,7 @@ post](https://www.geeksforgeeks.org/g-fact-30/)). If the object is
 created using new, then we can do *delete this*, otherwise behavior is
 undefined.
 
-  --------------------------------------------------------------------------------------
+  `````````--
   class A
   
   {
@@ -585,7 +555,7 @@ undefined.
   
     A \*ptr = new A;
   
-    ptr-&gt;fun();
+    ptr->fun();
   
     ptr = NULL; // make ptr NULL to make sure that things are not accessed using ptr. 
   
@@ -606,13 +576,13 @@ undefined.
     return 0;
   
   }
-  --------------------------------------------------------------------------------------
+  `````````--
 
 2\) Once *delete this *is done, any member of the deleted object should
 not be accessed after deletion.
 
-  -------------------------------------------
-  \#include&lt;iostream&gt;
+  ```---------------
+  \#include<iostream>
   
   using namespace std;
   
@@ -636,12 +606,12 @@ not be accessed after deletion.
   
         /\* Invalid: Undefined Behavior \*/
   
-        cout&lt;&lt;x;
+        cout<<x;
   
       }
   
   };
-  -------------------------------------------
+  ```---------------
 
 **What are VTABLE and VPTR?**\
 vtable is a table of function pointers. It is maintained per class.\
@@ -650,7 +620,7 @@ Compiler adds additional code at two places to maintain and use vtable
 and vptr.\
 1) Code in every constructor. This code sets vptr of the object being
 created. This code sets vptr to point to vtable of the class.\
-2) Code with polymorphic function call (e.g. bp-&gt;show() in above
+2) Code with polymorphic function call (e.g. bp->show() in above
 code). Wherever a polymorphic call is made, compiler inserts code to
 first look for vptr using base class pointer or reference (In the above
 example, since pointed or referred object is of derived type, vptr of
@@ -658,7 +628,7 @@ derived class is accessed). Once vptr is fetched, vtable of derived
 class can be accessed. Using vtable, address of derived derived class
 function show() is accessed and called.
 
-\#include&lt;iostream.h&gt;
+\#include<iostream.h>
 
 class Base
 
@@ -666,9 +636,9 @@ class Base
 
 public:
 
-virtual void function1() {cout&lt;&lt;"Base :: function1()\\n";};
+virtual void function1() {cout<<"Base :: function1()\\n";};
 
-virtual void function2() {cout&lt;&lt;"Base :: function2()\\n";};
+virtual void function2() {cout<<"Base :: function2()\\n";};
 
 virtual \~Base(){};
 
@@ -682,7 +652,7 @@ public:
 
 \~D1(){};
 
-virtual void function1() { cout&lt;&lt;"D1 :: function1()\\n";};
+virtual void function1() { cout<<"D1 :: function1()\\n";};
 
 };
 
@@ -694,7 +664,7 @@ public:
 
 \~D2(){};
 
-virtual void function2() { cout&lt;&lt; "D2 :: function2\\n";};
+virtual void function2() { cout<< "D2 :: function2\\n";};
 
 };
 
@@ -706,9 +676,9 @@ D1 \*d = new D1;;
 
 Base \*b = d;
 
-b-&gt;function1();
+b->function1();
 
-b-&gt;function2();
+b->function2();
 
 delete (b);
 
@@ -942,7 +912,7 @@ like String so that we can concatenate two strings by just using +.
 Other example classes where arithmetic operators may be overloaded are
 Complex Number, Fractional Number, Big Integer, etc.
 
-  -----------------------------------------------------------------------------------
+  ``````---------------------------
   class Complex {\
   private:\
   int real, imag;\
@@ -957,7 +927,7 @@ Complex Number, Fractional Number, Big Integer, etc.
   res.imag = imag + obj.imag;\
   return res;\
   }\
-  void print() { cout &lt;&lt; real &lt;&lt; " + i" &lt;&lt; imag &lt;&lt; endl; }\
+  void print() { cout << real << " + i" << imag << endl; }\
   };\
   \
   int main()\
@@ -966,7 +936,7 @@ Complex Number, Fractional Number, Big Integer, etc.
   Complex c3 = c1 + c2; // An example call to "operator+"\
   c3.print();\
   }
-  -----------------------------------------------------------------------------------
+  ``````---------------------------
 
 ### 
 
@@ -1701,7 +1671,7 @@ No goto\
 No [*default
 arguments*](http://quiz.geeksforgeeks.org/default-arguments-c/)\
 No unsigned int in Java\
-No -&gt; operator in java\
+No -> operator in java\
 No stack allocated objects in java\
 No delete operator in java due to java’s garbage collection\
 No destructor in java\
@@ -1733,7 +1703,7 @@ inherit from anything, we create a new tree in forest.
 Following Java example shows that Test class automatically inherits from
 Object class.
 
-  -----------------------------------------------------------------------------
+  ``````---------------------
   class Test { 
   
       // members of test
@@ -1751,7 +1721,7 @@ Object class.
     }
   
   }
-  -----------------------------------------------------------------------------
+  ``````---------------------
 
 Output:
 
@@ -1768,7 +1738,7 @@ accessible in other class “B” of same package, even if B doesn’t inherit
 from A (they both have to be in the same package). For example, in the
 following program, protected members of A are accessible in B.
 
-  ------------------------------------------------
+  ```--------------------
   // filename B.java
   
   class A {
@@ -1790,7 +1760,7 @@ following program, protected members of A are accessible in B.
       }
   
   }
-  ------------------------------------------------
+  ```--------------------
 
 **4) **Java uses *extends *keyword for inheritence. Unlike C++, Java
 doesn’t provide an inheritance specifier like public, protected or
@@ -1811,7 +1781,7 @@ and *abstract *keyword for abstract classes and abstract functions.
 
 Following is a Java abstract class example.
 
-  ------------------------------------------------------
+  ```--------------------------
   // An abstract class example
   
   []{#_gjdgxs .anchor}abstract class myAbstractClass {
@@ -1845,11 +1815,11 @@ Following is a Java abstract class example.
      }
   
   }
-  ------------------------------------------------------
+  ```--------------------------
 
 Following is a Java interface example
 
-  -----------------------------------------------------------------------------------
+  ``````---------------------------
   // An interface example
   
   public interface myInterface {
@@ -1873,7 +1843,7 @@ Following is a Java interface example
      }
   
   }
-  -----------------------------------------------------------------------------------
+  ``````---------------------------
 
 **7)** Unlike C++, Java doesn’t support multiple inheritance. A class
 cannot inherit from more than one class. A class can implement multiple
@@ -1888,7 +1858,7 @@ called in Java, but if we want to call parametrized constructor then we
 must use super to call the parent constructor. See following Java
 example.
 
-  ---------------------------------------------------------------------------------
+  ``````-------------------------
   package main;
   
      
@@ -1940,7 +1910,7 @@ example.
       }
   
   }
-  ---------------------------------------------------------------------------------
+  ``````-------------------------
 
 Output:
 
@@ -2089,17 +2059,17 @@ node.Types of Linked List :
 1.  **Singly Linked List : **In this type of linked list, every node
     > stores address or reference of next node in list and the last node
     > has next address or reference as NULL. For example
-    > 1-&gt;2-&gt;3-&gt;4-&gt;NULL
+    > 1->2->3->4->NULL
 
 2.  **Doubly Linked List : **Here,** **here are two references
     > associated with each node, One of the reference points to the next
     > node and one to the previous node. Eg.
-    > NULL&lt;-1&lt;-&gt;2&lt;-&gt;3-&gt;NULL
+    > NULL<-1<->2<->3->NULL
 
 3.  **Circular Linked List : **Circular linked list is a linked list
     > where all nodes are connected to form a circle. There is no NULL
     > at the end. A circular linked list can be a singly circular linked
-    > list or doubly circular linked list. Eg. 1-&gt;2-&gt;3-&gt;1 \[The
+    > list or doubly circular linked list. Eg. 1->2->3->1 \[The
     > next pointer of last node is pointing to the first\]
 
  
@@ -2444,7 +2414,7 @@ following two tables.
 **Table –** Student Table
 
   ***<span style="font-variant:small-caps;">ENROLLNO</span>***   ***<span style="font-variant:small-caps;">STUDENTNAME</span>***   ***<span style="font-variant:small-caps;">ADDRESS</span>***
-  -------------------------------------------------------------- ----------------------------------------------------------------- -------------------------------------------------------------
+  ``````------ ``````--------- ``````-----
   1000                                                           geek1                                                             geeksquiz1
   1001                                                           geek2                                                             geeksquiz2
   1002                                                           geek3                                                             geeksquiz3
@@ -2452,7 +2422,7 @@ following two tables.
 **Table –** StudentCourse Table
 
   ***<span style="font-variant:small-caps;">COURSEID</span>***   ***<span style="font-variant:small-caps;">ENROLLNO</span>***
-  -------------------------------------------------------------- --------------------------------------------------------------
+  ``````------ ``````------
   1                                                              1000
   2                                                              1000
   3                                                              1000
@@ -2475,7 +2445,7 @@ ORDER BY StudentCourse.CourseID;
 The above query would produce following result.
 
   ***<span style="font-variant:small-caps;">COURSEID</span>***   ***<span style="font-variant:small-caps;">STUDENTNAME</span>***
-  -------------------------------------------------------------- -----------------------------------------------------------------
+  ``````------ ``````---------
   1                                                              geek1
   1                                                              geek3
   2                                                              geek1
@@ -2632,7 +2602,7 @@ SQL Interview Questions
     > below:
 
   **<span style="font-variant:small-caps;">SQL</span>**   **<span style="font-variant:small-caps;">PL/SQL</span>**
-  ------------------------------------------------------- ----------------------------------------------------------
+  ```--------------------------- ``````--
   SQL is a query execution or commanding language         PL/SQL is a complete programming language
   SQL is data oriented language                           PL/SQL is a procedural language
   SQL is very declarative in nature                       PL/SQL has a procedural nature
@@ -2788,7 +2758,7 @@ SQL Interview Questions
 > **Orders**
 
   **<span style="font-variant:small-caps;">O\_ID</span>**   **<span style="font-variant:small-caps;">ORDER\_NO</span>**   **<span style="font-variant:small-caps;">C\_ID</span>**
-  --------------------------------------------------------- ------------------------------------------------------------- ---------------------------------------------------------
+  ``````- ``````----- ``````-
   1                                                         2253                                                          3
   2                                                         3325                                                          3
   3                                                         4521                                                          2
@@ -2797,7 +2767,7 @@ SQL Interview Questions
 > **Customers**
 
   **<span style="font-variant:small-caps;">C\_ID</span>**   **<span style="font-variant:small-caps;">NAME</span>**   **<span style="font-variant:small-caps;">ADDRESS</span>**
-  --------------------------------------------------------- -------------------------------------------------------- -----------------------------------------------------------
+  ``````- `````` ``````---
   1                                                         RAMESH                                                   DELHI
   2                                                         SURESH                                                   NOIDA
   3                                                         DHARMESH                                                 GURGAON
@@ -2880,7 +2850,7 @@ are used:
  
 
   **Cardinality**                                                **Minimum No. of tables**
-  -------------------------------------------------------------- ---------------------------
+  ``````------ ---------------------------
   1:1 cardinality with partial participation of both entities    2
   1:1 cardinality with total participation of atleast 1 entity   1
   1:n cardinality                                                2
@@ -2951,7 +2921,7 @@ Procedural language with basic and extended operators.
  
 
   [***Basic Operator***](https://www.geeksforgeeks.org/basic-operators-in-relational-algebra-2/)   **Semantic**
-  ------------------------------------------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------
+  `````````------------ ````````````-------------------
   **σ(Selection)**                                                                                 Select rows based on given condition
   **∏(Projection)**                                                                                Project some columns
   **X (Cross Product)**                                                                            Cross product of relations, returns **m\*n**rows where m and n are number of rows in R1 and R2 respectively.
@@ -2962,7 +2932,7 @@ Procedural language with basic and extended operators.
   
 
   [***Extended Operator***](https://www.geeksforgeeks.org/extended-operators-in-relational-algebra/)   **Semantic**
-  ---------------------------------------------------------------------------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  `````````---------------- ````````````````````````````````````-
   **∩ (Intersection)**                                                                                 Returns those tuples which are in both R1 and R2. Max no. of rows returned = min(m,n) and Min no. of rows returned = 0
   **⋈~c~(Conditional Join)**                                                                           Selection from two or more tables based on some condition (Cross product followed by selection)
   **⋈(Equi Join)**                                                                                     It is a special case of conditional join when only equality condition is applied between attributes.
@@ -2983,7 +2953,7 @@ Relational Algebra, SQL is a non-procedural language.
  
 
   **Operator**                                                                                                 **Meaning**
-  ------------------------------------------------------------------------------------------------------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  `````````------------------------ `````````````````````-------------------
   [***Select***](https://www.geeksforgeeks.org/sql-select-query/)                                              Selects columns from a relation or set of relations. **Note: **As opposed to Relational Algebra, it may give duplicate tuples for repeated value of an attribute.
   [***From***](https://www.geeksforgeeks.org/sql-sub-queries-clause/)                                          **From** is used to give input as relation or set of relations from which data needs to be selected.
   [***where***](https://www.geeksforgeeks.org/sql-where-clause/)                                               **Where **is used to give condition to be used to filter tuples
@@ -3038,25 +3008,25 @@ schedule.
 
  
 
-**Irrecoverable Schedules: **For a transaction pair &lt; Ti, Tj &gt;,
+**Irrecoverable Schedules: **For a transaction pair < Ti, Tj >,
 if Tj is reading the value updated by Ti and Tj is committed before
 commit of Ti, the schedule will be irrecoverable.
 
  
 
-**Recoverable Schedules: **For a transaction pair &lt; Ti, Tj &gt;,
+**Recoverable Schedules: **For a transaction pair < Ti, Tj >,
 ifTj is reading the value updated by Ti and Tj is committed after commit
 of Ti, the schedule will be recoverable.
 
  
 
 **Cascadeless Recoverable Schedules: **For a transaction pair
-&lt; Ti, Tj &gt;, if value updated by Ti is read by Tj only after commit
+< Ti, Tj >, if value updated by Ti is read by Tj only after commit
 of Ti, the schedule will be cascadeless recoverable.
 
  
 
-**Strict Recoverable:** For a transaction pair &lt; Ti, Tj &gt;, if
+**Strict Recoverable:** For a transaction pair < Ti, Tj >, if
 value updated by Ti is read or written by Tj only after commit of Ti,
 the schedule will be strict recoverable. The relationship between them
 can be represented as:
@@ -3263,7 +3233,7 @@ instead of sending a separate frame.
 **Differences between Hub, Switch and Router?**
 
   Hub                                                                                                                                                                         Switch                                                                                                                                        Router
-  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------
+  ``````````````````--- ```````````````- ```----------------------
   Physical Layer Device                                                                                                                                                       Data Link Layer Device                                                                                                                        Network Layer Device
   Simply repeats signal to all ports                                                                                                                                          Doesn’t simply repeat, but filters content by MAC or LAN address                                                                              Routes data based on IP address
   Connects devices within a single LAN                                                                                                                                        Can connect multiple sub-LANs within a single LAN                                                                                             Connect multiple  LANSand WANS together.
@@ -3401,7 +3371,7 @@ height="4.152777777777778in"}
 **OSI Layers, Data units and Functions:**
 
   **LAYERS**           **DATA UNITS**      **FUNCTIONS**
-  -------------------- ------------------- ----------------------------------------------------------------
+  -------------------- ------------------- ``````--------
   Application Layer    Data                Mail Services, Directory Services, FTAM
   Presentation Layer   Data                Translation, Compression, Encryption/Decryption
   Session Layer        Data                Session Establishment, Synchronization,Dialog Controller
@@ -3477,12 +3447,12 @@ lack of transmissions.
 ![https://media.geeksforgeeks.org/wp-content/uploads/2-40.jpg](images//media/image5.jpg){width="6.263888888888889in"
 height="1.9895833333333333in"}
 
-1.  Sequence No. &gt;= (Sender’s Window Size) + (Reciever’s Window Size
+1.  Sequence No. >= (Sender’s Window Size) + (Reciever’s Window Size
     > )
 
 2.  Efficiency in TDM(polling) = T~t~ / (T~poll~ + T~t~)
 
-3.  In CSMA/CD, T~t~ &gt;= 2\*T~p~\
+3.  In CSMA/CD, T~t~ >= 2\*T~p~\
     > Hence, min frame length = 2\*T~p~\*B
 
 4.  In CSMA/CD, Efficiency = 1/(1 + 6.44a)
@@ -3895,18 +3865,18 @@ system call while the parent sleeps for 50 seconds, hence doesn’t call
 [wait()](https://en.wikipedia.org/wiki/Wait_%28system_call%29) and the
 child process’s entry still exists in the process table.
 
-  -----------------------------------------------
+  ```-------------------
   // A C program to demonstrate Zombie Process.
   
   // Child becomes Zombie as parent is sleeping
   
   // when child process exits.
   
-  \#include &lt;stdlib.h&gt;
+  \#include <stdlib.h>
   
-  \#include &lt;sys/types.h&gt;
+  \#include <sys/types.h>
   
-  \#include &lt;unistd.h&gt;
+  \#include <unistd.h>
   
   int main()
   
@@ -3920,7 +3890,7 @@ child process’s entry still exists in the process table.
   
   // Parent process
   
-  if (child\_pid &gt; 0)
+  if (child\_pid > 0)
   
   sleep(50);
   
@@ -3933,7 +3903,7 @@ child process’s entry still exists in the process table.
   return 0;
   
   }
-  -----------------------------------------------
+  ```-------------------
 
 **Orphan Process:**
 
@@ -3947,7 +3917,7 @@ child process is still executing and is called an orphan process now.
 However, the orphan process is soon adopted by init process, once its
 parent process dies.
 
-  ------------------------------------------------
+  ```--------------------
   // A C program to demonstrate Orphan Process.
   
   // Parent process finishes execution while the
@@ -3956,11 +3926,11 @@ parent process dies.
   
   // becomes orphan.
   
-  \#include&lt;stdio.h&gt;
+  \#include<stdio.h>
   
-  \#include &lt;sys/types.h&gt;
+  \#include <sys/types.h>
   
-  \#include &lt;unistd.h&gt;
+  \#include <unistd.h>
   
   int main()
   
@@ -3970,7 +3940,7 @@ parent process dies.
   
   int pid = fork();
   
-  if (pid &gt; 0)
+  if (pid > 0)
   
   printf("in parent process");
   
@@ -3991,7 +3961,7 @@ parent process dies.
   return 0;
   
   }
-  ------------------------------------------------
+  ```--------------------
 
 **NOTES**
 
@@ -4050,7 +4020,7 @@ There are two types of threads:
  
 
   **<span style="font-variant:small-caps;">USER LEVEL THREAD</span>**                         **<span style="font-variant:small-caps;">KERNEL LEVEL THREAD</span>**
-  ------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------
+  `````````------- `````````----------
   User threads are implemented by users.                                                      kernel threads are implemented by OS.
   OS doesn’t recognize user level threads.                                                    Kernel threads are recognized by OS.
   Implementation of User threads is easy.                                                     Implementation of Kernel thread is complicated.
@@ -4483,11 +4453,11 @@ Algorithms:**](https://www.geeksforgeeks.org/page-replacement-algorithms-in-oper
 
 > For example, consider page reference string 1, 3, 0, 3, 5, 6 and 3
 > page slots. Initially, all slots are empty, so when 1, 3, 0 came they
-> are allocated to the empty slots —&gt; 3 Page Faults. When 3 comes, it
-> is already in  memory so —&gt; 0 Page Faults. Then 5 comes, it is not
-> available in  memory so it replaces the oldest page slot i.e 1. —&gt;
+> are allocated to the empty slots —> 3 Page Faults. When 3 comes, it
+> is already in  memory so —> 0 Page Faults. Then 5 comes, it is not
+> available in  memory so it replaces the oldest page slot i.e 1. —>
 > 1 Page Fault. Finally, 6 comes,  it is also not available in memory so
-> it replaces the oldest page slot i.e 3 —&gt; 1 Page Fault.
+> it replaces the oldest page slot i.e 3 —> 1 Page Fault.
 >
 > **Belady’s anomaly:**\
 > Belady’s anomaly proves that it is possible to have more page faults
@@ -4503,12 +4473,12 @@ Algorithms:**](https://www.geeksforgeeks.org/page-replacement-algorithms-in-oper
 
 > Let us consider page reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 and 4
 > page slots. Initially, all slots are empty, so when 7 0 1 2 are
-> allocated to the empty slots —&gt; 4 Page faults. 0 is already there
-> so —&gt; 0 Page fault. When 3 came it will take the place of 7 because
-> it is not used for the longest duration of time in the future.—&gt; 1
-> Page fault. 0 is already there so —&gt; 0 Page fault. 4 will takes
-> place of 1 —&gt; 1 Page Fault. Now for the further page reference
-> string —&gt; 0 Page fault because they are already available in the
+> allocated to the empty slots —> 4 Page faults. 0 is already there
+> so —> 0 Page fault. When 3 came it will take the place of 7 because
+> it is not used for the longest duration of time in the future.—> 1
+> Page fault. 0 is already there so —> 0 Page fault. 4 will takes
+> place of 1 —> 1 Page Fault. Now for the further page reference
+> string —> 0 Page fault because they are already available in the
 > memory.
 >
 > Optimal page replacement is perfect, but not possible in practice as
@@ -4522,11 +4492,11 @@ Algorithms:**](https://www.geeksforgeeks.org/page-replacement-algorithms-in-oper
 
 > Let say the page reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 .
 > Initially, we have 4-page slots empty. Initially, all slots are empty,
-> so when 7 0 1 2 are allocated to the empty slots —&gt; 4 Page faults.
-> 0 is already their so —&gt; 0 Page fault. When 3 came it will take the
-> place of 7 because it is least recently used —&gt; 1 Page fault. 0 is
-> already in memory so —&gt; 0 Page fault. 4 will takes place of 1 —&gt;
-> 1 Page Fault. Now for the further page reference string —&gt;** 0 Page
+> so when 7 0 1 2 are allocated to the empty slots —> 4 Page faults.
+> 0 is already their so —> 0 Page fault. When 3 came it will take the
+> place of 7 because it is least recently used —> 1 Page fault. 0 is
+> already in memory so —> 0 Page fault. 4 will takes place of 1 —>
+> 1 Page Fault. Now for the further page reference string —>** 0 Page
 > fault** because they are already available in the memory.
 >
 >  \
@@ -4695,17 +4665,17 @@ before execution of the program.
 
 4.  **Logical :**code not reachable, infinite loop.
 
-**Left Recursion** : The grammar : A -&gt; Aa | a is left recursive. Top
+**Left Recursion** : The grammar : A -> Aa | a is left recursive. Top
 down parsing techniques cannot handle left recursive grammar so we
 convert left recursion into right recursion.\
-Left recursion elimination : A -&gt; Aa | a ⇒ A -&gt; aA’\
-A’ -&gt; aA’ | a
+Left recursion elimination : A -> Aa | a ⇒ A -> aA’\
+A’ -> aA’ | a
 
 **Left Factoring** : If a grammar has common prefixes in r.h.s of
 nonterminal then suh grammar needs to be left factored by eliminating
 common prefixes as follows :\
-A -&gt; ab1 | ac2 ⇒ A -&gt; A -&gt; aA’\
-A’ -&gt; A -&gt; b1 | c2
+A -> ab1 | ac2 ⇒ A -> A -> aA’\
+A’ -> A -> b1 | c2
 
 [**FIRST(A)**](https://www.geeksforgeeks.org/compiler-design-first-in-syntax-analysis/) is
 a set of the terminal symbols which occur as first symbols in string
@@ -4722,8 +4692,8 @@ height="2.1104166666666666in"}
 **LL(1) Parser** : LL(1) grammar is unambiguous, left factored and non
 left recursive.\
 To check whether a grammar is LL(1) or not :\
-1. If A -&gt; B1 | C2 ⇒ { FIRST(B1) ∩ FIRST(C2 ) = φ }\
-2. If A -&gt; B | ∈ ⇒ { FIRST(B) ∩ FOLLOW(A) = φ }
+1. If A -> B1 | C2 ⇒ { FIRST(B1) ∩ FIRST(C2 ) = φ }\
+2. If A -> B | ∈ ⇒ { FIRST(B) ∩ FOLLOW(A) = φ }
 
 ![bottomupparser](images//media/image18.jpg){width="6.263888888888889in"
 height="1.9680555555555554in"}
@@ -4733,18 +4703,18 @@ canonical collection of LR items.\
 Conflicts in LR(0) parser :
 
 1. **Shift Reduce (SR) conflict :** when the same state in DFA contains
-both shift and reduce items. A -&gt; B . xC (shifting) B -&gt; a.
+both shift and reduce items. A -> B . xC (shifting) B -> a.
 (reduced)
 
 2. **Reduced Reduced (RR) conflict :** two reductions in same state of
-DFA A -&gt; a. (reduced) B -&gt; b. (reduced)
+DFA A -> a. (reduced) B -> b. (reduced)
 
 **SLR Parser **: It is powerful than LR(0).\
 Ever LR(0) is SLR but every SLR need not be LR(0).\
 Conflicts in SLR\
-1. SR conflict : A -&gt; B . xC (shifting) B -&gt; a. (reduced) if
+1. SR conflict : A -> B . xC (shifting) B -> a. (reduced) if
 FOLLOW(B) ∩ {x} ≠ φ\
-2. RR conflict : A -&gt; a. (reduced) B -&gt; b. (reduced) if FOLLOW(A)
+2. RR conflict : A -> a. (reduced) B -> b. (reduced) if FOLLOW(A)
 ∩ FOLLOW(B) ≠ φ
 
 **CLR Parser** : It is same as SLR parser except that the reduced
@@ -4760,7 +4730,7 @@ Parsers Comparison :**\
 LR(0) ⊂ SLR ⊂ LALR ⊂ CLR\
 LL(1) ⊂ LALR ⊂ CLR\
 If number of states LR(0) = n1, number of states SLR = n2, number of
-states LALR = n3, number of states CLR = n4 then, n1 = n2 = n3 &lt;= n4
+states LALR = n3, number of states CLR = n4 then, n1 = n2 = n3 <= n4
 
 ![https://media.geeksforgeeks.org/wp-content/uploads/compiler-design4.jpg](images//media/image20.jpg){width="6.263888888888889in"
 height="4.073611111111111in"}
@@ -4769,9 +4739,9 @@ height="4.073611111111111in"}
 Translation**](https://www.geeksforgeeks.org/compiler-design-syntax-directed-translation/):
 Syntax Directed Translation are augmented rules to the grammar that
 facilitate semantic analysis.\
-Eg – S -&gt; AB {print (\*)}\
-A -&gt; a {print (1)}\
-B -&gt; b {print (2)}
+Eg – S -> AB {print (\*)}\
+A -> a {print (1)}\
+B -> b {print (2)}
 
 **Synthesized Attribute **: attribute whose value is evaluated in terms
 of attribute values of its children.
@@ -5119,26 +5089,26 @@ This method may cause a problem for users that follow a lot of users.
 Push method is for users that follow few users and pull method is for
 users that follow a lot of users.
 
-  ---------------------------------------------------------------------------------------
+  `````````---
   // Java Program to explain the design
   
     
   
   public class Server{
   
-      ArrayList&lt;Machine&gt; machines = new ArrayList&lt;Machine&gt;();
+      ArrayList<Machine> machines = new ArrayList<Machine>();
   
   }
   
   public class Storage{
   
-      ArrayList&lt;StorageMachine&gt; machines = new ArrayList&lt;StorageMachine&gt;();
+      ArrayList<StorageMachine> machines = new ArrayList<StorageMachine>();
   
   }
   
   public class Machine{
   
-      public ArrayList&lt;User&gt; users = new ArrayList&lt;User&gt;();
+      public ArrayList<User> users = new ArrayList<User>();
   
       public int machineID;
   
@@ -5146,7 +5116,7 @@ users that follow a lot of users.
   
   public class StorageMachine{
   
-      public ArrayList&lt;Picture&gt; pictures = new ArrayList&lt;Picture&gt;();
+      public ArrayList<Picture> pictures = new ArrayList<Picture>();
   
       public int machineID;
   
@@ -5154,9 +5124,9 @@ users that follow a lot of users.
   
   public class User{
   
-      private ArrayList&lt;Integer&gt; friends;
+      private ArrayList<Integer> friends;
   
-      private ArrayList&lt;Integer&gt; pictures;
+      private ArrayList<Integer> pictures;
   
       private int userID;
   
@@ -5176,9 +5146,9 @@ users that follow a lot of users.
   
           this.machineID = machineID;
   
-  pictures = new ArrayList&lt;Integer&gt;();
+  pictures = new ArrayList<Integer>();
   
-  friends = new ArrayList&lt;Integer&gt;();
+  friends = new ArrayList<Integer>();
   
       }
   
@@ -5236,7 +5206,7 @@ users that follow a lot of users.
   
           int\[\] temp = new int\[friends.size()\];
   
-          for(int i=0; i&lt;temp.length; i++){
+          for(int i=0; i<temp.length; i++){
   
               temp\[i\] = friends.get(i);
   
@@ -5252,7 +5222,7 @@ users that follow a lot of users.
   
           int\[\] temp = new int\[pictures.size()\];
   
-          for(int i=0; i&lt;temp.length; i++){
+          for(int i=0; i<temp.length; i++){
   
               temp\[i\] = pictures.get(i);
   
@@ -5377,4 +5347,4 @@ users that follow a lot of users.
       }
   
   }
-  ---------------------------------------------------------------------------------------
+  `````````---
