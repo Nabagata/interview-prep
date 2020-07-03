@@ -1,7 +1,7 @@
 # Table of contents
 
 * [C](#c)
-* [C++](#c\+\+)
+* [C++](#c-1)
 * [JAVA](#java)
 * [Comparison of Inheritance in C++ and JAVA](#comparison-of-inheritance-in-c-and-java)
 * [Data Structures](#commonly-asked-data-structure-interview-questions--set-1)
