@@ -144,7 +144,7 @@ Following are examples.
   
   // ptr is a dangling pointer now and operations like following are invalid
   
-  *ptr = 10; // or printf("%d", \*ptr);
+  *ptr = 10; // or printf("%d", *ptr);
   
   // EXAMPLE 2
   
@@ -175,11 +175,11 @@ programs like daemons and servers which by definition never terminate.
   
     
   
-      /\* Do some work \*/
+      /* Do some work */
   
     
   
-      return; /\* Return without freeing ptr\*/
+      return; /* Return without freeing ptr*/
   
   }
   ```
@@ -251,7 +251,7 @@ functions static can be reuse of the same function name in other files.
 For example, if we store following program in one file *file1.c*
 
   ```cpp
-  /\* Inside file1.c \*/ 
+  /* Inside file1.c */ 
   
   static void fun1(void)
   
@@ -265,7 +265,7 @@ For example, if we store following program in one file *file1.c*
 And store following program in another file *file2.c*
 
   ```cpp
-  /\* Iinside file2.c  \*/ 
+  /* Iinside file2.c  */ 
   
   int main(void)
   
@@ -299,8 +299,8 @@ expression ++i increments the value and returns new value.\
 prefix ++ is right to left.\
 4) In C++, ++i can be used as l-value, but i++ cannot be. In C, they
 both cannot be used as l-value.\
-See [Difference between ++\*p, \*p++ and
-\*++p](https://www.geeksforgeeks.org/difference-between-p-p-and-p/) for
+See [Difference between ++*p, *p++ and
+*++p](https://www.geeksforgeeks.org/difference-between-p-p-and-p/) for
 more details.
 
 **What is l-value?**\
@@ -323,7 +323,7 @@ Pointer](https://www.geeksforgeeks.org/difference-pointer-array-c/)
 **How to write your own sizeof operator?**
 
   ```cpp
-  #define my\_sizeof(type) (char \*)(&type+1)-(char\*)(&type)
+  #define my\_sizeof(type) (char *)(&type+1)-(char*)(&type)
   ```
 
 See [Implement your own
@@ -334,7 +334,7 @@ more details.
 We can use recursion for this purpose.
 
   ```cpp
-  /\* Prints numbers from 1 to n \*/
+  /* Prints numbers from 1 to n */
   
   void printNos(unsigned int n)
   
@@ -375,11 +375,11 @@ following program works fine.
   
       const volatile int local = 10;
   
-      int \*ptr = (int\*) &local; 
+      int *ptr = (int*) &local; 
   
       printf("Initial value of local : %d \\n", local); 
   
-      \*ptr = 100; 
+      *ptr = 100; 
   
       printf("Modified value of local: %d \\n", local); 
   
@@ -494,7 +494,7 @@ bp points to an object of Derived class.
   
   int main(void) {   
   
-      Base \*bp = new Derived;     
+      Base *bp = new Derived;     
   
       bp->show();  // RUN-TIME POLYMORPHISM
   
@@ -551,9 +551,9 @@ undefined.
   
   {
   
-    /\* Following is Valid \*/
+    /* Following is Valid */
   
-    A \*ptr = new A;
+    A *ptr = new A;
   
     ptr->fun();
   
@@ -563,7 +563,7 @@ undefined.
   
     
   
-    /\* And following is Invalid: Undefined Behavior \*/
+    /* And following is Invalid: Undefined Behavior */
   
     A a;
   
@@ -604,7 +604,7 @@ not be accessed after deletion.
   
     
   
-        /\* Invalid: Undefined Behavior \*/
+        /* Invalid: Undefined Behavior */
   
         cout<<x;
   
@@ -672,9 +672,9 @@ int main()
 
 {
 
-D1 \*d = new D1;;
+D1 *d = new D1;;
 
-Base \*b = d;
+Base *b = d;
 
 b->function1();
 
@@ -809,15 +809,15 @@ Following are the differences between malloc() and operator new.
 
 -   new is an operator, while malloc() is a function.
 
--   new returns exact data type, while malloc() returns void \*.
+-   new returns exact data type, while malloc() returns void *.
 
 -   new calls constructors( class instances are initalized and deinitialized automatically), while malloc() does not (classes won’t get initalized or deinitialized automatically)
 
 -   Syntax:
 
-    1.  int \*n = new int(10); // initialization with new()
+    1.  int *n = new int(10); // initialization with new()
 
-    2.  str = (char \*) malloc(15); //malloc()
+    2.  str = (char *) malloc(15); //malloc()
 
 **free( )** is used on resources allocated by malloc( ), or calloc( ) in
 C
@@ -1056,7 +1056,7 @@ and initialized read-write area.
 For instance the global string defined by char s\[\] = “hello world” in
 C and a C statement like int debug=1 outside the main (i.e. global)
 would be stored in initialized read-write area. And a global C statement
-like const char\* string = “hello world” makes the string literal “hello
+like const char* string = “hello world” makes the string literal “hello
 world” to be stored in initialized read-only area and the character
 pointer variable string in initialized read-write area.
 
@@ -2008,19 +2008,19 @@ using Arrays and Linked Lists.
     their operands. This is the usual way we write expressions. An
     expression such as
 
-A \* ( B + C ) / D
+A * ( B + C ) / D
 
 -   **Postfix notation (also known as “Reverse Polish notation”): **X
     Y **+ **Operators are written after their operands. The infix
     expression given above is equivalent to
 
-A B C + \* D/
+A B C + * D/
 
 -   **Prefix notation (also known as “Polish notation”): **+ X
     Y** **Operators are written before their operands. The expressions
     given above are equivalent to
 
-/ \* A + B C D
+/ * A + B C D
 
 Converting between these notations: [*Click
 here*](http://quiz.geeksforgeeks.org/stack-set-2-infix-to-postfix/)
@@ -2593,7 +2593,7 @@ SQL Interview Questions
     values.\
     For example,
 
-2.  SELECT \* FROM Students
+2.  SELECT * FROM Students
 
 3.  WHERE ROLL\_NO BETWEEN 20 AND 30;
 
@@ -2604,7 +2604,7 @@ The **IN **operator is used to check for values contained in specific
 sets.\
 For example,
 >
-SELECT \* FROM Students
+SELECT * FROM Students
 >
 WHERE ROLL\_NO IN (20,21,23);
 >
@@ -2629,7 +2629,7 @@ the value of the field ROLL\_NO is either 20 or 21 or 23.
 
 The required query is:
 >
-SELECT \* FROM Employees WHERE EmpName like 'A%' ;
+SELECT * FROM Employees WHERE EmpName like 'A%' ;
 >
 You may refer to this article on [*WHERE
 clause*](https://www.geeksforgeeks.org/sql-where-clause/) for more
@@ -2900,7 +2900,7 @@ Procedural language with basic and extended operators.
   --- | ---
   **σ(Selection)**       |                                                                          Select rows based on given condition
   **∏(Projection)** |                                                                               Project some columns
-  **X (Cross Product)** |                                                                           Cross product of relations, returns **m\*n**rows where m and n are number of rows in R1 and R2 respectively.
+  **X (Cross Product)** |                                                                           Cross product of relations, returns **m*n**rows where m and n are number of rows in R1 and R2 respectively.
   **U (Union)** |                                                                                   Return those tuples which are either in R1 or in R2. Max no. of rows returned **= m+n** andMin no. of rows returned =**max(m,n)**
   **−(Minus)** |                                                                                    R1-R2 returns those tuples which are in R1 but not in R2. Max no. of rows returned = **m** and Min no. of rows returned = **m-n**
   **ρ(Rename)** |                                                                                    Renaming a relation to other relation.
@@ -2935,7 +2935,7 @@ Relational Algebra, SQL is a non-procedural language.
   [***EXISTS***](https://www.geeksforgeeks.org/sql-exists/) |                                                  **EXISTS** is used to check whether the result of a correlated nested query is empty (contains no tuples) or not.
   [***Group By***](https://www.geeksforgeeks.org/sql-group-by/) |                                               **Group By** is used to group the tuples based on some attribute or set of attributes like counting the no. of students group by department.
   [***Order By***](https://www.geeksforgeeks.org/sql-order-by/) |                                               **Order By** is used to sort the fetched data in either ascending or descending according to one or more columns.
-  [***Aggregate functions***](https://www.geeksforgeeks.org/database-management-system-aggregate-functions/) |  Find the aggregated value of an attribute. Used mostly with group by. e.g.; count, sum, min max. **select count(\*) from student group by dept\_idNote:** we can select only those columns which are part of group by.
+  [***Aggregate functions***](https://www.geeksforgeeks.org/database-management-system-aggregate-functions/) |  Find the aggregated value of an attribute. Used mostly with group by. e.g.; count, sum, min max. **select count(*) from student group by dept\_idNote:** we can select only those columns which are part of group by.
   [***Nested Queries***](https://www.geeksforgeeks.org/nested-queries-sql/) |                                   When one query is a part of other query. Solving nested queries questions can be learnt in **http://quiz.geeksforgeeks.org/nested-queries-sql/**
 
  
@@ -3427,8 +3427,8 @@ height="1.9895833333333333in"}
 
 2.  Efficiency in TDM(polling) = T~t~ / (T~poll~ + T~t~)
 
-3.  In CSMA/CD, T~t~ >= 2\*T~p~\
-    Hence, min frame length = 2\*T~p~\*B
+3.  In CSMA/CD, T~t~ >= 2*T~p~\
+    Hence, min frame length = 2*T~p~*B
 
 4.  In CSMA/CD, Efficiency = 1/(1 + 6.44a)
 
@@ -3436,7 +3436,7 @@ height="1.9895833333333333in"}
     CSMA/CD***](https://www.geeksforgeeks.org/back-off-algorithm-csmacd/)\
     Waiting time = back–off time\
     Let n = collision number or re-transmission serial number.\
-    Then, Waiting time = K \* T~slot~\
+    Then, Waiting time = K * T~slot~\
     where K = \[0, 2^n^ – 1 \]
 
 6.  N = No. of stations\
@@ -3450,11 +3450,11 @@ height="1.9895833333333333in"}
     channels***](https://www.geeksforgeeks.org/computer-network-maximum-data-rate-channel-capacity-noiseless-noisy-channels/)
 
     -   **Noiseless Channel : Nyquist Bit Rate**\
-        BitRate = 2 \* Bandwidth \* log2(L)\
+        BitRate = 2 * Bandwidth * log2(L)\
         where,L is the number of signal levels used to represent data.
 
     -   **Noisy Channel : Shannon Capacity**\
-        Capacity = bandwidth \* log2(1 + SNR)\
+        Capacity = bandwidth * log2(1 + SNR)\
         where, SNR is the signal-to-noise ratio
 
  
@@ -3633,8 +3633,8 @@ i.e. server maintains no information about past client requests.
 
 **Network Security**
 
-For Symmetric Key : n\*(n-1)/2 keys are required.\
-For Public Key : 2\*n key are required ( each node will have private and
+For Symmetric Key : n*(n-1)/2 keys are required.\
+For Public Key : 2*n key are required ( each node will have private and
 public key).
 
 [***RSA Algorithm in
@@ -4714,7 +4714,7 @@ height="4.073611111111111in"}
 Translation**](https://www.geeksforgeeks.org/compiler-design-syntax-directed-translation/):
 Syntax Directed Translation are augmented rules to the grammar that
 facilitate semantic analysis.\
-Eg – S -> AB {print (\*)}\
+Eg – S -> AB {print (*)}\
 A -> a {print (1)}\
 B -> b {print (2)}
 
@@ -4852,7 +4852,7 @@ assume the total user count of Instagram is 500 Million and the daily
 user is 10 Million. If we assume that each user uploads 2 picture in
 each day, daily incoming picture count is 20 Million. Notice that we can
 think the average size of the picture is 500 KB so total required space
-for 1 day is 20 Million \* 500 KB = 10 \* 10\^12 = 10 TB. Total space
+for 1 day is 20 Million * 500 KB = 10 * 10\^12 = 10 TB. Total space
 required for 5 years can easily be estimated. Note that, this capacity
 doesn’t contain replicate data. Additionally, we should just only use
 until 80% of total existing capacity.
@@ -4878,7 +4878,7 @@ dislike count, total view count.
    3-) *DeletePicture (api\_dev\_key, pictureID)*\
      Return HTTP response if success.
 
-\*\*There are a lot of another APIs to design Instagram, however, these
+**There are a lot of another APIs to design Instagram, however, these
 three APIs are more important than the others.
 
 **5- DATABASE SCHEMA**
@@ -4912,16 +4912,16 @@ scale system easily. There are three tables to store data;
     – UserID1 : Int\
     – UserID2 : Int
 
-   \*\* If we choose the NoSQL to keep data, we need to add a new table
+   ** If we choose the NoSQL to keep data, we need to add a new table
 system. (PictureUser)\
-   \*\* We can store photos in S3 or HDFS.\
-   \*\* We can store all information about pictures with a key-value
+   ** We can store photos in S3 or HDFS.\
+   ** We can store all information about pictures with a key-value
 pair like Redis. Key is pictureID, a value is other information about
 the picture. (For NoSQL)\
-   \*\* We can store all information about users with a key-value pair
+   ** We can store all information about users with a key-value pair
 like Redis. Key is userID, a value is other information about the user.
 (For NoSQL)\
-   \*\* We can use Cassandra, column-based data storage, to save
+   ** We can use Cassandra, column-based data storage, to save
 follow-up of users.
 
    Note: A lot of NoSQL database supports replication.
