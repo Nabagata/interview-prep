@@ -185,15 +185,15 @@ programs like daemons and servers which by definition never terminate.
   ```
 
 **What are local static variables? What is their use?**\
-**Ans:**A local static variable is a variable whose lifetime doesn’t end
+**Ans:** A local static variable is a variable whose lifetime doesn’t end
 with a function call where it is declared. It extends for the lifetime
 of complete program. All calls to the function share the same copy of
 local static variables. Static variables can be used to count the number
 of times a function is called. Also, static variables get the default
 value as 0. For example, the following program prints “0 1”
 
-  ```-------------------------
-  \#include <stdio.h>
+  ```cpp
+  #include <stdio.h>
   
   void fun()
   
@@ -224,7 +224,7 @@ value as 0. For example, the following program prints “0 1”
   }
   
   // Output: 0 1
-  ```-------------------------
+  ```
 
 **What are static functions? What is their use?**\
 **Ans:**
@@ -233,7 +233,7 @@ In C, functions are global by default. The “*static*” keyword before a
 function name makes it static. For example, below function *fun() *is
 static.
 
-  ```----------
+  ```cpp
   static int fun(void)
   
   {
@@ -241,7 +241,7 @@ static.
     printf("I am a static function ");
   
   }
-  ```----------
+  ```
 
 Unlike global functions in C, access to static functions is restricted
 to the file where they are declared. Therefore, when we want to restrict
@@ -250,7 +250,7 @@ functions static can be reuse of the same function name in other files.
 
 For example, if we store following program in one file *file1.c*
 
-  -------------------------
+  ```cpp
   /\* Inside file1.c \*/ 
   
   static void fun1(void)
@@ -260,11 +260,11 @@ For example, if we store following program in one file *file1.c*
     puts("fun1 called");
   
   }
-  -------------------------
+  ```
 
 And store following program in another file *file2.c*
 
-  ---------------------------
+  ```cpp
   /\* Iinside file2.c  \*/ 
   
   int main(void)
@@ -278,7 +278,7 @@ And store following program in another file *file2.c*
     return 0;  
   
   }
-  ---------------------------
+  ```
 
 Now, if we compile the above code with command “*gcc file2.c file1.c*”,
 we get the error *“undefined reference to \`fun1’”* . This is
@@ -322,9 +322,9 @@ Pointer](https://www.geeksforgeeks.org/difference-pointer-array-c/)
 
 **How to write your own sizeof operator?**
 
-  ``````------
-  \#define my\_sizeof(type) (char \*)(&type+1)-(char\*)(&type)
-  ``````------
+  ```cpp
+  #define my\_sizeof(type) (char \*)(&type+1)-(char\*)(&type)
+  ```
 
 See [Implement your own
 sizeof](https://www.geeksforgeeks.org/implement-your-own-sizeof/) for
@@ -333,7 +333,7 @@ more details.
 **How will you print numbers from 1 to 100 without using loop?**\
 We can use recursion for this purpose.
 
-  ```--------
+  ```cpp
   /\* Prints numbers from 1 to n \*/
   
   void printNos(unsigned int n)
@@ -351,7 +351,7 @@ We can use recursion for this purpose.
     } 
   
   }
-  ```--------
+  ```
 
 **What is volatile keyword?**\
 The volatile keyword is intended to prevent the compiler from applying
@@ -388,9 +388,9 @@ following program works fine.
   }
   ``````
 
-**C++**
+# C++
 
-Commonly Asked C++ Interview Questions | Set 1
+## Commonly Asked C++ Interview Questions | Set 1
 
 **What are the differences between C and C++?**\
 **1)** C++ is a kind of superset of C, most of C programs except few
@@ -403,10 +403,10 @@ features like function overloading, templates, inheritance, virtual
 functions, friend functions. These features are absent in C.\
 **4)** C++ supports exception handling at language level, in C exception
 handling is done in traditional if-else style.\
-**5) **C++
+**5)** C++
 supports [*references*](https://www.geeksforgeeks.org/references-in-c/)**, **C
 doesn’t.\
-**6) **In C, scanf() and printf() are mainly used input/output. C++
+**6)** In C, scanf() and printf() are mainly used input/output. C++
 mainly uses streams to perform input and output operations. cin is
 standard input stream and cout is standard output stream.
 
@@ -420,12 +420,12 @@ returned from functions, to get efficiency gain.\
 Despite above similarities, there are following differences between
 references and pointers.
 
-*References are less powerful than pointers*\
+*References are less powerful than pointers*
 1) Once a reference is created, it cannot be later made to reference
 another object; it cannot be reseated. This is often done with
-pointers.\
+pointers.
 2) References cannot be NULL. Pointers are often made NULL to indicate
-that they are not pointing to any valid thing.\
+that they are not pointing to any valid thing.
 3) A reference must be initialized when declared. There is no such
 restriction with pointers
 
@@ -435,29 +435,29 @@ references don’t have above restrictions, and can be used to implement
 all data structures. References being more powerful in Java, is the main
 reason Java doesn’t need pointers.
 
-*References are safer and easier to use:*\
+*References are safer and easier to use:*
 1) Safer: Since references must be initialized, wild references like
 wild pointers are unlikely to exist. It is still possible to have
 references that don’t refer to a valid location (See questions 5 and 6
-in the below exercise )\
+in the below exercise )
 2) Easier to use: References don’t need dereferencing operator to access
 the value. They can be used like normal variables. ‘&’ operator is
 needed only at the time of declaration. Also, members of an object
 reference can be accessed with dot operator (‘.’), unlike pointers where
 arrow operator (->) is needed to access members.
 
-**What are virtual functions – Write an example? **\
+**What are virtual functions – Write an example?**\
 [*Virtual
-functions *](https://www.geeksforgeeks.org/virtual-functions-and-runtime-polymorphism-in-c-set-1-introduction/)are
+functions*](https://www.geeksforgeeks.org/virtual-functions-and-runtime-polymorphism-in-c-set-1-introduction/) are
 used with inheritance, they are called according to the type of object
 pointed or referred, not according to the type of pointer or reference.
 In other words, virtual functions are resolved late, at runtime. Virtual
 keyword is used to make a function virtual.
 
 Following things are necessary to write a C++ program with runtime
-polymorphism (use of virtual functions)\
-1) A base class and a derived class.\
-2) A function with same name in base class and derived class.\
+polymorphism (use of virtual functions)
+1) A base class and a derived class.
+2) A function with same name in base class and derived class.
 3) A pointer or reference of base class type pointing or referring to an
 object of derived class.
 
@@ -465,8 +465,8 @@ For example, in the following program bp is a pointer of type Base, but
 a call to bp->show() calls show() function of Derived class, because
 bp points to an object of Derived class.
 
-  ``````-
-  \#include<iostream>
+  ```cpp
+  #include<iostream>
   
   using namespace std;
   
@@ -501,7 +501,7 @@ bp points to an object of Derived class.
       return 0;
   
   }
-  ``````-
+  ```
 
 Output:
 
@@ -509,7 +509,7 @@ In Derived
 
 **What is this pointer?**\
 The [*‘this’
-pointer *](https://www.geeksforgeeks.org/this-pointer-in-c/)is passed as
+pointer*](https://www.geeksforgeeks.org/this-pointer-in-c/) is passed as
 a hidden argument to all nonstatic member function calls and is
 available as a local variable within the body of all nonstatic
 functions. ‘this’ pointer is a constant pointer that holds the memory
@@ -519,16 +519,16 @@ object (with class name).
 
 **Can we do “delete this”?**
 
-Ideally *delete *operator should not be used for *this *pointer.
+Ideally *delete* operator should not be used for *this* pointer.
 However, if used, then following points must be considered.
 
-1) *delete *operator works only for objects allocated using
+1) *delete* operator works only for objects allocated using
 operator *new* (See [this
 post](https://www.geeksforgeeks.org/g-fact-30/)). If the object is
 created using new, then we can do *delete this*, otherwise behavior is
 undefined.
 
-  `````````--
+  ```cpp
   class A
   
   {
@@ -576,13 +576,13 @@ undefined.
     return 0;
   
   }
-  `````````--
+  ```
 
-2\) Once *delete this *is done, any member of the deleted object should
+2\) Once *delete this* is done, any member of the deleted object should
 not be accessed after deletion.
 
-  ```---------------
-  \#include<iostream>
+  ```cpp
+  #include<iostream>
   
   using namespace std;
   
@@ -611,7 +611,7 @@ not be accessed after deletion.
       }
   
   };
-  ```---------------
+  ```
 
 **What are VTABLE and VPTR?**\
 vtable is a table of function pointers. It is maintained per class.\
@@ -627,8 +627,8 @@ example, since pointed or referred object is of derived type, vptr of
 derived class is accessed). Once vptr is fetched, vtable of derived
 class can be accessed. Using vtable, address of derived derived class
 function show() is accessed and called.
-
-\#include<iostream.h>
+```cpp
+#include<iostream.h>
 
 class Base
 
@@ -685,7 +685,7 @@ delete (b);
 return (0);
 
 }
-
+```
 **Output**:
 
 D1 :: function1() // base virtual member function got overloaded
@@ -697,8 +697,7 @@ Base :: function2()
 ![](images//media/image22.png){width="6.270833333333333in"
 height="5.083333333333333in"}
 
-Commonly Asked C++ Interview Questions | Set 2
-==============================================
+## Commonly Asked C++ Interview Questions | Set 2
 
  
 
@@ -706,25 +705,17 @@ Commonly Asked C++ Interview Questions | Set 2
 
 There are lot of differences, some of the major differences are:
 
--   Java has automatic garbage collection whereas C++ has destructors
-    > , which are automatically invoked when the object is destroyed.
+-   Java has automatic garbage collection whereas C++ has destructors, which are automatically invoked when the object is destroyed.
 
--   Java does not support pointers, templates, unions, operator
-    > overloading, structures etc.
+-   Java does not support pointers, templates, unions, operator overloading, structures etc.
 
--   C++ has no in built support for threads, whereas in Java there is a
-    > Thread class that you inherit to create a new thread
+-   C++ has no in built support for threads, whereas in Java there is a Thread class that you inherit to create a new thread
 
 -   No goto in JAVA
 
--   C++ support multiple inheritance, method overloading and operator
-    > overloading but JAVA only has method overloading.
+-   C++ support multiple inheritance, method overloading and operator overloading but JAVA only has method overloading.
 
--   Java is *interpreted *and hence platform independent whereas C++
-    > isn’t. At compilation time, Java Source code converts into
-    > JVM *byte code*. The interpreter executes this bytecode at run
-    > time and gives output. C++ run and compile using compiler which
-    > converts source code into machine level language.
+-   Java is *interpreted* and hence platform independent whereas C++ isn’t. At compilation time, Java Source code converts into JVM *byte code*. The interpreter executes this bytecode at run time and gives output. C++ run and compile using compiler which converts source code into machine level language.
 
 ### 
 
@@ -733,14 +724,14 @@ There are lot of differences, some of the major differences are:
 Access specifiers are used to define how the members (functions and
 variables) can be accessed outside the class.
 
--   **Private: **Members declared as private are accessible only within
+-   **Private:** Members declared as private are accessible only within
     > the same class and they cannot be accessed outside the class they
     > are declared. Child classes are also not allowed to access private
     > members of parent.
 
--   **Public: **Members declared as public are accessible from anywhere.
+-   **Public:** Members declared as public are accessible from anywhere.
 
--   **Protected: **Only the class and its child classes can access
+-   **Protected:** Only the class and its child classes can access
     > protected
     > members.![table5.6](images//media/image14.png){width="5.75in"
     > height="1.625in"}
@@ -804,29 +795,23 @@ does not take any space.
 
 ### Q. [Structure vs class in C++](https://www.geeksforgeeks.org/g-fact-76/)
 
--   In C++, a structure is same as class except the following
-    > differences:
+-   In C++, a structure is same as class except the following differences:
 
-    -   Members of a class are private by default and members of struct
-        > are public by default.
+    -   Members of a class are private by default and members of struct are public by default.
 
-    -   When deriving a struct from a class/struct, default
-        > access-specifier for a base class/struct is public. And when
-        > deriving a class, default access specifier is private.
+    -   When deriving a struct from a class/struct, default access-specifier for a base class/struct is public. And when deriving a class, default access specifier is private.
 
 ### 
 
 ### Q. [*Malloc() vs new*](https://www.geeksforgeeks.org/malloc-vs-new/) / [*Delete vs Free*](https://www.geeksforgeeks.org/g-fact-30/)
 
-** **Following are the differences between malloc() and operator new.
+Following are the differences between malloc() and operator new.
 
 -   new is an operator, while malloc() is a function.
 
 -   new returns exact data type, while malloc() returns void \*.
 
--   new calls constructors( class instances are initalized and
-    > deinitialized automatically), while malloc() does not( classes
-    > won’t get initalized or deinitialized automatically
+-   new calls constructors( class instances are initalized and deinitialized automatically), while malloc() does not (classes won’t get initalized or deinitialized automatically)
 
 -   Syntax:
 
@@ -912,7 +897,7 @@ like String so that we can concatenate two strings by just using +.
 Other example classes where arithmetic operators may be overloaded are
 Complex Number, Fractional Number, Big Integer, etc.
 
-  ``````---------------------------
+  ```cpp
   class Complex {\
   private:\
   int real, imag;\
@@ -936,7 +921,7 @@ Complex Number, Fractional Number, Big Integer, etc.
   Complex c3 = c1 + c2; // An example call to "operator+"\
   c3.print();\
   }
-  ``````---------------------------
+  ```
 
 ### 
 
@@ -944,26 +929,25 @@ Complex Number, Fractional Number, Big Integer, etc.
 
 A copy constructor is a member function which initializes an object
 using another object of the same class. A copy constructor has the
-following general function prototype: ClassName (const ClassName
-&old\_obj);
+following general function prototype: 
+```cpp
+ClassName (const ClassName &old\_obj);
 
 Point(int x1, int y1) { x = x1; y = y1; }
 
 // Copy constructor
 
 Point(const Point &p2) {x = p2.x; y = p2.y; }
-
-When is copy constructor called?
+```
+**When is copy constructor called?**
 
 In C++, a Copy Constructor may be called in following cases:
 
 1.  When an object of the class is returned by value.
 
-2.  When an object of the class is passed (to a function) by value as an
-    > argument.
+2.  When an object of the class is passed (to a function) by value as an argument.
 
-3.  When an object is constructed based on another object of the same
-    > class.
+3.  When an object is constructed based on another object of the same class.
 
 4.  When compiler generates a temporary object.
 
@@ -992,16 +976,13 @@ lifetime. Static Keyword can be used with following,
 [***Interesting facts about Static Members Functions  in
 C++***](https://www.geeksforgeeks.org/some-interesting-facts-about-static-member-functions-in-c/)
 
--   **static member functions do not have this pointer.**
+-   static member functions do not have this pointer.
 
--   **A static member function cannot be virtual**
+-   A static member function cannot be virtual
 
--   **Member function declarations with the same name and the name
-    > parameter-type-list cannot be overloaded if any of them is a
-    > static member function declaration.**
+-   Member function declarations with the same name and the name parameter-type-list cannot be overloaded if any of them is a static member function declaration.
 
--   **static member function can not be declared const, volatile, or
-    > const volatile.**
+-   static member function can not be declared const, volatile, or const volatile.
 
 **What is a namespace?**
 
@@ -1011,7 +992,7 @@ can create two variables or member functions having the same name.
 
 A namespace definition begins with the keyword **namespace** followed by
 the namespace name as follows:
-
+```
 namespace namespace\_name
 
 {
@@ -1023,9 +1004,8 @@ int x, y; // code declarations where
 // namespace\_name's scope
 
 }
-
-Memory Layout of C Programs
-===========================
+```
+# Memory Layout of C Programs
 
 A typical memory representation of C program consists of the following
 sections.
@@ -1140,9 +1120,9 @@ virtual memory into the process’ virtual address space). The Heap area
 is shared by all shared libraries and dynamically loaded modules in a
 process.
 
-**JAVA**
+# JAVA
 
-**Why is Java called the ‘Platform Independent Programming Language’?**\
+**Why is Java called the ‘Platform Independent Programming Language’?**
  
 
 Platform independence means that execution of your program does not
@@ -3625,7 +3605,7 @@ Subnet Mask (Option 1 – e.g., 255.255.255.0)\
 Router Address (Option 3 – e.g., 192.168.1.1)\
 DNS Address (Option 6 – e.g., 8.8.8.8)\
 Vendor Class Identifier (Option 43 – e.g., ‘unifi’ = 192.168.1.9
-\#\#where unifi = controller)
+##where unifi = controller)
 
 [***Simple Network Management Protocol
 (SNMP) ***](https://www.geeksforgeeks.org/computer-network-simple-network-management-protocol-snmp/):
@@ -3872,11 +3852,11 @@ child process’s entry still exists in the process table.
   
   // when child process exits.
   
-  \#include <stdlib.h>
+  #include <stdlib.h>
   
-  \#include <sys/types.h>
+  #include <sys/types.h>
   
-  \#include <unistd.h>
+  #include <unistd.h>
   
   int main()
   
@@ -3926,11 +3906,11 @@ parent process dies.
   
   // becomes orphan.
   
-  \#include<stdio.h>
+  #include<stdio.h>
   
-  \#include <sys/types.h>
+  #include <sys/types.h>
   
-  \#include <unistd.h>
+  #include <unistd.h>
   
   int main()
   
