@@ -245,7 +245,7 @@ value as 0. For example, the following program prints “0 1”
 **Ans:**
 
 In C, functions are global by default. The “*static*” keyword before a
-function name makes it static. For example, below function *fun() *is
+function name makes it static. For example, below function *fun()* is
 static.
 
   ```cpp
