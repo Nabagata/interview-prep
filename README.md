@@ -5,7 +5,7 @@
 * [JAVA](#java)
 * [Comparison of Inheritance in C++ and JAVA](#comparison-of-inheritance-in-c-and-java)
 * [Data Structures](#commonly-asked-data-structure-interview-questions--set-1)
-* [OOPs](#oop)
+* [OOPs](#oops)
 * [DBMS](#dbms)
 * [Computer Networking](#computer-networking)
 * [Operating Systems](#operating-systems)
@@ -58,7 +58,7 @@ variable may directly be accessible. In C, all identifiers are lexically
 See [*this*](https://www.geeksforgeeks.org/scope-rules-in-c/) for more
 details.
 
-**What is the difference between Scope and Lifetime?**
+**What is the difference between Scope and Lifetime?** \
 **Ans:**
 
 ***Scope*** is the region or section of code where a variable can be
