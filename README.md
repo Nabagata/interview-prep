@@ -1,4 +1,5 @@
 # Interview Preparation Resouces
+
 Everything you need to know to get the job
 
 ## Table of contents
@@ -14,7 +15,6 @@ Everything you need to know to get the job
 * [Operating Systems](#operating-systems)
 * [Compiler Design](#compiler-design)
 * [System Design](#system-design)
-
 
 ## C
 
@@ -92,12 +92,13 @@ begin with.
   
   }
 ```
+
 See [*print “Geeks for Geeks” without using a semicolon for
 answer*](https://www.geeksforgeeks.org/write-a-c-program-to-print-geeks-for-geeks-without-using-a-semicolon/).
 
 **When should we use pointers in a C program?**\
 **1.** To get address of a variable\
-**2.** For achieving pass by reference in C:* Pointers allow different
+**2.** For achieving pass by reference in C:*Pointers allow different
 functions to share and modify their local variables.\
 **3.** To pass large structures* so that complete copy of the structure
 can be avoided.\
@@ -183,7 +184,7 @@ forget to delete it. Memory leaks are particularly serious issues for
 programs like daemons and servers which by definition never terminate.
 
   ```cpp
-  //Function with memory leak 
+  //Function with memory leak
   
   #include <stdlib.h>
   
@@ -191,11 +192,11 @@ programs like daemons and servers which by definition never terminate.
   {
       int* ptr = (int*)malloc(sizeof(int));
   
-    
+
   
       /* Do some work */
   
-    
+
   
       return; /* Return without freeing ptr*/
   
@@ -227,7 +228,7 @@ value as 0. For example, the following program prints “0 1”
   
   }
   
-    
+
   
   int main()
   
@@ -269,7 +270,7 @@ functions static can be reuse of the same function name in other files.
 For example, if we store following program in one file *file1.c*
 
   ```cpp
-  /* Inside file1.c */ 
+  /* Inside file1.c */
   
   static void fun1(void)
   
@@ -283,13 +284,13 @@ For example, if we store following program in one file *file1.c*
 And store following program in another file *file2.c*
 
   ```cpp
-  /* Iinside file2.c  */ 
+  /* Iinside file2.c  */
   
   int main(void)
   
   {
   
-    fun1(); 
+    fun1();
   
     getchar();
   
@@ -309,7 +310,8 @@ low-level access to memory, simple set of keywords, and clean style.
 These features make it suitable for system programming like operating
 system or compiler development.
 
-**What is difference between i++ and ++i?** 
+**What is difference between i++ and ++i?**
+
 1) The expression ‘i++’ returns the old value and then increments i. The
 expression ++i increments the value and returns new value.
 2) Precedence of postfix ++ is higher than that of prefix ++.
@@ -331,7 +333,7 @@ const variables are “nonmodifiable l-value”.\
 “modifiable l-value” represent a l-value that can be modified.
 
 Refer [lvalue and rvalue in C
-language ](https://www.geeksforgeeks.org/lvalue-and-rvalue-in-c-language/)for
+language](https://www.geeksforgeeks.org/lvalue-and-rvalue-in-c-language/)for
 details.
 
 **What is the difference between array and pointer?**\
@@ -366,7 +368,7 @@ We can use recursion for this purpose.
   
       printf("%d ",  n);
   
-    } 
+    }
   
   }
   ```
@@ -393,13 +395,13 @@ following program works fine.
   
       const volatile int local = 10;
   
-      int *ptr = (int*) &local; 
+      int *ptr = (int*) &local;
   
-      printf("Initial value of local : %d \\n", local); 
+      printf("Initial value of local : %d \\n", local);
   
-      *ptr = 100; 
+      *ptr = 100;
   
-      printf("Modified value of local: %d \\n", local); 
+      printf("Modified value of local: %d \\n", local);
   
       return 0;
   
