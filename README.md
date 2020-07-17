@@ -1,21 +1,24 @@
-# Table of contents
+# Interview Preparation Resouces
+Everything you need to know to get the job
+
+## Table of contents
 
 * [C](#c)
 * [C++](#c-1)
 * [JAVA](#java)
 * [Comparison of Inheritance in C++ and JAVA](#comparison-of-inheritance-in-c-and-java)
-* [Data Structures](#commonly-asked-data-structure-interview-questions--set-1)
+* [Data Structures](#data-structures)
 * [OOPs](#oops)
 * [DBMS](#dbms)
 * [Computer Networking](#computer-networking)
 * [Operating Systems](#operating-systems)
 * [Compiler Design](#compiler-design)
-* [System Design](#design-scalable-system-like-instagram)
+* [System Design](#system-design)
 
 
-# C
+## C
 
-## Commonly Asked C Programming Interview Questions | Set 1
+### Commonly Asked C Programming Interview Questions | Set 1
 
 **What is the difference between declaration and definition of a
 variable/function**\
@@ -403,7 +406,7 @@ following program works fine.
   }
   ```
 
-# C++
+## C++
 
 ## Commonly Asked C++ Interview Questions | Set 1
 
@@ -1106,7 +1109,7 @@ virtual memory into the process’ virtual address space). The Heap area
 is shared by all shared libraries and dynamically loaded modules in a
 process.
 
-# JAVA
+## JAVA
 
 **Why is Java called the ‘Platform Independent Programming Language’?**
  
@@ -1646,7 +1649,7 @@ No friend functions\
 No friend classes\
 No templates in java
 
-# Comparison of Inheritance in C++ and Java
+## Comparison of Inheritance in C++ and Java
 
 The purpose of inheritance is same in C++ and Java. Inheritance is used
 in both languages for reusing code and/or creating is-a relationship.
@@ -1882,7 +1885,7 @@ Base constructor called
 
 Derived constructor called
 
-# Commonly Asked Data Structure Interview Questions | Set 1
+## Data Structures
 
 **What is a Data Structure?**\
 A data structure is a way of organizing the data so that the data can be
@@ -2217,8 +2220,7 @@ list*](https://www.geeksforgeeks.org/write-a-c-function-to-detect-loop-in-a-link
 [*Data Structure for Dictionary and Spell
 Checker?*](https://www.geeksforgeeks.org/data-structure-dictionary-spell-checker/)
 
-# OOPs
-
+## OOPs
 
 ## Commonly Asked OOP Interview Questions | Set 1
 
@@ -2287,7 +2289,7 @@ do is to try to understand the problem to separate necessary from
 unnecessary details: We try to obtain our own abstract view, or model,
 of the problem. This process of modeling is called abstraction.
 
-# DBMS
+## DBMS
 
 
 ## Commonly asked DBMS interview questions | Set 1
@@ -3026,7 +3028,7 @@ is. Order of non-leaf will be higher as compared to leaf nodes.
 Searching time will be less in B+ tress, since it doesn’t have record
 pointers in non-leaf because of which depth will decrease.
 
-# Computer Networking
+## Computer Networking
 
 ## Commonly asked Computer Networks Interview Questions | Set 1
 
@@ -3607,7 +3609,7 @@ R1 = g<sup>x</sup> mod p\
 R2 = g<sup>y</sup> mod q\
 Both will have same key = g<sup>xy</sup> mod p
 
-# Operating Systems
+## Operating Systems
 
 ## Commonly Asked Operating Systems Interview Questions | Set 1
 
@@ -4535,7 +4537,7 @@ Algorithms**](https://www.geeksforgeeks.org/disk-scheduling-algorithms/):
     extra delay which occurred due to unnecessary traversal to the end
     of the disk.
 
-# COMPILER DESIGN
+## Compiler Design
 
 [**Phases of
 Compiler**](https://www.geeksforgeeks.org/compiler-design-phases-compiler/):\
@@ -4723,7 +4725,7 @@ during compile time.\
 4. **Strength reduction** : replacing costly operators by simple
 operators.
 
-**SYSTEM DESIGN**
+## System Design
 
 Design Scalable System like Instagram
 =====================================
