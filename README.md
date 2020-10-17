@@ -2173,7 +2173,7 @@ more details.
  
 **Multi Linked List (MLL) Questions**
 
--   [*Target(Path problem)*]("./res/target.cpp")
+-   [*Target(Path problem)*](https://github.com/nabagata/interview-prep/res/target.cpp)
 
 -   [*Printing MLL(depth wise)*](https://github.com/nabagata/interview-prep/res/MLL-depth.cpp)
  
