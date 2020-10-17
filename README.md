@@ -2040,7 +2040,9 @@ node.Types of Linked List :
     list or doubly circular linked list. Eg. 1->2->3->1 \[The
     next pointer of last node is pointing to the first\]
 
- 
+4. **Multi-linked list :** It resembles trees and graphs in many ways . 
+    Precisely it's foundation data-structure while moving from linked list to trees.
+
 
 **Which data structures are used for BFS and DFS of a graph?**
 
@@ -2169,7 +2171,12 @@ more details.
     List*](https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/)
 
  
+**Multi Linked List (MLL) Questions**
 
+-   [*Target(Path problem)*](https://github.com/nabagata/interview-prep/res/target.cpp)
+
+-   [*Printing MLL(depth wise)*](https://github.com/nabagata/interview-prep/res/MLL-depth.cpp)
+ 
 **Tree Traversal Questions**
 
 -   [*Inorder*](https://www.geeksforgeeks.org/618/)
