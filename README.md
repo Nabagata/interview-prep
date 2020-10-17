@@ -2173,9 +2173,9 @@ more details.
  
 **Multi Linked List (MLL) Questions**
 
--   [*Target(Path problem)*](https://github.com/nabagata/interview-prep/res/target.cpp)
+-   [*Target(Path problem)*](https://github.com/nabagata/interview-prep/res/Multi-linked-list/target.cpp)
 
--   [*Printing MLL(depth wise)*](https://github.com/nabagata/interview-prep/res/MLL-depth.cpp)
+-   [*Printing MLL(depth wise)*](https://github.com/nabagata/interview-prep/res/Multi-linked-list/MLL-depth.cpp)
  
 **Tree Traversal Questions**
 
@@ -2191,6 +2191,11 @@ more details.
     Tree*](https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/)
 
  
+**Binary Heaps**
+
+-   [*Max Heap*](https://github.com/nabagata/interview-prep/res/BinaryHeap/maxheap.cpp)
+
+-   [*Min Heap*](https://github.com/nabagata/interview-prep/res/BinaryHeap/minheap.cpp)
 
 **Convert a DLL to Binary Tree in-place**\
 See [*In-place conversion of Sorted DLL to Balanced
@@ -2217,7 +2222,7 @@ it?*](https://www.geeksforgeeks.org/in-a-linked-list-given-only-a-pointer-to-a-n
 [*Write a function to reverse a linked
 list*](https://www.geeksforgeeks.org/write-a-function-to-reverse-the-nodes-of-a-linked-list/)
 
- 
+[*Recursive Approach*](https://github.com/nabagata/interview-prep/res/LL/reverseLL.cpp)
 
 **Detect Loop in a Linked List**\
 [*Write a C function to detect loop in a linked
