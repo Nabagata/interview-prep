@@ -20,45 +20,45 @@
 
 using namespace std;
 
-typedef struct btnode{
-	btnode *lc;
+typedef struct Btnode{
+	Btnode *left_child;
 	char data;
-	btnode *rc;
-}*btptr;
+	Btnode *right_child;
+}*BT_ptr;
 
-void insert(btptr &T,char n)
+void insert(BT_ptr &T,char n)
 {
 	if(T==NULL)
 	{
-		T = new btnode;
+		T = new Btnode;
 		T->data = n;
-		T->lc = NULL;
-		T->rc = NULL;
+		T->left_child = NULL;
+		T->right_child = NULL;
 	}
 	char ch;
 	cout<<"Enter left child for "<<n<<" (. if none): ";
 	cin>>ch;
 	if(ch!='.')
-		insert(T->lc,ch);
+		insert(T->left_child,ch);
 	cout<<"Enter right child for "<<n<<" (. if none) :";
 	cin>>ch;
 	if(ch!='.')	
-		insert(T->rc,ch);
+		insert(T->right_child,ch);
 	else return;
 }
 
-queue<btptr>q;
-void level(btptr T)
+queue<BT_ptr>q;
+void levelPrint(BT_ptr T)
 {
-	btptr temp = new btnode;
+	BT_ptr temp = new Btnode;
 	temp->data = '#';
-	temp->lc = NULL;
-	temp->rc = NULL;
+	temp->left_child = NULL;
+	temp->right_child = NULL;
 	q.push(T);
 	q.push(temp);
 	while(q.size()!=1)
 	{
-		btptr t = q.front();
+		BT_ptr t = q.front();
 		q.pop();
 		if(t->data=='#')
 		{
@@ -68,21 +68,21 @@ void level(btptr T)
 		else
 		{
 			cout<<t->data<<" ";
-			if(t->lc!=NULL)
-				q.push(t->lc);
-			if(t->rc!=NULL)
-				q.push(t->rc);
+			if(t->left_child!=NULL)
+				q.push(t->left_child);
+			if(t->right_child!=NULL)
+				q.push(t->right_child);
 		}
 	}
 }
 
 int main()
 {
-	btptr T = NULL;
+	BT_ptr T = NULL;
 	char ch;
 	cin>>ch;
 	insert(T,ch);
-	level(T);
+	levelPrint(T);
 }
 
 
