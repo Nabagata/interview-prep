@@ -2173,9 +2173,9 @@ more details.
  
 **Multi Linked List (MLL) Questions**
 
--   [*Target(Path problem)*](https://github.com/nabagata/interview-prep/res/Multi-linked-list/target.cpp)
+-   [*Target(Path problem)*](https://github.com/nabagata/interview-prep/codes/Multi-linked-list/target.cpp)
 
--   [*Printing MLL(depth wise)*](https://github.com/nabagata/interview-prep/res/Multi-linked-list/MLL-depth.cpp)
+-   [*Printing MLL(depth wise)*](https://github.com/nabagata/interview-prep/codes/Multi-linked-list/MLL-depth.cpp)
  
 **Tree Traversal Questions**
 
@@ -2193,15 +2193,20 @@ more details.
  
 **Binary Heaps**
 
--   [*Max Heap*](https://github.com/nabagata/interview-prep/res/BinaryHeap/maxheap.cpp)
+-   [*Max Heap*](https://github.com/nabagata/interview-prep/codes/BinaryHeap/maxheap.cpp)
 
--   [*Min Heap*](https://github.com/nabagata/interview-prep/res/BinaryHeap/minheap.cpp)
+-   [*Min Heap*](https://github.com/nabagata/interview-prep/codes/BinaryHeap/minheap.cpp)
 
 **Convert a DLL to Binary Tree in-place**\
 See [*In-place conversion of Sorted DLL to Balanced
 BST*](https://www.geeksforgeeks.org/in-place-conversion-of-sorted-dll-to-balanced-bst/)
 
- 
+**Flatten a MLL**\
+See [Multi linked list flattening](https://github.com/nabagata/interview-prep/codes/Multi-Linked-List/flatten_MLL.cpp)
+
+**Covert Binary Tree to Binary search tree in-place**\
+See  [bt2bst](https://github.com/nabagata/interview-prep/codes/BST/bt2bst2.cpp)
+
 
 **Convert Binary Tree to DLL in-place**\
 See [*Convert a given Binary Tree to Doubly Linked List | Set
