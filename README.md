@@ -2040,7 +2040,9 @@ node.Types of Linked List :
     list or doubly circular linked list. Eg. 1->2->3->1 \[The
     next pointer of last node is pointing to the first\]
 
- 
+4. **Multi-linked list :** It resembles trees and graphs in many ways . 
+    Precisely it's foundation data-structure while moving from linked list to trees.
+
 
 **Which data structures are used for BFS and DFS of a graph?**
 
@@ -2169,7 +2171,12 @@ more details.
     List*](https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/)
 
  
+**Multi Linked List (MLL) Questions**
 
+-   [*Target(Path problem)*](https://github.com/nabagata/interview-prep/res/Multi-linked-list/target.cpp)
+
+-   [*Printing MLL(depth wise)*](https://github.com/nabagata/interview-prep/res/Multi-linked-list/MLL-depth.cpp)
+ 
 **Tree Traversal Questions**
 
 -   [*Inorder*](https://www.geeksforgeeks.org/618/)
@@ -2184,6 +2191,11 @@ more details.
     Tree*](https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/)
 
  
+**Binary Heaps**
+
+-   [*Max Heap*](https://github.com/nabagata/interview-prep/res/BinaryHeap/maxheap.cpp)
+
+-   [*Min Heap*](https://github.com/nabagata/interview-prep/res/BinaryHeap/minheap.cpp)
 
 **Convert a DLL to Binary Tree in-place**\
 See [*In-place conversion of Sorted DLL to Balanced
@@ -2210,7 +2222,7 @@ it?*](https://www.geeksforgeeks.org/in-a-linked-list-given-only-a-pointer-to-a-n
 [*Write a function to reverse a linked
 list*](https://www.geeksforgeeks.org/write-a-function-to-reverse-the-nodes-of-a-linked-list/)
 
- 
+[*Recursive Approach*](https://github.com/nabagata/interview-prep/res/LL/reverseLL.cpp)
 
 **Detect Loop in a Linked List**\
 [*Write a C function to detect loop in a linked
