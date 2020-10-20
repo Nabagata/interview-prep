@@ -2185,13 +2185,13 @@ more details.
     Traversals*](https://www.geeksforgeeks.org/618/)
 
 -   [*Level order traversal*](https://www.geeksforgeeks.org/level-order-tree-traversal/)
-    - [Source Code](res/Tree/Tree_Level_Printing.cpp)
+    - [Source Code](res/Tree/levelWiseTreeTraversal.cpp)
 
 
 -   [*Height of Binary
     Tree*](https://www.geeksforgeeks.org/write-a-c-program-to-find-the-maximum-depth-or-height-of-a-tree/)
 
--   [*Least Common Ancestor in BST*](res/BST/Least_Common_Ancestor.cpp)
+-   [*Least Common Ancestor in BST*](res/BST/leastCommonAncestor.cpp)
 
  
 **Binary Heaps**
