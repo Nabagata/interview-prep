@@ -1,4 +1,4 @@
-# Interview Preparation Resouces
+# Interview Preparation Resources
 
 Everything you need to know to get the job
 
