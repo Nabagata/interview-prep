@@ -2326,6 +2326,8 @@ conventional operating systems
 7. Security problems
 Source: [*http://cs.nyu.edu/courses/spring01/G22.2433-001/mod1.2.pdf*](http://cs.nyu.edu/courses/spring01/G22.2433-001/mod1.2.pdf)
 
+**What are keys in DBMS?**\
+**Ans** [keys in DBMS](https://www.scaler.com/topics/keys-in-dbms/) are nothing but a way to uniquely identify each record of a table.\
 **What are super, primary, candidate and foreign keys?**\
 **Ans:** A [*superkey*](http://en.wikipedia.org/wiki/Superkey) is a set
 of attributes of a relation schema upon which all attributes of the
