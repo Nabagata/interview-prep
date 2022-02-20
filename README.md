@@ -4214,7 +4214,7 @@ Deadlock avoidance can be done with Banker’s Algorithm.
 >
 **Banker’s Algorithm**
 >
-Bankers’s Algorithm is resource allocation and deadlock avoidance
+Bankers’s Algorithm is resource allocation and [deadlock avoidance](https://www.scaler.com/topics/operating-system/deadlock-avoidance-in-os/)
 algorithm which test all the request made by processes for resources,
 it checks for the safe state, if after granting request system remains
 in the safe state it allows the request and if there is no safe state
