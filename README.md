@@ -257,9 +257,7 @@ For example, if we store following program in one file *file1.c*
   ```cpp
   /* Inside file1.c */
   
-  static void fun1(void)
-  
-  {
+  static void fun1(void) {
   
     puts("fun1 called");
   
@@ -271,9 +269,7 @@ And store following program in another file *file2.c*
   ```cpp
   /* Iinside file2.c  */
   
-  int main(void)
-  
-  {
+  int main(void) {
   
     fun1();
   
@@ -341,13 +337,9 @@ We can use recursion for this purpose.
   ```cpp
   /* Prints numbers from 1 to n */
   
-  void printNos(unsigned int n)
+  void printNos(unsigned int n) {
   
-  {
-  
-    if(n > 0)
-  
-    {
+    if(n > 0) {
   
       printNos(n-1);
   
@@ -374,9 +366,7 @@ The value can be changed by other code or pointer. For example the
 following program works fine.
 
   ```cpp
-  int main(void)
-  
-  {
+  int main(void) {
   
       const volatile int local = 10;
   
@@ -582,9 +572,7 @@ not be accessed after deletion.
   
     
   
-  class A
-  
-  {
+  class A {
   
     int x;
   
@@ -622,49 +610,41 @@ derived class is accessed). Once vptr is fetched, vtable of derived
 class can be accessed. Using vtable, address of derived derived class
 function show() is accessed and called.
 ```cpp
-#include<iostream.h>
+#include <iostream.h>
 
-class Base
-{
-
-public:
-
-virtual void function1() {cout<<"Base :: function1()\n";};
-
-virtual void function2() {cout<<"Base :: function2()\n";};
-
-virtual ~Base(){};
-
-};
-
-class D1: public Base
-{
+class Base {
 
 public:
-~D1(){};
-virtual void function1() { cout<<"D1 :: function1()\n";};
+  virtual void function1() { cout << "Base :: function1()\n"; };
 
+  virtual void function2() { cout << "Base :: function2()\n"; };
+
+  virtual ~Base(){};
 };
 
-class D2: public Base
-{
+class D1 : public Base {
 
 public:
-~D2(){};
-virtual void function2() { cout<< "D2 :: function2\n";};
-
+  ~D1(){};
+  virtual void function1() { cout << "D1 :: function1()\n"; };
 };
 
-int main()
-{
+class D2 : public Base {
 
-D1 *d = new D1;;
-Base *b = d;
-b->function1();
-b->function2();
-delete (b);
-return (0);
+public:
+  ~D2(){};
+  virtual void function2() { cout << "D2 :: function2\n"; };
+};
 
+int main() {
+
+  D1 *d = new D1;
+  ;
+  Base *b = d;
+  b->function1();
+  b->function2();
+  delete (b);
+  return (0);
 }
 ```
 **Output**:
@@ -815,9 +795,7 @@ time. Inline function may increase efficiency if it is small.
 
 The syntax for defining the function inline is:
 ```cpp
-inline return-type function-name(parameters)
-
-{
+inline return-type function-name(parameters) {
 
 // function code
 
