@@ -4997,24 +4997,24 @@ This method may cause a problem for users that follow a lot of users.
 Push method is for users that follow few users and pull method is for
 users that follow a lot of users.
 
-  ```java
+```java
 // Java Program to explain the design
 
 public class Server {
 
-  ArrayList < Machine > machines = new ArrayList < Machine > ();
+  ArrayList <Machine> machines = new ArrayList <Machine> ();
 
 }
 
 public class Storage {
 
-  ArrayList < StorageMachine > machines = new ArrayList < StorageMachine > ();
+  ArrayList <StorageMachine> machines = new ArrayList <StorageMachine> ();
 
 }
 
 public class Machine {
 
-  public ArrayList < User > users = new ArrayList < User > ();
+  public ArrayList <User> users = new ArrayList <User> ();
 
   public int machineID;
 
@@ -5022,7 +5022,7 @@ public class Machine {
 
 public class StorageMachine {
 
-  public ArrayList < Picture > pictures = new ArrayList < Picture > ();
+  public ArrayList <Picture> pictures = new ArrayList <Picture> ();
 
   public int machineID;
 
@@ -5030,9 +5030,9 @@ public class StorageMachine {
 
 public class User {
 
-  private ArrayList < Integer > friends;
+  private ArrayList <Integer> friends;
 
-  private ArrayList < Integer > pictures;
+  private ArrayList <Integer> pictures;
 
   private int userID;
 
@@ -5106,13 +5106,13 @@ public class User {
 
   }
 
-  public int\[\] getPictures() {
+  public int[] getPictures() {
 
-    int\[\] temp = new int\[pictures.size()\];
+    int[] temp = new int\[pictures.size()\];
 
     for (int i = 0; i < temp.length; i++) {
 
-      temp\[i\] = pictures.get(i);
+      temp[i] = pictures.get(i);
 
     }
 
@@ -5219,5 +5219,5 @@ public class Picture {
   }
 
 }
-  ```
+```
 Source: [GeeksForGeeks](http://www.geeksforgeeks.org/)
