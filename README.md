@@ -853,29 +853,32 @@ Other example classes where arithmetic operators may be overloaded are
 Complex Number, Fractional Number, Big Integer, etc.
 
   ```cpp
-  class Complex {
-  private:
+class Complex {
+private:
   int real, imag;
-  public:
-  Complex(int r = 0, int i =0) {real = r; imag = i;}
-  
+
+public:
+  Complex(int r = 0, int i = 0) {
+    real = r;
+    imag = i;
+  }
+
   // This is automatically called when '+' is used with
   // between two Complex objects
-  Complex operator + (Complex const &obj) {
-  Complex res;
-  res.real = real + obj.real;
-  res.imag = imag + obj.imag;
-  return res;
+  Complex operator+(Complex const &obj) {
+    Complex res;
+    res.real = real + obj.real;
+    res.imag = imag + obj.imag;
+    return res;
   }
   void print() { cout << real << " + i" << imag << endl; }
-  };
-  
-  int main()
-  {
+};
+
+int main() {
   Complex c1(10, 5), c2(2, 4);
   Complex c3 = c1 + c2; // An example call to "operator+"
   c3.print();
-  }
+}
   ```
 
 ### 
@@ -886,13 +889,19 @@ A copy constructor is a member function which initializes an object
 using another object of the same class. A copy constructor has the
 following general function prototype: 
 ```cpp
-ClassName (const ClassName &old\_obj);
+ClassName(const ClassName &old_obj);
 
-Point(int x1, int y1) { x = x1; y = y1; }
+Point(int x1, int y1) {
+  x = x1;
+  y = y1;
+}
 
 // Copy constructor
 
-Point(const Point &p2) {x = p2.x; y = p2.y; }
+Point(const Point &p2) {
+  x = p2.x;
+  y = p2.y;
+}
 ```
 **When is copy constructor called?**
 
@@ -1251,19 +1260,11 @@ Read [more](https://www.geeksforgeeks.org/can-we-overload-or-override-static-me
 The method is static because otherwise there would be ambiguity: which
 constructor should be called? Especially if your class looks like this:
 ```java
-public class JavaClass
+public class JavaClass {
 
-{
+    protected JavaClass(int x) { }
 
-protected JavaClass(int x)
-
-{ }
-
-public void main(String\[\] args)
-
-{
-
-}
+    public void main(String[] args) { }
 
 }
 ```
@@ -1644,7 +1645,7 @@ Object class.
   
   class Main {
   
-    public static void main(String\[\] args) {
+    public static void main(String[] args) {
   
       Test t = new Test();    
   
