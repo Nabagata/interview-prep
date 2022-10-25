@@ -80,17 +80,15 @@ begin with.
 **Ans:**
 
 ```cpp
-  #include <stdio.h>
-  
-  int main(void)
-  
-  {
-  
-      if (printf("Hello World")) {
-  
-      }
-  
-  }
+#include <stdio.h>
+
+int main(void) {
+
+    if (printf("Hello World")) {
+
+    }
+
+}
 ```
 
 See [*print “Geeks for Geeks” without using a semicolon for
@@ -120,23 +118,20 @@ value of global variable x.
   #include <stdio.h>
 
   int x = 0;
-  
-  int f()  
-  {
-     return x;
+
+  int f() {
+       return x; 
   }
-  
-  int g()
-  {
-     int x = 1;
-     return f();
+
+  int g() {
+       int x = 1;
+       return f();
   }
-  
-  int main()
-  {
-    printf("%d", g());
-    printf("\\n");
-    getchar();
+
+  int main() {
+      printf("%d", g());
+      printf("\\n");
+      getchar();
   }
   ```
 
@@ -188,18 +183,12 @@ programs like daemons and servers which by definition never terminate.
   
   #include <stdlib.h>
   
-  void f()
-  {
+  void f() {
       int* ptr = (int*)malloc(sizeof(int));
-  
-
   
       /* Do some work */
   
-
-  
       return; /* Return without freeing ptr*/
-  
   }
   ```
 
@@ -214,9 +203,7 @@ value as 0. For example, the following program prints “0 1”
   ```cpp
   #include <stdio.h>
   
-  void fun()
-  
-  {
+  void fun() {
   
       // static variables get the default value as 0.
   
@@ -230,9 +217,7 @@ value as 0. For example, the following program prints “0 1”
   
 
   
-  int main()
-  
-  {
+  int main() {
   
       fun();
   
