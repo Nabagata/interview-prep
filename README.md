@@ -2886,7 +2886,7 @@ Relational Algebra, SQL is a non-procedural language.
 
   **Operator** |                                                                                                **Meaning**
   --- | ---
-  [***Select***](https://www.geeksforgeeks.org/sql-select-query/) |                                             Selects columns from a relation or set of relations. **Note: **As opposed to Relational Algebra, it may give duplicate tuples for repeated value of an attribute.
+  [***Select***](https://www.geeksforgeeks.org/sql-select-query/) |                                             Selects columns from a relation or set of relations. **Note: **As opposed to [Relational Algebra](https://www.scaler.com/topics/dbms/relational-algebra-in-dbms/), it may give duplicate tuples for repeated value of an attribute.
   [***From***](https://www.geeksforgeeks.org/sql-sub-queries-clause/) |                                          **From** is used to give input as relation or set of relations from which data needs to be selected.
   [***where***](https://www.geeksforgeeks.org/sql-where-clause/) |                                              **Where** is used to give condition to be used to filter tuples
   [***EXISTS***](https://www.geeksforgeeks.org/sql-exists/) |                                                  **EXISTS** is used to check whether the result of a correlated nested query is empty (contains no tuples) or not.
