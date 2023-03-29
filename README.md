@@ -425,7 +425,7 @@ that they are not pointing to any valid thing.
 restriction with pointers
 
 Due to the above limitations, references in C++ cannot be used for
-implementing data structures like Linked List, Tree, etc. In Java,
+implementing data structures like Linked List, Tree, etc. In #,
 references don’t have above restrictions, and can be used to implement
 all data structures. References being more powerful in Java, is the main
 reason Java doesn’t need pointers.
@@ -1615,6 +1615,8 @@ No friend functions\
 No friend classes\
 No templates in java
 
+For more preparation, refer these [Java Interview Questions](https://blog.geekster.in/java-interview-questions/).
+
 ## Comparison of Inheritance in C++ and Java
 
 The purpose of inheritance is same in C++ and Java. Inheritance is used
@@ -1862,6 +1864,8 @@ implementation of databases, while compiler implementations usually use
 hash tables to look up identifiers. (Source: [*Wiki
 Page*](http://en.wikipedia.org/wiki/Data_structure))
 
+Get to know more about [Data Structures And Algorithms – Meaning, Types, And Classification](https://blog.geekster.in/what-is-data-structure-and-algorithms/)
+
  
 
 **What are linear and non linear data Structures?**
@@ -2091,7 +2095,7 @@ implemented in two ways:
 -   Method 2 (By making deQueue operation costly) See [*Implement Queue
     using Stacks*](https://www.geeksforgeeks.org/queue-using-stacks/)
 
- 
+ For more info about Stack and Queue, refer [Stack And Queue In Data Structures](https://blog.geekster.in/learn-stack-and-queue-in-data-structures/).
 
 **Which Data Structure Should be used for implementiong LRU cache?**
 
@@ -2202,6 +2206,9 @@ list*](https://www.geeksforgeeks.org/write-a-c-function-to-detect-loop-in-a-link
 **Which data structure is used for dictionary and spell checker?**\
 [*Data Structure for Dictionary and Spell
 Checker?*](https://www.geeksforgeeks.org/data-structure-dictionary-spell-checker/)
+
+Refer these [Data Structure and Algorithm Interview Questions](https://blog.geekster.in/data-structure-algorithm-interview-questions/) for more info.
+You can also prepare with these video turorials on [Java-DSA interview Preparation](https://learn.geekster.in/courses/java-dsa-questions-for-interview-preparation).
 
 ## OOPs
 
@@ -2511,6 +2518,8 @@ logical ordering. Typically, a tree is created whose leaf point to disk
 records. [*B-Tree*](http://en.wikipedia.org/wiki/B-tree) or [*B+
 tree*](http://en.wikipedia.org/wiki/B+_tree) are used for this purpose
 
+See more [DBMS interview questions](https://blog.geekster.in/dbms-interview-questions/) to prepare better for the interview.
+
 SQL Interview Questions
 =======================
 
@@ -2686,6 +2695,7 @@ condition: Condition to select rows
 ```
 For more details on how to create and use view, please refer
 to [*this*](https://www.geeksforgeeks.org/sql-views/) article.
+For more info on creating SQL Table, visit [How to create an SQL Table](https://blog.geekster.in/how-to-create-sql-table/).
 
 1.  **What do you mean by foreign key?**\
     A Foreign key is a field which can uniquely identify each row in
