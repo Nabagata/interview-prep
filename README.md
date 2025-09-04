@@ -1,16 +1,16 @@
 # Interview Preparation Resources
 
-Everything you need to know to get the job
+A comprehensive collection of interview questions and answers covering programming languages, data structures, algorithms, and system design concepts.
 
-## Table of contents
+## Table of Contents
 
 * [C](#c)
 * [C++](#c-1)
-* [JAVA](#java)
-* [Comparison of Inheritance in C++ and JAVA](#comparison-of-inheritance-in-c-and-java)
+* [Java](#java)
+* [Comparison of Inheritance in C++ and Java](#comparison-of-inheritance-in-c-and-java)
 * [Data Structures](#data-structures)
-* [OOPs](#oops)
-* [DBMS](#dbms)
+* [Object-Oriented Programming](#oops)
+* [Database Management Systems](#dbms)
 * [Computer Networking](#computer-networking)
 * [Operating Systems](#operating-systems)
 * [Compiler Design](#compiler-design)
@@ -50,33 +50,24 @@ this statement.
 int x;
 ```
 
-**What are different storage class specifiers in C?**\
-**Ans:** auto, register, static, extern
+**What are different storage class specifiers in C?**  
+**Ans:** auto, register, static, extern
 
-**What is scope of a variable? How are variables scoped
-in [*C*](http://www.geeksforgeeks.org/c/)?**\
-**Ans:** Scope of a variable is the part of the program where the
-variable may directly be accessible. In C, all identifiers are lexically
-(or statically) scoped.
-See [*this*](https://www.geeksforgeeks.org/scope-rules-in-c/) for more
-details.
+**What is scope of a variable? How are variables scoped in [C](http://www.geeksforgeeks.org/c/)?**  
+**Ans:** Scope of a variable is the part of the program where the variable may directly be accessible. In C, all identifiers are lexically (or statically) scoped.  
+See [this](https://www.geeksforgeeks.org/scope-rules-in-c/) for more details.
 
-**What is the difference between Scope and Lifetime?** \
+**What is the difference between Scope and Lifetime?**  
 **Ans:**
 
-***Scope*** is the region or section of code where a variable can be
-accessed.
+**Scope** is the region or section of code where a variable can be accessed.
 
-***Lifetime*** is the time duration where an object/variable is in a
-valid state.
+**Lifetime** is the time duration where an object/variable is in a valid state.
 
-For, ***Automatic/Local non-static variables Lifetime is limited to
-their Scope***.\
-In other words, automatic variables are automagically destroyed once the
-scope({,}) in which they are created ends. Hence the name automatic to
-begin with.
+For **Automatic/Local non-static variables, Lifetime is limited to their Scope**.  
+In other words, automatic variables are automagically destroyed once the scope({,}) in which they are created ends. Hence the name automatic to begin with.
 
-**How will you print “Hello World” without semicolon?**\
+**How will you print "Hello World" without semicolon?**  
 **Ans:**
 
 ```cpp
@@ -128,22 +119,22 @@ value of global variable x.
        return f();
   }
 
-  int main() {
-      printf("%d", g());
-      printf("\\n");
-      getchar();
-  }
-  ```
+int main() {
+    printf("%d", g());
+    printf("\n");
+    getchar();
+}
+```
 
-**What is NULL pointer?**\
-**Ans:** NULL is used to indicate that the pointer doesn’t point to a
+**What is NULL pointer?**  
+**Ans:** NULL is used to indicate that the pointer doesn't point to a
 valid location. Ideally, we should initialize pointers as NULL if we
 don’t know their value at the time of declaration. Also, we should make
 a pointer NULL when memory pointed by it is deallocated in the middle of
 a program.
 
-**What is Dangling pointer?**\
-**Ans:** Dangling Pointer is a pointer that doesn’t point to a valid
+**What is Dangling pointer?**  
+**Ans:** Dangling Pointer is a pointer that doesn't point to a valid
 memory location. Dangling pointers arise when an object is deleted or
 deallocated, without modifying the value of the pointer, so that the
 pointer still points to the memory location of the deallocated memory.
@@ -167,30 +158,29 @@ Following are examples.
       int x = 10;
       ptr = &x;
   }
-  
-  // x goes out of scope and memory allocated to x is free now.
-  
-  // So ptr is a dangling pointer now.
-  ```
+
+// x goes out of scope and memory allocated to x is free now.
+// So ptr is a dangling pointer now.
+```
 
 **What is memory leak? Why it should be avoided**\
 **Ans:** Memory leak occurs when programmers create a memory in heap and
 forget to delete it. Memory leaks are particularly serious issues for
 programs like daemons and servers which by definition never terminate.
 
-  ```cpp
-  //Function with memory leak
-  
-  #include <stdlib.h>
-  
-  void f() {
-      int* ptr = (int*)malloc(sizeof(int));
-  
-      /* Do some work */
-  
-      return; /* Return without freeing ptr*/
-  }
-  ```
+```cpp
+// Function with memory leak
+
+#include <stdlib.h>
+
+void f() {
+    int* ptr = (int*)malloc(sizeof(int));
+    
+    /* Do some work */
+    
+    return; /* Return without freeing ptr*/
+}
+```
 
 **What are local static variables? What is their use?**\
 **Ans:** A local static variable is a variable whose lifetime doesn’t end
@@ -200,35 +190,23 @@ local static variables. Static variables can be used to count the number
 of times a function is called. Also, static variables get the default
 value as 0. For example, the following program prints “0 1”
 
-  ```cpp
-  #include <stdio.h>
-  
-  void fun() {
-  
-      // static variables get the default value as 0.
-  
-      static int x;
-  
-      printf("%d ", x);
-  
-      x = x + 1;
-  
-  }
-  
+```cpp
+#include <stdio.h>
 
-  
-  int main() {
-  
-      fun();
-  
-      fun();
-  
-      return 0;
-  
-  }
-  
-  // Output: 0 1
-  ```
+void fun() {
+    // static variables get the default value as 0.
+    static int x;
+    printf("%d ", x);
+    x = x + 1;
+}
+
+int main() {
+    fun();
+    fun();
+    return 0;
+}
+// Output: 0 1
+```
 
 **What are static functions? What is their use?**\
 **Ans:**
@@ -237,15 +215,11 @@ In C, functions are global by default. The “*static*” keyword before a
 function name makes it static. For example, below function *fun()* is
 static.
 
-  ```cpp
-  static int fun(void)
-  
-  {
-  
-    printf("I am a static function ");
-  
-  }
-  ```
+```cpp
+static int fun(void) {
+    printf("I am a static function ");
+}
+```
 
 Unlike global functions in C, access to static functions is restricted
 to the file where they are declared. Therefore, when we want to restrict
@@ -254,31 +228,25 @@ functions static can be reuse of the same function name in other files.
 
 For example, if we store following program in one file *file1.c*
 
-  ```cpp
-  /* Inside file1.c */
-  
-  static void fun1(void) {
-  
-    puts("fun1 called");
-  
-  }
-  ```
+```cpp
+/* Inside file1.c */
+
+static void fun1(void) {
+    puts("fun1 called");
+}
+```
 
 And store following program in another file *file2.c*
 
-  ```cpp
-  /* Iinside file2.c  */
-  
-  int main(void) {
-  
-    fun1();
-  
-    getchar();
-  
-    return 0;  
-  
-  }
-  ```
+```cpp
+/* Inside file2.c */
+
+int main(void) {
+    fun1();
+    getchar();
+    return 0;
+}
+```
 
 Now, if we compile the above code with command “*gcc file2.c file1.c*”,
 we get the error *“undefined reference to \`fun1’”* . This is
@@ -323,9 +291,9 @@ Pointer](https://www.geeksforgeeks.org/difference-pointer-array-c/)
 
 **How to write your own sizeof operator?**
 
-  ```cpp
-  #define my_sizeof(type) (char *)(&type+1)-(char*)(&type)
-  ```
+```cpp
+#define my_sizeof(type) (char *)(&type+1)-(char*)(&type)
+```
 
 See [Implement your own
 sizeof](https://www.geeksforgeeks.org/implement-your-own-sizeof/) for
@@ -1083,7 +1051,7 @@ virtual memory into the process’ virtual address space). The Heap area
 is shared by all shared libraries and dynamically loaded modules in a
 process.
 
-## JAVA
+## Java
 
 **Why is Java called the ‘Platform Independent Programming Language’?**
  
@@ -1137,8 +1105,7 @@ Refer [this](https://www.geeksforgeeks.org/g-fact-27-string-vs-stringbuilder-vs
 details.
 
  \
-**Why multiple inheritance is not supported in java?**\
- 
+**Why multiple inheritance is not supported in java?**  
 
 Java supports multiple inheritance but not through classes, it supports
 only through its interfaces. The reason for not supporting multiple
@@ -1671,14 +1638,12 @@ accessible in other class “B” of same package, even if B doesn’t inherit
 from A (they both have to be in the same package). For example, in the
 following program, protected members of A are accessible in B.
 
-  ```java
-  // filename B.java
-  
-  class A {
-  
-      protected int x = 10, y = 20;
-  
-  }
+```java
+// filename B.java
+
+class A {
+    protected int x = 10, y = 20;
+}
   
      
   
@@ -1714,12 +1679,11 @@ and *abstract *keyword for abstract classes and abstract functions.
 
 Following is a Java abstract class example.
 
-  ```java
-  // An abstract class example
-  
-  []{#_gjdgxs .anchor}abstract class myAbstractClass {
-  
-       
+```java
+// An abstract class example
+
+abstract class myAbstractClass {
+    
   
      // An abstract method
   
@@ -1752,12 +1716,11 @@ Following is a Java abstract class example.
 
 Following is a Java interface example
 
-  ```java
-  // An interface example
-  
-  public interface myInterface {
-  
-     // myAbstractFun() is public and abstract, even if we don't use these keywords
+```java
+// An interface example
+
+public interface myInterface {
+    // myAbstractFun() is public and abstract, even if we don't use these keywords
   
      void myAbstractFun();  // is same as public abstract void myAbstractFun()
   
@@ -1791,12 +1754,10 @@ called in Java, but if we want to call parametrized constructor then we
 must use super to call the parent constructor. See following Java
 example.
 
-  ```java
-  package main;
-  
-     
-  
-  class Base {
+```java
+package main;
+
+class Base {
   
       private int b;
   
@@ -2004,18 +1965,13 @@ node.Types of Linked List :
     list or doubly circular linked list. Eg. 1->2->3->1 \[The
     next pointer of last node is pointing to the first\]
 
-4. **Multi-linked list :** It resembles trees and graphs in many ways . 
-    Precisely it's foundation data-structure while moving from linked list to trees.
+4. **Multi-linked list:** It resembles trees and graphs in many ways. Precisely it's foundation data-structure while moving from linked list to trees.
 
 
 **Which data structures are used for BFS and DFS of a graph?**
 
--   [*Queue is used for
-    BFS*](https://www.geeksforgeeks.org/breadth-first-traversal-for-a-graph/)
-
--   Stack is used for DFS. [*DFS can also be implemented using
-    recursion*](https://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) (Note
-    that recursion also uses function call stack).
+- [Queue is used for BFS](https://www.geeksforgeeks.org/breadth-first-traversal-for-a-graph/)
+- Stack is used for DFS. [DFS can also be implemented using recursion](https://www.geeksforgeeks.org/depth-first-traversal-for-a-graph/) (Note that recursion also uses function call stack).
 
  
 
@@ -2122,31 +2078,21 @@ more details.
 
 **Linked List Questions**
 
--   [*Linked List
-    Insertion*](http://quiz.geeksforgeeks.org/linked-list-set-2-inserting-a-node/)
-
--   [*Linked List
-    Deletion*](http://quiz.geeksforgeeks.org/linked-list-set-3-deleting-node/)
-
--   [*middle of a given linked
-    list*](https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/)
-
--   [*Nth node from the end of a Linked
-    List*](https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/)
+- [Linked List Insertion](http://quiz.geeksforgeeks.org/linked-list-set-2-inserting-a-node/)
+- [Linked List Deletion](http://quiz.geeksforgeeks.org/linked-list-set-3-deleting-node/)
+- [Middle of a given linked list](https://www.geeksforgeeks.org/write-a-c-function-to-print-the-middle-of-the-linked-list/)
+- [Nth node from the end of a Linked List](https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/)
 
  
 **Multi Linked List (MLL) Questions**
 
--   [*Target(Path problem)*](https://github.com/nabagata/interview-prep/codes/Multi-linked-list/target.cpp)
-
--   [*Printing MLL(depth wise)*](https://github.com/nabagata/interview-prep/codes/Multi-linked-list/MLL-depth.cpp)
+- [Target(Path problem)](https://github.com/nabagata/interview-prep/codes/Multi-linked-list/target.cpp)
+- [Printing MLL(depth wise)](https://github.com/nabagata/interview-prep/codes/Multi-linked-list/MLL-depth.cpp)
  
 **Tree Traversal Questions**
 
--   [*Inorder*](https://www.geeksforgeeks.org/618/)
-
--   [*Preorder and Postoder
-    Traversals*](https://www.geeksforgeeks.org/618/)
+- [Inorder](https://www.geeksforgeeks.org/618/)
+- [Preorder and Postorder Traversals](https://www.geeksforgeeks.org/618/)
 
 -   [*Level order
     traversal*](https://www.geeksforgeeks.org/level-order-tree-traversal/)
@@ -2203,7 +2149,7 @@ list*](https://www.geeksforgeeks.org/write-a-c-function-to-detect-loop-in-a-link
 [*Data Structure for Dictionary and Spell
 Checker?*](https://www.geeksforgeeks.org/data-structure-dictionary-spell-checker/)
 
-## OOPs
+## Object-Oriented Programming (OOP)
 
 ## Commonly Asked OOP Interview Questions | Set 1
 
@@ -2272,7 +2218,7 @@ do is to try to understand the problem to separate necessary from
 unnecessary details: We try to obtain our own abstract view, or model,
 of the problem. This process of modeling is called abstraction.
 
-## DBMS
+## Database Management Systems (DBMS)
 
 
 ## Commonly asked DBMS interview questions | Set 1
